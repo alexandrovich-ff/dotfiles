@@ -1,0 +1,44 @@
+! vim: filetype=.Xresources
+! __  ______  _____ ____   ___  _   _ ____   ____ _____ ____  
+! \ \/ /  _ \| ____/ ___| / _ \| | | |  _ \ / ___| ____/ ___| 
+!  \  /| |_) |  _| \___ \| | | | | | | |_) | |   |  _| \___ \ 
+!  /  \|  _ <| |___ ___) | |_| | |_| |  _ <| |___| |___ ___) |
+! /_/\_\_| \_\_____|____/ \___/ \___/|_| \_\\____|_____|____/ 
+!
+! Конфигурационный файл $HOME/.Xresources
+! Написан: @alexandrovich.ff
+! Website: http://malikov.red
+
+! -----------------------------------
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xcursor.size: 24
+
+! =================
+*background:    #1D1F28
+*foreground:    #FDFDFD
+*cursorColor:   #C574DD
+*color0:    #282A36
+*color1:    #F37F97
+*color2:    #5ADECD
+*color3:    #F2A272
+*color4:    #8897F4
+*color5:    #C574DD
+*color6:    #79E6F3
+*color7:    #FDFDFD
+*color8:    #414458
+*color9:    #FF4971
+*color10:   #18E3C8
+*color11:   #FF8037
+*color12:   #556FFF
+*color13:   #B043D1
+*color14:   #3FDCEE
+*color15:   #BEBEC1
+
+! =================
+XTerm**color4:darkblue
