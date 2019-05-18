@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# vim: filetype=polybar
+#  ____   _____        _______ ____  __  __ _____ _   _ _   _ 
+# |  _ \ / _ \ \      / / ____|  _ \|  \/  | ____| \ | | | | |
+# | |_) | | | \ \ /\ / /|  _| | |_) | |\/| |  _| |  \| | | | |
+# |  __/| |_| |\ V  V / | |___|  _ <| |  | | |___| |\  | |_| |
+# |_|    \___/  \_/\_/  |_____|_| \_\_|  |_|_____|_| \_|\___/ 
+#
+# Скрипт - Меню выключения
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+MENU="$(rofi -sep "|" -dmenu -i -p 'Выключение' -location 5 -xoffset -14 -yoffset -595 -width 20 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Блокировка| Выход| Перезагрузка| Выключение")"
+            case "$MENU" in
+                *Блокировка) sh -c "~/.config/i3/bin/lock" ;;
+                *Выход) i3-msg exit;;
+                *Перезагрузка) systemctl reboot ;;
+                *Выключение) systemctl -i poweroff
+            esac

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# vim: filetype=scripts
+#  ___ _____ ____  _   _ _   _ ___ _   _  ____ 
+# |_ _|  ___|  _ \| | | | \ | |_ _| \ | |/ ___|
+#  | || |_  | |_) | | | |  \| || ||  \| | |  _ 
+#  | ||  _| |  _ <| |_| | |\  || || |\  | |_| |
+# |___|_|   |_| \_\\___/|_| \_|___|_| \_|\____|
+#
+# Скрипт для определения запущеного приложения
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+ps_out=`ps -ef | grep '$1' | grep -v 'grep' | grep -v $0`
+result=$(echo $ps_out | grep "$1")
+if [[ "$result" != "" ]];then
+    killall -q $1
+else
+    $1
+fi

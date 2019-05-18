@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# vim: filetype=i3
+#  ___ _____ ____  _____ ____ ___ __________ 
+# |_ _|___ /|  _ \| ____/ ___|_ _|__  / ____|
+#  | |  |_ \| |_) |  _| \___ \| |  / /|  _|  
+#  | | ___) |  _ <| |___ ___) | | / /_| |___ 
+# |___|____/|_| \_\_____|____/___/____|_____|
+#
+# Скрипт изменения размера окон i3
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+[ -z "$1" ] && echo "Не указано направление" && exit 1
+distanceStr="2 px or 2 ppt"
+
+moveChoice() {
+  i3-msg resize "$1" "$2" "$distanceStr" | grep '"success":true' || \
+    i3-msg resize "$3" "$4" "$distanceStr"
+}
+
+case $1 in
+  up)
+    moveChoice grow up shrink down
+    ;;
+  down)
+    moveChoice shrink up grow down
+    ;;
+  left)
+    moveChoice shrink right grow left
+    ;;
+  right)
+    moveChoice grow right shrink left
+    ;;
+esac
+

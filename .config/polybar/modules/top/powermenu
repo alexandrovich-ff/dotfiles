@@ -1,0 +1,21 @@
+; vim: filetype=polybar
+;  ____   _____        _______ ____  
+; |  _ \ / _ \ \      / / ____|  _ \ 
+; | |_) | | | \ \ /\ / /|  _| | |_) |
+; |  __/| |_| |\ V  V / | |___|  _ < 
+; |_|    \___/  \_/\_/  |_____|_| \_\
+;
+; Конфигурационный файл модуля - Powermenu
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/powermenu]
+type = custom/text
+content = 
+
+content-background = ${color.ac}
+content-foreground = ${color.mf}
+content-padding = 2
+
+click-left = $HOME/.config/polybar/scripts/powermenu
+click-right = $HOME/.config/polybar/scripts/powermenu

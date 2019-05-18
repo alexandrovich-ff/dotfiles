@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# vim: filetype=i3
+#  ___ _____ _     ___   ____ _  __
+# |_ _|___ /| |   / _ \ / ___| |/ /
+#  | |  |_ \| |  | | | | |   | ' / 
+#  | | ___) | |__| |_| | |___| . \ 
+# |___|____/|_____\___/ \____|_|\_\
+#
+# Скрипт блокировки экрана с помощью i3block
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+# Создание скриншота
+scrot /tmp/screen_locked.png
+# Размытие рисунка
+mogrify -scale 10% -scale 1000% /tmp/screen_locked.png
+
+# Блокировка с использованием рисунка
+i3lock -i /tmp/screen_locked.png

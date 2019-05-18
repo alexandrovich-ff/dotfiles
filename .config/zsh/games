@@ -1,0 +1,19 @@
+# vim: filetype=zsh
+#   ____    _    __  __ _____ ____  
+#  / ___|  / \  |  \/  | ____/ ___| 
+# | |  _  / _ \ | |\/| |  _| \___ \ 
+# | |_| |/ ___ \| |  | | |___ ___) |
+#  \____/_/   \_\_|  |_|_____|____/ 
+#
+# Конфигурационный файл zsh-games
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+# #---Proton---#
+# Proton run
+:proton() {python ~/.proton/run.py $1}
+
+# #---Wine---#
+# Torchlight 2
+alias :torchlight2="WINEPREFIX=~/.wine/Torchlight\ 2 wine ~/.wine/Torchlight\ 2/drive_c/Program\ Files\ \(x86\)/Runic\ Games/Torchlight\ 2/Torchlight2.exe"
+alias :ss2="WINEPREFIX=~/.wine/SS2 wine ~/.wine/SS2/drive_c/Program\ Files/Serious\ Sam\ 2/Bin/Sam2.exe"

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _       __  __    _    _   _ 
+# |  _ \|  \/  | ____| \ | | | | |     |  \/  |  / \  | \ | |
+# | | | | |\/| |  _| |  \| | | | |_____| |\/| | / _ \ |  \| |
+# | |_| | |  | | |___| |\  | |_| |_____| |  | |/ ___ \| |\  |
+# |____/|_|  |_|_____|_| \_|\___/      |_|  |_/_/   \_\_| \_|
+#
+# Скрипт чтения man в формате pdf
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+man -Tpdf $(man -k . | awk '{print $1}' | uniq | dmenu -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -l 20) | zathura -

@@ -1,0 +1,135 @@
+; vim: filetype=polybar
+;  ____   ___  _  __   ______    _    ____  
+; |  _ \ / _ \| | \ \ / / __ )  / \  |  _ \ 
+; | |_) | | | | |  \ V /|  _ \ / _ \ | |_) |
+; |  __/| |_| | |___| | | |_) / ___ \|  _ < 
+; |_|    \___/|_____|_| |____/_/   \_\_| \_\
+;
+; Конфигурационный файл для нижнего бара
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+; --- Настройки панели ---
+[bar/bottom]
+; Выбор монитора
+monitor = ${env:MONITOR:}
+monitor-fallback =
+monitor-strict = false
+: Принудительная отрисовка
+override-redirect = false
+; Положение
+bottom = true
+; Центровка
+fixed-center = true
+; Ширина / высота
+width = 100%
+height = 26
+; Смещение
+offset-x = 1%
+offset-y = 2%:-3
+; Цветовая палитка
+background = ${color.trans}
+foreground = ${color.fg}
+; Скругление
+radius-top = 0.0
+radius-bottom = 0.0
+; Подчеркивание
+overline-size = 2
+overline-color = ${color.ac}
+; Рамка
+border-top-size = 2
+border-color = ${color.ac}
+; Внутрение отступы
+padding = 0
+; Отступы модулей
+module-margin-left = 0
+module-margin-right = 0
+; Шрифты
+font-0 = "Terminus (TTF):style=Medium:size=10;1"
+font-1 = "icomoon\-feather:size=10;1"
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-4 = "Font Awesome 5 Brands:style=Regular:pixelsize=10;1"
+font-5 = Iosevka Nerd Font:style=Medium:size=16;3
+font-6 = Iosevka Nerd Font:style=Medium:size=12;3
+font-7 = Iosevka Nerd Font:style=Medium:size=7;3
+
+; --- Модули на панели ---
+; Модули
+modules-left = cpu memory right-end-top
+modules-center = left-end-top filesystem-root filesystem-home right-end-top
+modules-right = left-end-top battery temperature
+; Разделитель
+separator =
+; Модульное растаяние
+spacing = 0
+; Значение непрозрачности
+dim-value = 1.0
+; Значение WM_NAME
+wm-name = 
+; Локализация
+locale = ru_RU.UTF-8
+
+; --- Трей ---
+tray-position = none
+; Сдвиг при смене содержимого
+tray-detached = false
+; Размер иконок
+tray-maxsize = 16
+; Прозрачность трея
+tray-transparent = false
+; Цветовая схема
+tray-background = ${color.bg}
+; Смещение
+tray-offset-x = 0
+tray-offset-y = 0
+; Внутрений отступ
+tray-padding = 0
+; Коэффициент маштабирования
+tray-scale = 1.0
+
+; --- Окна ---
+; Перегруппировка окон
+;wm-restack = i3
+; Значение DPI
+; dpi = 
+; Поддержка межпроцессного обмена сообщениями
+enable-ipc = true
+
+; --- Указатели мыши ----
+click-left = 
+click-middle = 
+click-right =
+double-click-left =
+double-click-middle =
+double-click-right =
+cursor-click = pointer
+cursor-scroll =
+
+; --- Настройки окружения ---
+; Настройка i3wm
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+
+screenchange-reload = false
+
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
+format-foreground = 
+format-background = 
+format-underline =
+format-overline =
+format-spacing =
+format-padding =
+format-margin =
+format-offset =
+
+pseudo-transparency = false

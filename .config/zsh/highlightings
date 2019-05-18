@@ -1,0 +1,26 @@
+# vim: filetype=zsh
+#  _   _ ___ ____ _   _ _     ___ ____ _   _ _____ ___ _   _  ____ 
+# | | | |_ _/ ___| | | | |   |_ _/ ___| | | |_   _|_ _| \ | |/ ___|
+# | |_| || | |  _| |_| | |    | | |  _| |_| | | |  | ||  \| | |  _ 
+# |  _  || | |_| |  _  | |___ | | |_| |  _  | | |  | || |\  | |_| |
+# |_| |_|___\____|_| |_|_____|___\____|_| |_| |_| |___|_| \_|\____|
+#
+# Конфигурационный файл zsh-highlightings
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+#alias ls="ls --color=auto"
+alias ls="lsd"
+alias cc="grc --colour=auto cc"
+alias df="grc --colour=auto df"
+alias diff="grc --colour=auto diff"
+alias gcc="grc --colour=auto gcc"
+alias ifconfig="grc --colour=auto ifconfig"
+alias last="grc --colour=auto last"
+alias make="grc --colour=auto make"
+alias mount="grc --colour=auto mount"
+alias netstat="grc --colour=auto netstat"
+alias ping="grc --colour=auto ping"
+alias ps="grc --colour=auto ps"
+alias traceroute="grc --colour=auto traceroute"
+alias iwconfig="grc --colour=auto iwconfig"

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  _   _  _____        ______ _     ___ ____  
+# / ___|| | | |/ _ \ \      / / ___| |   |_ _|  _ \ 
+# \___ \| |_| | | | \ \ /\ / / |   | |    | || |_) |
+#  ___) |  _  | |_| |\ V  V /| |___| |___ | ||  __/ 
+# |____/|_| |_|\___/  \_/\_/  \____|_____|___|_|    
+#
+# Скрипт для отображения содержимого буффера обмена
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+clip=$(xclip -o -selection clipboard)
+prim=$(xclip -o -selection primary)
+
+[ -n "$clip" ] && notify-send "Буфер:" "$clip"
+[ -n "$prim" ] && notify-send "Скопировано:" "$prim"

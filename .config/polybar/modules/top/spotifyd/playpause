@@ -1,0 +1,19 @@
+; vim: filetype=polybar
+;  ____  ____   ___ _____ ___ _______   __
+; / ___||  _ \ / _ \_   _|_ _|  ___\ \ / /
+; \___ \| |_) | | | || |  | || |_   \ V / 
+;  ___) |  __/| |_| || |  | ||  _|   | |  
+; |____/|_|    \___/ |_| |___|_|     |_|  
+;
+; Конфигурационный файл модуля - Spotify Play\Pause
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/spotify-playpause]
+type = custom/script
+interval = 1
+format = <label>
+exec = python $HOME/.config/polybar/scripts/spotify-playpause -p ','
+click-left = "playerctl play-pause"
+format-background = ${color.ac}
+format-padding = 1

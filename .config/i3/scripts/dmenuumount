@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _       _   _ __  __  ___  _   _ _   _ _____ 
+# |  _ \|  \/  | ____| \ | | | | |     | | | |  \/  |/ _ \| | | | \ | |_   _|
+# | | | | |\/| |  _| |  \| | | | |_____| | | | |\/| | | | | | | |  \| | | |  
+# | |_| | |  | | |___| |\  | |_| |_____| |_| | |  | | |_| | |_| | |\  | | |  
+# |____/|_|  |_|_____|_| \_|\___/       \___/|_|  |_|\___/ \___/|_| \_| |_|  
+#
+# Скрипт для удобного размонтирования внешних накопителей
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+unmountusb() {
+	[ -z "$drives" ] && exit
+	chosen=$(echo "$drives" | dmenu -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -i -p "Какой диск размонтировать?" | awk '{print $1}')
+	[ -z "$chosen" ] && exit
+        sudo -A umount "$chosen" && notify-send "💻 USB отмонтирован" "$chosen устройство отмонтировано."
+	}
+
+unmountandroid() { \
+	chosen=$(awk '/simple-mtpfs/ {print $2}' /etc/mtab | dmenu -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -i -p "Какое устройство размонтировать?")
+	[ -z "$chosen" ] && exit
+        sudo -A umount -l "$chosen" && notify-send "🤖 Android отмонтирован" "$chosen устройство отмонтировано."
+	}
+
+asktype() { \
+	case "$(printf "USB\\nAndroid" | dmenu -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -i -p "Размонтировать USB-накопитель или устройство Android?")" in
+		USB) unmountusb ;;
+		Android) unmountandroid ;;
+	esac
+	}
+
+drives=$(lsblk -nrpo "name,type,size,mountpoint" | awk '$2=="part"&&$4!~/\/boot|\/home$|SWAP/&&length($4)>1{printf "%s (%s)\n",$4,$3}')
+
+if ! grep simple-mtpfs /etc/mtab; then
+	[ -z "$drives" ] && echo "Нет дисков для размонтирования." &&  exit
+	echo "Обнаружен не подключаемый USB-накопитель."
+	unmountusb
+else
+	if [ -z "$drives" ]
+	then
+		echo "Обнаружено не подключаемое устройство Android."
+	       	unmountandroid
+	else
+		echo "Обнаружены несмонтированные USB-накопители и Android-устройства."
+		asktype
+	fi
+fi

@@ -1,0 +1,31 @@
+; vim: filetype=polybar
+;  _____ _   _ ____         ___  _____ 
+; | ____| \ | |  _ \       / _ \|  ___|
+; |  _| |  \| | | | |_____| | | | |_   
+; | |___| |\  | |_| |_____| |_| |  _|  
+; |_____|_| \_|____/       \___/|_|    
+;
+; Конфигурационный файл модуля - End-of
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/decor-glyph]
+type = custom/text
+content-background = ${color.trans}
+content-foreground = ${color.ac}
+
+[module/left-end-top]
+inherit = module/decor-glyph
+content = "%{T6}%{T-}"
+
+[module/right-end-top]
+inherit = module/decor-glyph
+content = "%{T6}%{T-}"
+
+[module/left-end-bottom]
+inherit = module/decor-glyph
+content = "%{T6}%{T-}"
+
+[module/right-end-bottom]
+inherit = module/decor-glyph
+content = "%{T6}%{T-}"

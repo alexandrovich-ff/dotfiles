@@ -1,0 +1,19 @@
+; vim: filetype=polybar
+;   ____ ___  _     ___  ____      ______        _____ _____ ____ _   _ 
+;  / ___/ _ \| |   / _ \|  _ \    / ___\ \      / /_ _|_   _/ ___| | | |
+; | |  | | | | |  | | | | |_) |___\___ \\ \ /\ / / | |  | || |   | |_| |
+; | |__| |_| | |__| |_| |  _ <_____|__) |\ V  V /  | |  | || |___|  _  |
+;  \____\___/|_____\___/|_| \_\   |____/  \_/\_/  |___| |_| \____|_| |_|
+;
+; Конфигурационный файл модуля - Color-switch
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/color-switch]
+type = custom/text
+content = 
+
+content-background = ${color.ac}
+
+click-left = $HOME/.config/polybar/scripts/color-switch-light &
+click-right = $HOME/.config/polybar/scripts/color-switch-dark &

@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# vim: filetype=i3
+#   ___  ____   ____ ___  ____  _____ 
+#  / _ \|  _ \ / ___/ _ \|  _ \| ____|
+# | | | | |_) | |  | | | | | | |  _|  
+# | |_| |  _ <| |__| |_| | |_| | |___ 
+#  \__\_\_| \_\\____\___/|____/|_____|
+#
+# Скрипт создания QR кода из буффера обмена
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+~/.config/i3/scripts/ifinstalled feh && qrencode -o - -s 1 \
+	"$(xclip -out -selection clipboard)" |
+	feh --zoom max \
+		-F \
+		--force-aliasing \
+		--image-bg white \
+		-

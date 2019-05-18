@@ -1,0 +1,42 @@
+# vim: filetype=compton
+#   ____ ___  __  __ ____ _____ ___  _   _ 
+#  / ___/ _ \|  \/  |  _ \_   _/ _ \| \ | |
+# | |  | | | | |\/| | |_) || || | | |  \| |
+# | |__| |_| | |  | |  __/ | || |_| | |\  |
+#  \____\___/|_|  |_|_|    |_| \___/|_| \_|
+#
+# Конфигурационный файл Compton
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+backend = "glx";
+spaint-on-overlay = true;
+glx-no-stencil = true;
+vsync = "opengl";
+unredir-if-possible = true;
+
+# Мягкое появление окон
+no-fading-openclose = true;
+
+# Тени
+shadow = false;
+
+# Прозрачность
+detect-client-opacity = true;
+menu-opacity = 0.95;
+inactive-opacity = 0.80;
+active-opacity = 0.95;
+frame-opacity = 0.95;
+inactive-opacity-override = false;
+alpha-step = 0.06;
+
+# Отключение прозрачности для приложений 
+opacity-rule = [
+  "99:class_g = 'mpv'",
+  "99:class_g = 'dota2'",
+  "99:class_g = 'hl2_linux'",
+  "99:class_g = 'Steam'",
+  "99:class_g = 'Chromium'",
+  "99:class_g = 'Firefox'",
+  "99:class_g = 'stellarium'"
+];

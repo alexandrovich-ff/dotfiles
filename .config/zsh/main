@@ -1,0 +1,91 @@
+# vim: filetype=zsh
+#  __  __    _    ___ _   _ 
+# |  \/  |  / \  |_ _| \ | |
+# | |\/| | / _ \  | ||  \| |
+# | |  | |/ ___ \ | || |\  |
+# |_|  |_/_/   \_\___|_| \_|
+#
+# Конфигурационный файл zsh-main
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+# #---Конфигурация zsh---# #
+# Автопереход в папку
+setopt autocd
+# Цветовая схема
+autoload -U colors
+colors
+# Автодополнение
+zstyle ':completion:*:*:kill:*' menu yes select
+zstyle ':completion:*:kill:*' force-list always
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=$color[cyan]=$color[red]"
+zstyle ':completion:*:*:kill:*:processes' command 'ps --forest -A -o pid,user,cmd'
+zstyle ':completion:*:processes-names' command 'ps axho command' 
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*::::' completer _expand _complete _correct _ignored _approximate
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX+$#SUFFIX)/3 )) numeric )'
+zstyle ':completion:*:expand:*' tag-order all-expansions
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:descriptions' format '> %B%d%b'
+zstyle ':completion:*:messages' format '> %d'
+zstyle ':completion:*:warnings' format '> Ошибка: нет совпадений для: %d'
+zstyle ':completion:*:corrections' format '> %B%d (число ошибок: %e)%b'
+zstyle ':completion:*:correct:*' insert-unambiguous true
+zstyle ':completion:*:correct:*' original true
+zstyle ':completion:*:correct:*' prompt 'исправить на:'
+zstyle ':completion:*' prompt 'Исправить (число ошибок: %e) > '
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=** r:|=**' 'l:|=* r:|=*'
+zstyle ':completion:*' match-original both
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
+zstyle ':completion:*:*:(^rm):*:*files' ignored-patterns '*?.o' '*?.c~''*?.old' '*?.pro'
+zstyle ':completion:*:rm:*' ignore-line yes
+zstyle ':completion:*:functions' ignored-patterns '_*'
+zstyle ':completion:*:incremental:*' completer _complete _correct
+zstyle ':completion:*:predict:*' completer _complete
+zstyle ':mime:*' x-browsers firefox rekonq google-chrome konqueror chromium-browser
+zstyle ':mime:*' tty-browsers w3m elinks links lynx
+zstyle -e ':completion:*' hosts 'reply=($myhosts)'
+zstyle ':completion:*' insert-tab true
+zstyle ':completion:*' select-prompt '%SСтрока: %LЭлемент: %M[%p]%s'
+zstyle ':completion:*' list-prompt '%SТекущее положение: %p%s'
+zstyle ':completion:*' sort true
+zstyle ':completion:*' file-sort name
+zstyle ':completion:*' keep-prefix changed
+zstyle ':completion:*:man:*' separate-sections true
+zstyle ':completion:*:history-words' stop yes
+zstyle ':completion:*:history-words' remove-all-dups yes
+zstyle ':completion:*:history-words' list false
+zstyle ':completion:*:history-words' menu yes select
+zstyle ':completion:*' old-menu true
+zstyle ':completion:*' menu select
+zstyle ':completion:*' original true
+zstyle ':completion:*' substitute 1
+zstyle ':completion:*' use-compctl true
+zstyle ':completion:*' word true
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' squeeze-slashes true
+zstyle ':completion:*:(ssh|scp|ftp):*' hosts $hosts
+zstyle ':completion:*:(ssh|scp|ftp):*' users $users
+zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~'
+zstyle ':completion:*:*:*:users' ignored-patterns adm apache bin daemon games gdm halt ident junkbust lp mail mailnull named news nfsnobody nobody nscd ntp operator pcap postgres radvd rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs
+
+autoload -Uz compinit
+compinit
+# Автокорекция
+setopt correct
+
+SPROMPT="        Заменить $fg_bold[grey]'$reset_color$fg_bold[red]%R$reset_color$fg_bold[grey]'$reset_color на $fg_bold[grey]'$reset_color$fg_bold[green]%r$reset_color$fg_bold[grey]'$reset_color? ($fg_bold[grey]Y$reset_color$fg_bold[green]es$reset_color, $fg_bold[grey]N$reset_color$fg_bold[red]o$reset_color, $fg_bold[grey]A$reset_color$fg_bold[red]bort$reset_color, $fg_bold[grey]E$reset_color$fg_bold[blue]dit$reset_color) $fg_bold[green]>$reset_color "
+# История
+HISTFILE=~/.config/zsh/histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
+setopt append_history
+setopt share_history
+setopt inc_append_history
+# Меню
+setopt automenu

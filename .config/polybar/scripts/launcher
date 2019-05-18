@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# vim: filetype=rofi
+#  _        _   _   _ _   _  ____ _   _ _____ ____  
+# | |      / \ | | | | \ | |/ ___| | | | ____|  _ \ 
+# | |     / _ \| | | |  \| | |   | |_| |  _| | |_) |
+# | |___ / ___ \ |_| | |\  | |___|  _  | |___|  _ < 
+# |_____/_/   \_\___/|_| \_|\____|_| |_|_____|_| \_\
+#
+# Скрипт запуска приложений - Rofi
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+rofi -modi run,drun -show drun -location 7 -xoffset 15 -yoffset -450 -line-padding 4 -columns 1 -width 40 -lines 10 -padding 4 -hide-scrollbar -show-icons

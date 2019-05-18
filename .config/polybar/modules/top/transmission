@@ -1,0 +1,18 @@
+; vim: filetype=polybar
+;  _____ ____      _    _   _ ____  __  __ ___ ____ ____ ___ ___  _   _ 
+; |_   _|  _ \    / \  | \ | / ___||  \/  |_ _/ ___/ ___|_ _/ _ \| \ | |
+;   | | | |_) |  / _ \ |  \| \___ \| |\/| || |\___ \___ \| | | | |  \| |
+;   | | |  _ <  / ___ \| |\  |___) | |  | || | ___) |__) | | |_| | |\  |
+;   |_| |_| \_\/_/   \_\_| \_|____/|_|  |_|___|____/____/___\___/|_| \_|
+;
+; Конфигурационный файл модуля - Transmission
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/transmission]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/transmission
+interval = 7
+
+format-background = ${color.ac}
+format-padding = 1

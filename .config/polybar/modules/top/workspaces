@@ -1,0 +1,69 @@
+; vim: filetype=polybar
+; _______  ____  _  ______  ____   _____ _____ ____  
+; \ \  / / _ \|  _ \| |/ / ___||  _ \ / \  / ___| ____/ ___| 
+;  \ \ /\ / / | | | |_) | ' /\___ \| |_) / _ \| |   |  _| \___ \ 
+;   \ V  V /| |_| |  _ <| . \ ___) |  __/ ___ \ |___| |___ ___) |
+;\_/\_/  \___/|_| \_\_|\_\____/|_| /_/   \_\____|_____|____/ 
+;
+; Конфигурационный файл модуля - Workspaces
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/workspaces]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = true
+enable-click = true
+enable-scroll = false
+wrapping-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+
+; Иконки консольных рабочих столов
+set ws-icon-0 ""
+set ws-icon-1 ""
+set ws-icon-2 ""
+set ws-icon-3 ""
+set ws-icon-4 ""
+set ws-icon-5 ""
+set ws-icon-6 ""
+set ws-icon-7 ""
+set ws-icon-8 ""
+set ws-icon-9 ""
+; Иконки графических рабочих столов
+set ws-icon-10 ""
+set ws-icon-11 ""
+set ws-icon-12 ""
+set ws-icon-13 ""
+set ws-icon-14 ""
+set ws-icon-15 ""
+set ws-icon-16 ""
+set ws-icon-17 ""
+set ws-icon-18 ""
+set ws-icon-19 ""
+
+format = <label-state> <label-mode>
+format-background = ${color.ac}
+
+label-mode = %mode%
+
+label-focused = %icon% %name%
+label-focused-foreground = ${color.fg}
+label-focused-background = ${color.ac}
+label-focused-padding = 1
+
+label-unfocused = %icon% %name%
+label-unfocused-background = ${color.ac}
+label-unfocused-foreground = ${color.trans}
+label-unfocused-padding = 1
+
+label-visible = %icon% %name%
+label-visible-background = ${color.ac}
+label-visible-foreground = ${color.trans}
+label-visible-padding = 1
+
+label-urgent = %icon% %name%
+label-urgent-foreground = ${color.red}
+label-urgent-background = ${color.ac}
+label-urgent-padding = 1

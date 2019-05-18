@@ -1,0 +1,21 @@
+; vim: filetype=polybar
+;  _        _   _   _ _   _  ____ _   _ _____ ____  
+; | |      / \ | | | | \ | |/ ___| | | | ____|  _ \ 
+; | |     / _ \| | | |  \| | |   | |_| |  _| | |_) |
+; | |___ / ___ \ |_| | |\  | |___|  _  | |___|  _ < 
+; |_____/_/   \_\___/|_| \_|\____|_| |_|_____|_| \_\
+;
+; Конфигурационный файл модуля - Launcher
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/launcher]
+type = custom/text
+content = 
+
+content-background = ${color.ac}
+content-foreground = ${color.mf}
+content-padding = 2
+
+click-left = $HOME/.config/polybar/scripts/launcher
+click-right = $HOME/.config/polybar/scripts/launcher

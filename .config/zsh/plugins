@@ -1,0 +1,38 @@
+# vim: filetype=zsh
+#  ____  _    _   _  ____ ___ _   _ ____  
+# |  _ \| |  | | | |/ ___|_ _| \ | / ___| 
+# | |_) | |  | | | | |  _ | ||  \| \___ \ 
+# |  __/| |__| |_| | |_| || || |\  |___) |
+# |_|   |_____\___/ \____|___|_| \_|____/ 
+#
+# Конфигурационный файл zsh-plugins
+# Website: http://malikov.red
+
+# #---Подключение библиотеки---# #
+source /usr/share/doc/pkgfile/command-not-found.zsh
+source /usr/share/zsh/scripts/zplug/init.zsh
+
+# #---Плагины---# #
+zplug 'dracula/zsh', as:theme
+
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
+
+zplug "desyncr/auto-ls"
+zplug "peterhurford/up.zsh"
+zplug "djui/alias-tips"
+
+# #---Проверка установленных плагинов---# #
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
+
+# #---Загрузка плагина---# #
+zplug load

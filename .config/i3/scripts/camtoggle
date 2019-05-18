@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# vim: filetype=i3
+#   ____    _    __  __ _____ ___   ____  ____ _     _____ 
+#  / ___|  / \  |  \/  |_   _/ _ \ / ___|/ ___| |   | ____|
+# | |     / _ \ | |\/| | | || | | | |  _| |  _| |   |  _|  
+# | |___ / ___ \| |  | | | || |_| | |_| | |_| | |___| |___ 
+#  \____/_/   \_\_|  |_| |_| \___/ \____|\____|_____|_____|
+#
+# Скрипт включения \ отключения веб камеры
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+pkill -f /dev/video || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=30%  --title="mpvfloat" /dev/video0

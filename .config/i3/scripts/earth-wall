@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  _____    _    ____ _____ _   _  __        ___    _     _     
+# | ____|  / \  |  _ \_   _| | | | \ \      / / \  | |   | |    
+# |  _|   / _ \ | |_) || | | |_| |  \ \ /\ / / _ \ | |   | |    
+# | |___ / ___ \|  _ < | | |  _  |   \ V  V / ___ \| |___| |___ 
+# |_____/_/   \_\_| \_\|_| |_| |_|    \_/\_/_/   \_\_____|_____|
+#
+# Скрипт смены фонового рисунка Google Earth
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+START=1003
+END=1089
+
+curl --silent -o ~/.config/i3/wall-temp.png https://www.gstatic.com/prettyearth/assets/full/$(( RANDOM % ($START - $END + 1) + $START)).jpg
+
+while grep -q "an error" ~/.config/i3/wall-temp.png
+do
+    sleep 1
+    curl --silent -o ~/.config/i3/wall-temp.png https://www.gstatic.com/prettyearth/assets/full/$(( RANDOM % ($START - $END + 1) + $START)).jpg
+done
+
+mv ~/.config/i3/wall-temp.png ~/.config/i3/wall.png
+
+notify-send -i "$HOME/.config/wall.png" "Фоновый рисунок изменен." &
+feh --bg-scale ~/.config/i3/wall.png

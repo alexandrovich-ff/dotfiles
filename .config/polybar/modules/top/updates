@@ -1,0 +1,21 @@
+; vim: filetype=polybar
+;  _   _ ____  ____    _  _____ _____ ____  
+; | | | |  _ \|  _ \  / \|_   _| ____/ ___| 
+; | | | | |_) | | | |/ _ \ | | |  _| \___ \ 
+; | |_| |  __/| |_| / ___ \| | | |___ ___) |
+;  \___/|_|   |____/_/   \_\_| |_____|____/ 
+;
+; Конфигурационный файл модуля - Updates
+; Написан: @alexandrovich.ff
+; Website: http://malikov.red
+
+[module/updates]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/updates
+tail = true
+interval = 5
+
+format-background = ${color.ac}
+format-padding = 1
+
+click-left = $HOME/.config/polybar/scripts/lupdates &
