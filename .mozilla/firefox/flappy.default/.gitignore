@@ -1,0 +1,29 @@
+# vim: filetype=git
+#   ____ ___ _____   ___ ____ _   _  ___  ____  _____ 
+#  / ___|_ _|_   _| |_ _/ ___| \ | |/ _ \|  _ \| ____|
+# | |  _ | |  | |    | | |  _|  \| | | | | |_) |  _|  
+# | |_| || |  | |    | | |_| | |\  | |_| |  _ <| |___ 
+#  \____|___| |_|   |___\____|_| \_|\___/|_| \_\_____|
+#
+# Исключения для GitHub
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+# #---Скрытые---# #
+# Директории
+/*
+
+# #---Видимые---# #
+# Файлы
+!.gitignore
+!addonStartup.json.lz4
+!addons.json
+!extensions.json
+!prefs.js
+!user.js
+!search.json.mozlz4
+!sessionCheckpoints.json
+!xulstore.json
+# Директории
+!browser-extension-data
+!extensions
