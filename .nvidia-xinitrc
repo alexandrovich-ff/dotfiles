@@ -1,0 +1,5 @@
+## i3
+exec i3
+
+## Support Vulkan
+export VK_ICD_FILENAME=/usr/share/vulkan/icd.d/nvidia_icd.json
