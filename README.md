@@ -18,7 +18,7 @@
 
 # Установка
 
-      git clone https://github.com/alexandrovich-ff/i3wm
+      git clone https://github.com/alexandrovich-ff/dotfiles
 
           pacman -S dunst rofi ttf-font-awesome
           yay -S i3-gaps-next-git polybar terminus-font-ll2-td1-ttf nerd-fonts-complete skippy-xd-git
