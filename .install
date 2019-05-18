@@ -1,0 +1,746 @@
+██████╗  █████╗ ███████╗███████╗
+██╔══██╗██╔══██╗██╔════╝██╔════╝
+██████╔╝███████║███████╗█████╗  
+██╔══██╗██╔══██║╚════██║██╔══╝  
+██████╔╝██║  ██║███████║███████╗
+╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+
+## pacstrab base base-devel
+libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
+
+## pacman-contrib
+mlocate pacman-contrib
+
+## gvfs
+btrfs-progs dmraid dosfstools fuse-common fuse2 gcr gptfdisk libatasmart libblockdev libbytesize libcddb libcdio libcdio-paranoia libyaml ndctl parted udisks2 volume_key gvfs
+
+  ## Support
+  gvfs-smb
+
+## refind-efi
+sbsigntools efibootmgr efivar refind-efi
+
+## plymouth
+plymouth plymouth-theme-arch-beat
+
+## archlinuxcn-keyring
+archlinuxcn-keyring
+
+███████╗██╗██╗     ███████╗███████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗ █████╗ ████████╗
+██╔════╝██║██║     ██╔════╝██╔════╝    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝
+█████╗  ██║██║     █████╗  ███████╗    █████╗  ██║   ██║██████╔╝██╔████╔██║███████║   ██║   
+██╔══╝  ██║██║     ██╔══╝  ╚════██║    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██╔══██║   ██║   
+██║     ██║███████╗███████╗███████║    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║██║  ██║   ██║   
+╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   
+
+## archive
+cpio lhasa lzop p7zip unace unrar unzip zip lrzip libunrar
+
+███╗   ██╗███████╗████████╗██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗
+████╗  ██║██╔════╝╚══██╔══╝██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝
+██╔██╗ ██║█████╗     ██║   ██║ █╗ ██║██║   ██║██████╔╝█████╔╝ 
+██║╚██╗██║██╔══╝     ██║   ██║███╗██║██║   ██║██╔══██╗██╔═██╗ 
+██║ ╚████║███████╗   ██║   ╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗
+╚═╝  ╚═══╝╚══════╝   ╚═╝    ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+
+## wpa_supplicant
+dialog wpa_supplicant
+
+## crda
+iw wireless-regdb crda
+
+## net-tools
+net-tools
+
+## wireless_tools
+wireless_tools
+
+## ethtool
+ethtool
+
+██████╗ ██████╗ ██╗██╗   ██╗███████╗██████╗ ███████╗
+██╔══██╗██╔══██╗██║██║   ██║██╔════╝██╔══██╗██╔════╝
+██║  ██║██████╔╝██║██║   ██║█████╗  ██████╔╝███████╗
+██║  ██║██╔══██╗██║╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║
+██████╔╝██║  ██║██║ ╚████╔╝ ███████╗██║  ██║███████║
+╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝
+
+## intel-ucode
+intel-ucode
+
+## xf86-video-intel
+libpciaccess libdrm wayland xcb-proto xorgproto libxdmcp libxau libxcb libx11 libxext libxxf86vm libxfixes libxdamage libxshmfence libomxil-bellagio libunwind libedit llvm-libs lm_sensors libglvnd mesa libxv libxvmc pixman xcb-util xf86-video-intel
+
+## xf86-input-synaptics
+libxi libxtst libevdev xf86-input-synaptics
+
+## xf86-input-libinput
+mtdev libgudev libwacom libinput xf86-input-libinput
+
+## nvidia nvidia-utils nvidia-settings cuda
+egl-wayland eglexternalplatform opencl-headers opencl-nvidia libxnvctrl cuda nvidia-utils nvidia-settings nvidia
+
+## nvidia-xrun
+bbswitch nvidia-xrun
+
+## libva
+libva-vdpau-driver libva-intel-driver
+
+## vulkan
+vulkan-headers vulkan-tools vulkan-validation-layers vulkan-icd-loader vulkan-intel vulkan-caps-viewer
+
+## bluetooth
+ell bluez-libs bluez-utils bluez-firmware bluez
+
+## wd719x-firmware
+wd719x-firmware
+
+## aic94xx-firmware
+aic94xx-firmware
+
+██╗  ██╗    ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
+╚██╗██╔╝    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+ ╚███╔╝     ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
+ ██╔██╗     ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
+██╔╝ ██╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
+╚═╝  ╚═╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+
+## xorg-server
+libepoxy libpng graphite harfbuzz freetype2-cleartype libfontenc libxfont2 xkeyboard-config libxkbfile xorg-xkbcomp xorg-setxkbmap xorg-server-common xorg-server
+
+## xorg-xprop
+xorg-xprop
+
+## xorg-xkill
+xorg-xkill
+
+## xorg-xbacklight
+xorg-xbacklight
+
+## xorg-xrandr
+xorg-xrandr
+
+## xorg-fonts-alias
+xorg-fonts-alias
+
+## xorg-xrdb
+xorg-xrdb
+
+## xorg-xmodmap
+xorg-xmodmap
+
+## xorg-xdpyinfo
+libxxf86dga libdmx xorg-xdpyinfo
+
+## xorg-xwininfo
+xorg-xwininfo
+
+## xorg-xinput
+xorg-xinput
+
+███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
+██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+███████╗██║   ██║██║   ██║██╔██╗ ██║██║  ██║    ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
+╚════██║██║   ██║██║   ██║██║╚██╗██║██║  ██║    ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
+███████║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
+╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+
+## pulseaudio
+rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
+
+## jack
+realtime-privileges celt dbus-c++ libffado libxml++ python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
+
+## gstreamer
+aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer
+
+███████╗███╗   ██╗██╗   ██╗██╗██████╗  ██████╗ ███╗   ██╗███╗   ███╗███████╗███╗   ██╗████████╗
+██╔════╝████╗  ██║██║   ██║██║██╔══██╗██╔═══██╗████╗  ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+█████╗  ██╔██╗ ██║██║   ██║██║██████╔╝██║   ██║██╔██╗ ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║   
+██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║   ██║██║╚██╗██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   
+███████╗██║ ╚████║ ╚████╔╝ ██║██║  ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   
+╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+## slim
+libice libsm libxt libxmu libjpeg-turbo fontconfig libxrender libxft libxrandr xorg-xauth xorg-fonts-encodings xorg-bdftopcf xorg-mkfontscale xorg-font-util xorg-font-utils slim
+
+## i3-gaps
+xcb-util-keysyms xcb-util-wm libev yajl startup-notification libdatrie libthai lzo cairo fribidi pango xcb-util-renderutil xcb-util-image xcb-util-cursor xcb-util-xrm libxkbcommon libxkbcommon-x11 i3lock i3-gaps
+
+  ## i3blocks
+  i3-blocks acpi playerctl sysstat
+
+  ## i3ass
+  i3ass
+
+## edex-ui
+edex-ui
+
+## compton
+libconfig compton
+
+## dunst
+libxdg-basedir dunst
+
+## zsh & pkgfile & zplug
+zsh & pkgfile
+
+  ## zplug
+  zplug
+
+## mksh
+mksh
+
+  ## Support
+  ## Shellcheck
+  ghc-libs haskell-aeson haskell-attoparsec haskell-base-compat haskell-dlist haskell-erf haskell-hashable haskell-integer-logarithms haskell-primitive haskell-quickcheck haskell-random haskell-regex-base haskell-regex-tdfa haskell-scientific haskell-tagged haskell-tf-random haskell-th-abstraction haskell-time-locale-compat haskell-unordered-containers haskell-uuid-types haskell-vector shellcheck
+  ## Dash
+  dash
+
+## yay
+go yay
+
+## debtap
+debtap
+
+## polybar
+cmake jsoncpp libnsl libuv python python2 rhash xorg-fonts-misc libmpdclient polybar
+
+## dmenu-manjaro
+dmenu-manjaro
+
+## dmenu-hotkeys
+python-dmenu-hotkeys
+
+## rofi
+rofi
+
+## skippy-xd
+skippy-xd-git
+
+████████╗███████╗██████╗ ███╗   ███╗██╗████████╗ █████╗ ██╗         ██╗   ██╗████████╗██╗██╗     ███████╗
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔══██╗██║         ██║   ██║╚══██╔══╝██║██║     ██╔════╝
+   ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║   ███████║██║         ██║   ██║   ██║   ██║██║     ███████╗
+   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██╔══██║██║         ██║   ██║   ██║   ██║██║     ╚════██║
+   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ██║  ██║███████╗    ╚██████╔╝   ██║   ██║███████╗███████║
+   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝
+
+## git
+perl-error perl-timedate perl-mailtools git
+
+## ranger
+gpm imlib2 libid3tag libidn libmediainfo libmms libzen libzip lua lua51 python-appdirs python-packaging python-pyparsing python-setuptools python-six tre atool elinks ffmpegthumbnailer highlight libcaca mediainfo odt2txt perl-image-exiftool poppler poppler-data python-chardet w3m ranger
+
+## vifm
+vifm
+
+  ## Support
+  # python-ueberzug
+  python-apipkg python-atomicwrites python-docopt python-iniconfig python-more-itertools python-pluggy python-py python-pytest python-xlib tk python-pillow-simd python-ueberzug
+
+## mc
+mc
+
+## feh
+libexif jpegexiforient feh
+
+## sxiv
+sxiv
+
+## imagemagick
+liblqr libraqm imagemagick
+
+## time
+time
+
+## neovim
+jemalloc libtermkey libvterm luajit msgpack unibilium neovim
+
+## hdparm
+hdparm
+
+## hddtemp
+hddtemp
+
+## iotop
+iotop
+
+## htop
+htop lsof strace
+
+## gotop
+gotop-bin
+
+## nmon
+nmon
+
+## glances
+python-psutil glances
+
+  ## Support
+  python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
+
+
+## cowsay
+cowsay
+
+## fortune
+recode fortune-mod
+
+## fzf
+fzf
+
+## googler
+googler
+
+## grc
+grc
+
+## streamlink
+python-isodate python-pycountry python-pysocks streamlink
+
+## lolcat
+ruby-optimist ruby-diff-lcs ruby-manpages ruby-paint ruby-rainbow ruby-rdoc ruby-rspec ruby-rspec-core ruby-rspec-expectations ruby-rspec-mocks ruby-rspec-support ruby-term-ansicolor ruby-tins ruby-trollop lolcat
+
+## galculator
+galculator
+
+## networkmanager
+libndp libnewt libteam slang libmbim usb_modeswitch tcl libqmi dnsmasq modemmanager networkmanager
+
+  ## Support
+  ppp iwd pptpclient libnma mobile-broadband-provider-info nm-connection-editor network-manager-applet
+
+## openvpn
+easy-rsa pkcs11-helper openvpn
+
+## wireguard
+wireguard-tools wireguard-arch
+
+## openssh
+dnssec-anchors ldns x11-ssh-askpass openssh
+
+## sshfs
+fuse3 sshfs
+
+## ufw
+ufw
+
+## xbindkeys
+xbindkeys
+
+## cava
+iniparser cava
+
+## glava
+glava
+
+## youtube-dl
+atomicparsley python-pycryptodome rtmpdump youtube-dl
+
+## mps-youtube
+python-pyperclip mps-youtube
+
+## gcsf
+rust llvm7-libs gcsf
+
+## bc
+bc
+
+## pv
+pv
+
+## lxsession
+lxsession
+
+## neofetch
+xdotool neofetch ufetch
+
+## scrot
+giblib scrot
+
+## java
+java-rhino java-environment-common java-runtime-common libnet jdk-openjdk jre-openjdk jre-openjdk-headless openjdk-doc openjdk-src
+
+## qt5
+qt5-base qt5-imageformats qt5-svg qt5ct qt5-x11extras
+
+## smartmontools
+smartmontools
+
+## nodejs
+c-ares http-parser node-gyp semver nodejs  npm
+
+## rtorrent
+libtorrent xmlrpc-c rtorrent
+
+## transmission
+transmission-cli transmission-remote-cli-git
+
+## screen
+screen
+
+## downgrade
+downgrade
+
+## cups
+ijs libpaper run-parts libcups cups-filters cups-pdf liblouis qpdf cups
+
+  ## support
+  perl-clone perl-dbi antiword perl-xml-libxml perl-xml-namespacesupport perl-xml-sax perl-xml-sax-base perl-capture-tiny  perl-ffi-checklib perl-file-chdir perl-file-which perl-path-tiny perl-alien-build perl-alien-libxml2 foomatic-db foomatic-db-ppds foomatic-db-nonfree-ppds foomatic-db-engine foomatic-db-nonfree foomatic-db-gutenprint-ppds gutenprint gsfonts
+
+  ## GUI (system-config-printer)
+  python-pysmbc cups-pk-helper gobject-introspection-runtime pygobject-devel python-cairo python-gobject python-pycups python-pycurl python-requests python-idna python-urllib3 system-config-printer
+
+## tty-clock
+tty-clock
+
+## qrencode
+qrencode
+
+## rsync
+rsync
+
+## asus-fan-dkms-git
+dkms asus-fan-dkms-git
+
+## xclip
+xclip
+  
+  ## Support
+  glew slop maim rofi-greenclip
+
+## speedtest-cli
+speedtest-cli
+
+## rdesktop
+libgssglue pcsclite libao rdesktop
+
+## freerdp
+freerdp
+
+## grafana
+grafana
+
+## prometheus
+prometheus
+
+## lnav
+lnav
+
+## rng-tools
+jitterentropy libp11 rng-tools
+
+## lsd
+lsd
+
+## peerflix
+peerflix
+
+## clamav
+libmspack bind-tools clamav clamav-unofficial-sigs
+
+## tree
+tree
+
+## pass
+browserpass browserpass-chromium browserpass-firefox tomb pass pass-tomb pass-update pwgen qtpass
+
+## watch-with-mpv
+watch-with-mpv
+
+## profile-sync-daemon
+profile-sync-daemon
+
+## anything-sync-daemon
+anything-sync-daemon
+
+## ffcast
+xrectsel ffcast
+
+## neomutt
+gmime kyotocabinet notmuch-runtime xapian-core neomutt
+
+  ## Support
+  abook
+
+## mutt-wizard
+gsasl isync msmtp mutt-wizard-git
+
+## cpupower
+cpupower
+
+## oomd
+gmock gtest meson oomd
+
+## arch-install-scripts
+arch-install-scripts
+
+## fwupd
+gcab libsmbios libstemmer  libxmlb fwupd
+
+## termdown
+espeak python-click python-pyfiglet termdown
+
+████████╗██╗  ██╗███████╗███╗   ███╗███████╗███████╗
+╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝██╔════╝
+   ██║   ███████║█████╗  ██╔████╔██║█████╗  ███████╗
+   ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ╚════██║
+   ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗███████║
+   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚══════╝
+
+## basic
+gnome-themes-extra gtk-engine-murrine
+
+## arc
+arc-gtk-theme arc-icon-theme
+
+## numix
+numix-gtk-theme numix-icon-theme-pack-git
+
+## zafiro-icon-theme
+zafiro-icon-theme
+
+## capitaine-cursors
+capitaine-cursors
+
+███████╗ ██████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗
+██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║
+██║     ╚██████╔╝██║ ╚████║   ██║   ███████║
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+
+ttf-font-awesome ttf-liberation cantarell-fonts ttf-dejavu ttf-symbola ttf-opensans ttf-ubuntu-font-family
+noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nerd-fonts-complete ttf-weather-icons
+
+## adobe-source-code-pro-fonts
+adobe-source-code-pro-fonts
+
+## terminus-font-ll2-td1-ttf
+fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
+
+██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗ 
+██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
+██║  ██║█████╗  ███████╗█████╔╝    ██║   ██║   ██║██████╔╝
+██║  ██║██╔══╝  ╚════██║██╔═██╗    ██║   ██║   ██║██╔═══╝ 
+██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║     
+╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝     
+
+## termite
+atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-lib tdb sound-theme-freedesktop libcanberra gtk3 vte-common termite-terminfo termite
+
+## chromium
+nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore ffmpeg minizip libxslt re2 snappy flac chromium
+
+## pepper-flash & flashplugin
+pepper-flash & gtk2 flashplugin
+
+## firefox
+mailcap mozilla-common firefox firefox-i18n-ru
+
+## qutebrowser
+pyqt5-common python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
+
+## surf
+surf
+
+## sublime-text-dev
+sublime-text-dev
+
+## code
+electron ripgrep libevent code
+
+## atom
+ctags apm atom
+
+## brackets
+brackets-bin
+
+## pavucontrol
+libcanberra-pulse libsigc++ glibmm cairomm pangomm atkmm gtkmm3 pavucontrol
+  
+  ## Support
+  pamixer
+
+## lxappearance
+lxappearance
+
+## gpick
+boost-libs gpick
+
+## telegram-desktop
+double-conversion libmng openal tslib telegram-desktop
+
+## skypeforlinux-stable-bin
+asar gnome-keyring skypeforlinux-stable-bin
+
+## discord
+clang compiler-rt ninja libc++ libc++abi libc++experimental discord
+
+## messengerfordesktop
+anydesk bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
+
+## mpv
+cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
+
+## vlc
+a52dec aribb24 libdca libdvbpsi libebml libmatroska libmpeg2 libplacebo libtar libmpcdec faad2 libupnp libmad vlc
+
+  ## Support
+  dav1d libdvdcss libdc1394 vcdimager protobuf live-media zvbi libkate libtiger srt chromaprint libgoom2 glm projectm
+
+## pcmanfm
+libfm libfm-extra libfm-gtk2 lxmenu-data menu-cache pcmanfm
+
+## curlftpfs
+curlftpfs
+
+## nfs-utils
+ding-libs gssproxy nfsidmap rpcbind nfs-utils
+
+## gksu
+docbook-xml docbook-xsl gconf glib2-docs gtk-doc intltool libgnome-keyring libgtop perl-xml-parser python-anytree python-lxml python-pygments source-highlight libgksu gksu
+
+## wget
+wget
+
+## aria2
+aria2
+
+## gparted
+gtkmm gparted
+
+  ## support
+  f2fs-tools udftools nilfs-utils gpart mtools ntfs-3g exfat-utils
+
+## xarchiver
+xarchiver
+
+## wps-office
+wps-office ttf-wps-fonts wps-office-extension-russian-dictionary wps-office-mui-ru-ru
+
+## etcher
+electron2 etcher-bin
+
+## zathura
+girara libsynctex zathura
+
+  ## Support
+  djvulibre ghostscript jbig2dec libspectre zathura-cb zathura-djvu libmupdf zathura-pdf-mupdf zathura-ps
+
+## inkscape
+gsl gtkspell libcdr libmagick6 librevenge libwpd poppler-glib inkscape
+
+  ## Support
+  blas cblas lapack libsigsegv libxaw plotutils python2-six t1lib zziplib texlive-bin gd pstoedit python2-lxml python2-numpy python2-scour texlive-core
+
+## gimp
+libxpm babl exiv2 gegl ilmbase intel-tbb lensfun libde265 libgexiv2 libheif libmypaint libraw libwmf metis mypaint-brushes openexr suitesparse gimp
+
+## blender
+alembic blosc hdf5 libaec libspnav log4cplus opencollada opencolorio openimageio openjpeg openshadinglanguage opensubdiv openvdb ptex tinyxml yaml-cpp blender
+
+## virtualbox
+virtualbox-host-modules-arch virtualbox
+
+  ## Support
+  vde2 virtualbox-guest-iso libvncserver virtualbox-ext-vnc virtualbox-ext-oracle virtualbox-guest-modules-arch virtualbox-guest-utils virtualbox-sdk
+
+## crow-translate
+qt5-tools crow-translate
+
+## ruby
+rubygems ruby
+
+## ipscan
+ipscan
+
+## arandr
+libglade pygobject2-devel pygtk python2-cairo python2-gobject2 arandr
+
+## woeusb
+grub wxgtk2 wxgtk-common woeusb
+
+## handbrake
+handbrake
+
+## spotify
+spotify
+
+## musixmatch-bin
+musixmatch-bin
+
+## nomachine
+nomachine
+
+## stellarium
+gpsd qt5-multimedia qt5-script qt5-serialport stellarium
+
+## popcorntime
+yarn popcorntime
+
+## obs-studio
+obs-studio
+
+## metasploit
+postgresql-libs ruby-bundler metasploit
+
+## nmap
+nmap
+
+## aircrack-ng
+aircrack-ng
+
+## hashcat
+ocl-icd xxhash hashcat
+
+## wpscan
+wpscan
+
+## mycroft
+oniguruma python-stevedore python-virtualenv-clone python2-virtualenv jq python-virtualenv python-virtualenvwrapper swig python2-appdirs python2-pyparsing python2-packaging python2-setuptools mimic-git fann mycroft-core
+
+## cronie
+cronie
+
+## newsboat
+stfl newsboat
+
+## pypi2pkgbuild
+elfutils namcap pyalpm python-cachecontrol python-colorama python-distlib python-distro python-html5lib python-lockfile python-msgpack python-pep517 python-pip python-progress python-pyelftools python-pytoml python-retrying python-webencodings python-pypi2pkgbuild
+
+██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
+██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
+██║ █╗ ██║█████╗  ██████╔╝    ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
+██║███╗██║██╔══╝  ██╔══██╗    ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
+╚███╔███╔╝███████╗██████╔╝    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
+ ╚══╝╚══╝ ╚══════╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+
+## nginx
+geoip-database geoip nginx  
+
+███████╗████████╗███████╗ █████╗ ███╗   ███╗
+██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
+███████╗   ██║   █████╗  ███████║██╔████╔██║
+╚════██║   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║
+███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║
+╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
+
+## steam
+openssl-1.0 aspell brotli enchant geocode-glib geoclue harfbuzz-icu hspell hunspell hyphen iso-codes libmm-glib libnotify libvoikko webkit2gtk woff2 zenity steam
+
+    ## lib32-packages
+    lib32-mesa-vdpau lib32-alsa-lib lib32-alsa-plugins lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxss lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-zlib lib32-attr lib32-db lib32-dbus lib32-flac lib32-glib2 lib32-libasyncns lib32-libcap lib32-libgcrypt lib32-libgpg-error lib32-libice lib32-libogg lib32-libsm lib32-libsndfile lib32-libvorbis lib32-libxi lib32-libxtst lib32-pcre lib32-speexdsp lib32-systemd lib32-util-linux lib32-xz lib32-celt lib32-opus lib32-jack2 lib32-libpulse lib32-libsamplerate lib32-speex lib32-nvidia-utils lib32-opencl-nvidia
+
+## steam-native-runtime
+dbus-glib freeglut glew1.10 glu libappindicator-gtk2 libcurl-compat libcurl-gnutls libdbusmenu-glib libdbusmenu-gtk2 libgcrypt15 libidn11 libindicator-gtk2 libjpeg6-turbo libmikmod libnm libnm-glib libpng12 librtmp0 libtiff4 libudev0-shim libva1 libvpx1.3 libwrap sdl2_image opusfile sdl2_mixer sdl2_ttf sdl_image sdl_mixer sdl_ttf smpeg portaudio fluidsynth steam-native-runtime
+
+    ## lib32-packages
+    lib32-atk lib32-cairo lib32-curl lib32-dbus-glib lib32-e2fsprogs lib32-fontconfig lib32-freeglut lib32-freetype2 lib32-fribidi lib32-gdk-pixbuf2 lib32-giflib lib32-glew1.10 lib32-glu lib32-gmp lib32-gnutls lib32-gtk2 lib32-harfbuzz lib32-imlib2 lib32-keyutils lib32-krb5 lib32-libappindicator-gtk2 lib32-libcaca lib32-libcanberra lib32-libcups lib32-libcurl-compat lib32-libcurl-gnutls lib32-libdatrie lib32-libdbusmenu-glib lib32-libdbusmenu-gtk2 lib32-libgcrypt15 lib32-libgudev lib32-libid3tag lib32-libidn lib32-libidn11 lib32-libidn2 lib32-libindicator-gtk2 lib32-libjpeg-turbo lib32-libjpeg6-turbo lib32-libldap lib32-libltdl lib32-libmikmod lib32-libmodplug lib32-libnm-glib lib32-libnsl lib32-libpng lib32-libpng12 lib32-libpsl lib32-librtmp0 lib32-libssh2 lib32-libtasn1 lib32-libthai lib32-libtheora lib32-libtiff lib32-libtiff4 lib32-libtirpc lib32-libudev0-shim lib32-libunistring lib32-libusb lib32-libva1 lib32-libvdpau lib32-libvpx1.3 lib32-libwebp lib32-libwrap lib32-libxcomposite lib32-libxcursor lib32-libxft lib32-libxinerama lib32-libxmu lib32-libxrandr lib32-libxrender lib32-libxt lib32-lz4 lib32-mpg123 lib32-nettle lib32-nspr lib32-nss lib32-openal lib32-openssl-1.0 lib32-openssl lib32-p11-kit lib32-pango lib32-pixman lib32-sdl lib32-sdl2 lib32-sdl2_image lib32-sdl2_mixer lib32-sdl2_ttf lib32-sdl_image lib32-sdl_mixer lib32-sdl_ttf lib32-smpeg lib32-sqlite lib32-tdb lib32-zstd lib32-portaudio lib32-fluidsynth lib32-libcanberra-pulse
+
+## wine
+faudio lib32-acl lib32-faudio lib32-gettext lib32-lcms2 lib32-libnl lib32-libpcap wine wine-mono wine_gecko
+
+  ## winetricks
+  abextract xorg-xmessage winetricks
