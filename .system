@@ -1,0 +1,175 @@
+██████╗ ███████╗██████╗ ███████╗ ██████╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗ ██████╗███████╗
+██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔══██╗████╗  ██║██╔════╝██╔════╝
+██████╔╝█████╗  ██████╔╝█████╗  ██║   ██║██████╔╝██╔████╔██║███████║██╔██╗ ██║██║     █████╗  
+██╔═══╝ ██╔══╝  ██╔══██╗██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██╔══██║██║╚██╗██║██║     ██╔══╝  
+██║     ███████╗██║  ██║██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╗███████╗
+╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝
+
+## Swapping
+
+/etc/sysctl.d/90-swappiness.conf
+vm.swappiness = 10
+
+## / Swapping
+
+## Max user watch
+
+/etc/sysctl.d/90-max_user_watches.conf
+fs.inotify.max_user_watches = 600000
+
+## / Max user watch
+
+## LVM
+
+/etc/mkinitcpio.conf
+HOOKS=(base systemd autodetect modconf block sd-lvm2 filesystems keyboard fsck)
+
+## / LVM
+
+## Plymouth
+
+/etc/mkinitcpio.conf
+HOOKS=(base systemd sd-plymouth autodetect modconf block sd-lvm2 filesystems keyboard fsck)
+
+## /Plymouth
+
+## Fan speed
+ 
+/etc/modules-load.d/asus_fan.conf
+
+## /Fan speed
+
+## Relink bash to dash
+ln -sfT dash /usr/bin/sh
+
+
+
+
+
+███████╗██╗   ██╗███████╗████████╗███████╗███╗   ███╗██████╗ 
+██╔════╝╚██╗ ██╔╝██╔════╝╚══██╔══╝██╔════╝████╗ ████║██╔══██╗
+███████╗ ╚████╔╝ ███████╗   ██║   █████╗  ██╔████╔██║██║  ██║
+╚════██║  ╚██╔╝  ╚════██║   ██║   ██╔══╝  ██║╚██╔╝██║██║  ██║
+███████║   ██║   ███████║   ██║   ███████╗██║ ╚═╝ ██║██████╔╝
+╚══════╝   ╚═╝   ╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚═╝╚═════╝ 
+
+## Enabled
+[su]            slim.service
+[su]            NetworkManager.service
+[su]            bluetooth.service
+[su]            ufw.service
+[su]            rngd.service
+[su]            oomd.service
+[su]            cronie.service
+
+[user]          psd.service
+
+## Avalible
+[su]            org.cups.cupsd.service
+[su]            fancontrol.service
+[su]            sshd.service
+[su]            asd.service
+[su]            clamav-daemon.service
+[su]            clamav-freshclam.service
+[su]            clamav-unofficial-sigs.timer
+
+[user]          rtorrent.service
+[user]          mycroft.service
+
+
+
+
+
+
+
+
+
+
+
+
+
+██████╗ ██╗     ██╗   ██╗███████╗████████╗ ██████╗  ██████╗ ████████╗██╗  ██╗
+██╔══██╗██║     ██║   ██║██╔════╝╚══██╔══╝██╔═══██╗██╔═══██╗╚══██╔══╝██║  ██║
+██████╔╝██║     ██║   ██║█████╗     ██║   ██║   ██║██║   ██║   ██║   ███████║
+██╔══██╗██║     ██║   ██║██╔══╝     ██║   ██║   ██║██║   ██║   ██║   ██╔══██║
+██████╔╝███████╗╚██████╔╝███████╗   ██║   ╚██████╔╝╚██████╔╝   ██║   ██║  ██║
+╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝  ╚═════╝    ╚═╝   ╚═╝  ╚═╝
+                                                                             
+## Auto connect bluetooth pulseaudio
+
+    /etc/pulse/default.pa
+    
+    ...
+    # automatically switch to newly-connected devices
+    load-module module-switch-on-connect
+    load-module module-bluetooth-discover a2dp_config="ldac_eqmid=hq ldac_fmt=f32"
+    ...
+
+
+    pactl list short | grep bluetooth
+
+## / Auto connect bluetooth pulseaudio
+
+## Auto enable bluetooth
+
+    /etc/bluetooth/main.conf
+    
+    ...
+    [Policy]
+    AutoEnable=true
+    ...
+
+## / Auto enable bluetooth
+
+## Add user to group
+
+    gpasswd -a $USER lp audio
+
+## / Add user to group
+
+
+
+
+
+
+
+
+ ██████╗ ██████╗  ██████╗ ██╗   ██╗██████╗ ███████╗
+██╔════╝ ██╔══██╗██╔═══██╗██║   ██║██╔══██╗██╔════╝
+██║  ███╗██████╔╝██║   ██║██║   ██║██████╔╝███████╗
+██║   ██║██╔══██╗██║   ██║██║   ██║██╔═══╝ ╚════██║
+╚██████╔╝██║  ██║╚██████╔╝╚██████╔╝██║     ███████║
+ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚══════╝
+
+## Bluetooth + Audio
+
+    gpasswd -a $USER lp audio
+
+## Jack
+
+    gpasswd -a $USER realtime
+
+
+## Virtualbox
+    
+    gpasswd -a $USER vboxusers vboxsf storage
+
+
+
+
+
+
+
+
+███████╗██╗   ██╗███╗   ███╗██╗     ██╗███╗   ██╗██╗  ██╗███████╗
+██╔════╝╚██╗ ██╔╝████╗ ████║██║     ██║████╗  ██║██║ ██╔╝██╔════╝
+███████╗ ╚████╔╝ ██╔████╔██║██║     ██║██╔██╗ ██║█████╔╝ ███████╗
+╚════██║  ╚██╔╝  ██║╚██╔╝██║██║     ██║██║╚██╗██║██╔═██╗ ╚════██║
+███████║   ██║   ██║ ╚═╝ ██║███████╗██║██║ ╚████║██║  ██╗███████║
+╚══════╝   ╚═╝   ╚═╝     ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
+                                                                 
+ln -s /opt/balenaEtcher/balena-etcher-electron /usr/bin/etcher
+ln -s /home/flappy/.config/i3/wall.png /usr/share/slim/themes/flappy/background.png
+ln -s /home/flappy/.scripts/rdp /usr/bin/rdp
+ln -s /home/flappy/.scripts/xrdp /usr/bin/xrdp
+ln -s /usr/bin/chromium /usr/bin/google-chrome (brackets)
