@@ -207,13 +207,13 @@ user_pref("camera.control.face_detection.enabled",		false);
 // PREF: Disable GeoIP lookup on your address to set default search engine region
 // https://trac.torproject.org/projects/tor/ticket/16254
 // https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_geolocation-for-default-search-engine
-user_pref("browser.search.countryCode",				"US");
-user_pref("browser.search.region",				"US");
+user_pref("browser.search.countryCode",				"RU");
+user_pref("browser.search.region",				"RU");
 user_pref("browser.search.geoip.url",				"");
 
 // PREF: Set Accept-Language HTTP header to en-US regardless of Firefox localization
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
-user_pref("intl.accept_languages",				"en-US, en");
+user_pref("intl.accept_languages",				"ru-RU, ru");
 
 // PREF: Don't use OS values to determine locale, force using Firefox locale setting
 // http://kb.mozillazine.org/Intl.locale.matchOS
