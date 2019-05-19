@@ -326,9 +326,6 @@ fuse3 sshfs
 ## ufw
 ufw
 
-## xbindkeys
-xbindkeys
-
 ## cava
 iniparser cava
 
