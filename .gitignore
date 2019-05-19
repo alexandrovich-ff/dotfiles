@@ -25,7 +25,6 @@
 !.nvidia-settings-rc
 !.nvidia-xinitrc
 !.system
-!.xbindkeysrc
 !.xinitrc
 !.Xresources
 !.zshrc
@@ -36,6 +35,7 @@
 !.notmuch-config
 !.mozilla
 # Директории
+!.local
 !.vim
 !.config
 !.fonts
