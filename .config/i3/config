@@ -426,7 +426,7 @@ bindsym $alt+space $start ::dmenu_run
 # %%hotkey: Меню выклчючения %%
 bindsym $mod+$esc $start ::powermenu
 # %%hotkey: Заблокировать экран %%
-bindsym $mod+$alt+l $start notify-send "Экран заблокирован" & sleep 1 && ::lock; $start xset dpms force off
+bindsym $mod+$alt+l $start notify-send "Экран заблокирован" && sleep 1 && ::lock && xset dpms force off
 # %%hotkey: Запустить браузер %%
 bindsym $mod+$alt+c $start $BROWSER & notify-send ": Браузер запущен"
 # %%hotkey: Запустить терминал %%
