@@ -650,6 +650,8 @@ celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte
   ## Support
   ## libvirt
   augeas ceph-libs glusterfs gperftools leveldb libiscsi liburcu netcf oath-toolkit xmlsec libvirt
+  ## virt-manager
+  gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk virt-install virt-manager
 
 ## ruby
 rubygems ruby
