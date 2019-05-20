@@ -56,7 +56,6 @@ ln -sfT dash /usr/bin/sh
 ## Enabled
 [su]            slim.service
 [su]            NetworkManager.service
-[su]            bluetooth.service
 [su]            ufw.service
 [su]            rngd.service
 [su]            oomd.service
@@ -65,6 +64,7 @@ ln -sfT dash /usr/bin/sh
 [user]          psd.service
 
 ## Avalible
+[su]            bluetooth.service
 [su]            org.cups.cupsd.service
 [su]            fancontrol.service
 [su]            sshd.service
