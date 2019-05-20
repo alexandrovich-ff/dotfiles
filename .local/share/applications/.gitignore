@@ -16,6 +16,7 @@
 # #---Видимые---# #
 # Файлы
 !.gitignore
+!defaults.list
 !img.desktop
 !mail.desktop
 !pdf.desktop

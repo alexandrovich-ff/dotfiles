@@ -1,4 +1,5 @@
 [Desktop Entry]
 Type=Application
 Name=Просмотр изображений
-Exec=/usr/bin/sxiv -a %u
+Exec=/usr/bin/sxiv -a %F
+Icon=sxiv
