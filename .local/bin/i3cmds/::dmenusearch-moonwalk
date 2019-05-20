@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _ __  __  ___   ___  _   ___        ___    _     _  __
+# |  _ \|  \/  | ____| \ | | | | |  \/  |/ _ \ / _ \| \ | \ \      / / \  | |   | |/ /
+# | | | | |\/| |  _| |  \| | | | | |\/| | | | | | | |  \| |\ \ /\ / / _ \ | |   | ' / 
+# | |_| | |  | | |___| |\  | |_| | |  | | |_| | |_| | |\  | \ V  V / ___ \| |___| . \ 
+# |____/|_|  |_|_____|_| \_|\___/|_|  |_|\___/ \___/|_| \_|  \_/\_/_/   \_\_____|_|\_\
+#
+# Скрипт удобного поиска в YouTube
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+browser=${BROWSER:-firefox}
+
+pgrep -x dmenu && exit
+
+choice=$(echo "" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Поиск на Moonwalk:") || exit 1
+
+if [ "$choice" = ""  ]; then
+    $browser "http://moonwalk.cc/partners/movies"
+else
+    if "$choice" | grep "^(http:\/\/|https:\/\/)?[a-zA-Z0-9]+\.[a-zA-Z]+(/)?.*$"; then
+        $browser "$choice"
+    else
+        $browser "http://moonwalk.cc/partners/search?utf8=%E2%9C%93&search=$choice&page=all"
+    fi
+fi

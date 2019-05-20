@@ -10,14 +10,14 @@
 # Website: http://malikov.red
 
 # Просмотр фоновых изображений
-:wall(){sxiv -t ~/Картинки/Фоны\ рабочих\ столов/$1/*.*}
+:wall(){sxiv -t $HOME/Картинки/Фоны\ рабочих\ столов/$1/*.*}
 # Приложения
 :timer() {termdown $1 | lolcat}
 # Просмотр конфигурационных файлов
-:sec() { du -a ~/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-:ses() { du -a ~/.scripts/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-:serv() {du -a ~/Документация/*UNIX/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-:bz() {du -a ~/База\ знаний/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+:sec() { du -a $HOME/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+:ses() { du -a $HOME/.local/bin/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+:serv() {du -a $HOME/Документация/*UNIX/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+:bz() {du -a $HOME/База\ знаний/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 :vf() { fzf | xargs -r -I % $EDITOR % ;}
 # Переустановка всех пакетов системы
 :rebuild() { sudo pacman -S $(pacman -Qnq) }

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# vim: filetype=rofi
+#   ____ ___  _     ___  ____  ____  
+#  / ___/ _ \| |   / _ \|  _ \|  _ \ 
+# | |  | | | | |  | | | | |_) | | | |
+# | |__| |_| | |__| |_| |  _ <| |_| |
+#  \____\___/|_____\___/|_| \_\____/ 
+#
+# Светлая цветовая тема
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+MENU="$(rofi -theme $HOME/.config/rofi/light.rasi -sep "|" -dmenu -i -p 'Светлая цветовая схема' -location 5 -columns 2 -xoffset -50 -yoffset -450 -width 30 -hide-scrollbar -line-padding 4 -padding 20 -lines 10 <<< " Янтарная| Синяя| Сине-серая| Коричневая| Циан| Темно-оранжевая| Темно-пурпурная| Зеленая| Серая| Индиго| Светло-синяя| Светло-зеленая| Лаймовая| Оранжевая| Розовая| Пурпурная| Красная| Сине-зеленая| Желтая")"
+            case "$MENU" in
+                *Янтарная) ::color-light -amber ;;
+                *Синяя) ::color-light -blue ;;
+                *Сине-серая) ::color-light -blue-grey ;;
+                *Коричневая) ::color-light -brown ;;
+                *Циан) ::color-light -cyan ;;
+                *Темно-оранжевая) ::color-light -deep-orange ;;
+                *Темно-пурпурная) ::color-light -deep-purple ;;
+                *Зеленая) ::color-light -green ;;
+                *Серая) ::color-light -grey ;;
+                *Индиго) ::color-light -indigo ;;
+                *Светло-синяя) ::color-light -light-blue ;;
+                *Светло-зеленая) ::color-light -light-green ;;
+                *Лаймовая) ::color-light -lime ;;
+                *Оранжевая) ::color-light -orange ;;
+                *Розовая) ::color-light -pink ;;
+                *Пурпурная) ::color-light -purple ;;
+                *Красная) ::color-light -red ;;
+                *Сине-зеленая) ::color-light -teal ;;
+                *Желтая) ::color-light -yellow            
+            esac

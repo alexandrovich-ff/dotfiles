@@ -56,9 +56,6 @@ set $del Delete
 set $r --release
 # Директории
 set $i3 ${HOME}/.config/i3
-set $i3blocks ${HOME}/.config/i3blocks
-set $config ${HOME}/.config
-set $scripts ${HOME}/.config/i3/scripts
 set $polybar ${HOME}/.config/polybar
 # Выполнение / запуск
 set $start exec --no-startup-id
@@ -72,19 +69,14 @@ set $hibernate sudo -A systemctl suspend
 set $netrefresh sudo -A systemctl restart NetworkManager
 set $proccess_kill xkill
 # Приложения
-set $term termite -c $HOME/.config/termite/termite-dark.color
-set $dmenu_run dmenu_run -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14'
-set $passmenu passmenu -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14'
-set $browser $BROWSER
+set $passmenu ::passmenu
 set $editor termite -c $HOME/.config/termite/termite-dark.color -t 'Текстовый редактор' -e nvim
 set $filemanager termite -c $HOME/.config/termite/termite-dark.color -t 'Файловый менеджер' -e $HOME/.config/vifm/vifmrun
 set $proccess termite -c $HOME/.config/termite/termite-dark.color -t 'Менеджер процессов' -e gotop
 set $telegram termite -c $HOME/.config/termite/termite-dark.color -t "Телеграм" -e nctelegram
 set $xkill xkill
 set $calculate galculator
-set $equalizer termite -c ${HOME}/.config/termite/termite-dark.color -t 'Эквалайзер' -e cava
-set $ifrun $HOME/.config/i3/scripts/ifrunning
-set $ifinstall $HOME/.config/i3/scripts/ifinstalled
+set $equalizer $TERMINAL -t 'Эквалайзер' -e cava
 
 # #---Рабочая панель--# #
 # Статус бар
@@ -392,9 +384,9 @@ bindsym $mod+p $start $polybar/launch & notify-send "🧰 Панель вклю�
 bindsym $mod+$shift+p $start $polybar/stop & notify-send "🧰 Панель выключена"
 
 # %%hotkey: Запустить горизонтальный терминал %%
-bindsym $mod+bracketright   split horizontal ;; exec $term
+bindsym $mod+bracketright   split horizontal ;; exec $TERMINAL
 # %%hotkey: Запустить вертикальный терминал %%
-bindsym $mod+bracketleft    split vertical ;; exec $term
+bindsym $mod+bracketleft    split vertical ;; exec $TERMINAL
 
 # %%hotkey: Включить отступы %%
 bindsym $mod+$shift+t gaps inner current set 15; gaps outer current set 15
@@ -412,7 +404,7 @@ bindsym XF86AudioLowerVolume $start pamixer -d 5
 bindsym XF86AudioMute $start pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp $start xbacklight -inc 10
 bindsym XF86MonBrightnessDown $start xbacklight -dec 10
-bindsym XF86TouchpadToggle $start $i3/bin/toggletouchpad
+bindsym XF86TouchpadToggle $start ::toggletouchpad
 bindsym XF86AudioPlay $start playerctl play-pause
 bindsym XF86AudioStop $start playerctl stop
 bindsym XF86AudioNext $start playerctl next
@@ -420,26 +412,26 @@ bindsym XF86AudioPrev $start playerctl previous
 bindsym XF86Calculator $start $calculate & notify-send ": Калькулятор запущен"
 # Мультимедийные клавиши (Fn's) внешняя клавиатура
 bindsym XF86Tools $start spotify & notify-send ": Spotify запущен"
-bindsym XF86Mail $start mailsync; $start $term -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
+bindsym XF86Mail $start mailsync; $start $TERMINAL -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
 # Мультимедийные клавиши (Fn's) джойстик
-bindsym XF86WWW $start $browser & notify-send ": Браузер запущен"
+bindsym XF86WWW $start $BROWSER & notify-send ": Браузер запущен"
 # Приложения
 # %%hotkey: Комбинации клавиш %%
 bindsym $mod+$alt+k $start dmenu_hotkeys --menu rofi --app i3
 # %%hotkey: Лаунчер приложений dmenu %%
-bindsym $mod+space $start $polybar/scripts/launcher
+bindsym $mod+space $start ::launcher
 # %%hotkey: Лаунчер приложений rofi %%
-bindsym $alt+space $start $dmenu_run
+bindsym $alt+space $start ::dmenu_run
 # %%hotkey: Меню выклчючения %%
-bindsym $mod+$esc $start $polybar/scripts/powermenu
+bindsym $mod+$esc $start ::powermenu
 # %%hotkey: Заблокировать экран %%
-bindsym $mod+$alt+l $start notify-send "Экран заблокирован" & sleep 1 && $i3/bin/lock; $start xset dpms force off
+bindsym $mod+$alt+l $start notify-send "Экран заблокирован" & sleep 1 && ::lock; $start xset dpms force off
 # %%hotkey: Запустить браузер %%
-bindsym $mod+$alt+c $start $browser & notify-send ": Браузер запущен"
+bindsym $mod+$alt+c $start $BROWSER & notify-send ": Браузер запущен"
 # %%hotkey: Запустить терминал %%
-bindsym $mod+$enter $start $term -t 'Терминал' & notify-send ": Терминал запущен"
+bindsym $mod+$enter $start $TERMINAL -t 'Терминал' & notify-send ": Терминал запущен"
 # %%hotkey: Запустить плавающий терминал %%
-bindsym $mod+$shift+$enter $start $term -t 'Плавающий терминал' & notify-send ": Терминал запущен"
+bindsym $mod+$shift+$enter $start $TERMINAL -t 'Плавающий терминал' & notify-send ": Терминал запущен"
 # %%hotkey: Запустить консольный текстовый редактор %%
 bindsym $mod+$alt+s $start $editor & notify-send ": Текстовый редактор запущен"
 # %%hotkey: Запустить графический текстовый редактор %%
@@ -458,64 +450,66 @@ bindsym $r $alt+$esc $start $proccess_kill & notify-send ": Выберите 
 bindsym $mod+$alt+backslash $start glava --desktop & notify-send "Визуалитор установлен в качестве фона рабочего стола"
 # %%hotkey: Запустить визуализатор %%
 bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send "Визуализатор запущен"
-#bindsym $mod+$shift+m $start $term -t 'Видео YouTube' -e mpsyt & notify-send "Медиа плеер YouTube открыт в режиме быстрого доступа"
+#bindsym $mod+$shift+m $start $TERMINAL -t 'Видео YouTube' -e mpsyt & notify-send "Медиа плеер YouTube открыт в режиме быстрого доступа"
 # Скрипты
 # %%hotkey: Поиск в Google %%
-bindsym $mod+F1 $start $scripts/dmenusearch
+bindsym $mod+F1 $start ::dmenusearch
 # %%hotkey: Поиск на YouTube %%
-bindsym $mod+$alt+F1 $start $scripts/dmenusearch-youtube
+bindsym $mod+$alt+F1 $start ::dmenusearch-youtube
 # %%hotkey: Запуск почтового клиента %%
-bindsym $mod+$shift+F1 $start mailsync; $start $term -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
+bindsym $mod+$shift+F1 $start mailsync; $start $TERMINAL -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
 # %%hotkey: Настройка подключения сети %%
-bindsym $mod+F2 $start $term -t 'Настройка сети' -e nmtui
+bindsym $mod+F2 $start $TERMINAL -t 'Настройка сети' -e nmtui
 # %%hotkey: Перезапустить службу сети %%
 bindsym $mod+$shift+F2 $start $netrefresh & notify-send "Служба сети перезапущена"
 # %%hotkey: Поиск на Moonwalk %%
-bindsym $mod+$alt+F2 $start $scripts/dmenusearch-moonwalk
+bindsym $mod+$alt+F2 $start ::dmenusearch-moonwalk
 # %%hotkey: Поиск пароля %%
 bindsym $mod+F3 $start $passmenu
 # %%hotkey: Хранилище паролей %%
 bindsym $mod+$shift+F3 $start qtpass
 # %%hotkey: Документация в PDF %%
-bindsym $mod+F4 $start $scripts/dmenuman
+bindsym $mod+F4 $start ::dmenuman
 # %%hotkey: Служба торрентов %%
-bindsym $alt+F4 $start $scripts/transmission/toggle
+bindsym $alt+F4 $start ::transmission
 # %%hotkey: Включить веб камеру %%
-bindsym $mod+F7 $start $scripts/camtoggle
+bindsym $mod+F7 $start ::camtoggle
 # %%hotkey: Скачать музыку с YouTube %%
-bindsym $mod+$shift+F7 $start $scripts/dmenuyoutube/youtube-music
+bindsym $mod+$shift+F7 $start ::dmenuyoutube-music
 # %%hotkey: Режим второго монитора %%
-bindsym $mod+F8 $start $scripts/dmenudisplay
+bindsym $mod+F8 $start ::dmenudisplay
 # %%hotkey: Скачать видео с YouTube %%
-bindsym $mod+$shift+F8 $start $scripts/dmenuyoutube/youtube-dl
+bindsym $mod+$shift+F8 $start ::dmenuyoutube-video
 # %%hotkey: Подключение внешних устройств %%
-bindsym $mod+F9 $start $scripts/dmenumount
+bindsym $mod+F9 $start ::dmenumount
 # %%hotkey: Отключение внешних устройств %%
-bindsym $mod+F10 $start $scripts/dmenuumount
+bindsym $mod+F10 $start ::dmenuumount
 # %%hotkey: Список Emoji %%
-bindsym $mod+grave $start $scripts/dmenuunicode
+bindsym $mod+grave $start ::dmenuunicode
+# %%hotkey; Список FontAwesome %%
+bindsym $alt+grave $start ::dmenufontawesome
 # %%hotkey: Запись экрана %%
-bindsym $mod+Print $start $scripts/dmenurecord
+bindsym $mod+Print $start $::dmenurecord
 # %%hotkey: Содержимое буфера %%
-bindsym $mod+Home $start $scripts/showclip
+bindsym $mod+Home $start ::showclip
 # %%hotkey: Изменить размер окна [влево] %%
-bindsym $ctrl+$mod+h $start $scripts/i3resize left
+bindsym $ctrl+$mod+h $start ::i3resize left
 # %%hotkey: Изменить размер окна [вправо] %%
-bindsym $ctrl+$mod+l $start $scripts/i3resize right
+bindsym $ctrl+$mod+l $start ::i3resize right
 # %%hotkey: Изменить размер окна [вверх] %%
-bindsym $ctrl+$mod+k $start $scripts/i3resize up
+bindsym $ctrl+$mod+k $start ::i3resize up
 # %%hotkey: Изменить размер окна [вниз] %%
-bindsym $ctrl+$mod+j $start $scripts/i3resize down
+bindsym $ctrl+$mod+j $start ::i3resize down
 # %%hotkey: Изменить размер окна %%
-bindsym $mod+$shift+e $start $scripts/dmenuresize
+bindsym $mod+$shift+e $start ::dmenuresize
 # %%hotkey: Переместить окно влево-вниз %%
-bindsym $mod+$shift+b $start $scripts/hover left
+bindsym $mod+$shift+b $start ::hover left
 # %%hotkey: Переместить окно вправо-вниз %%
-bindsym $mod+$shift+n $start $scripts/hover right
+bindsym $mod+$shift+n $start ::hover right
 # %%hotkey: Сделать скриншот %%
-bindsym Print $start $scripts/dmenuscreenshot
+bindsym Print $start ::dmenuscreenshot
 # %%hotkey: Сгенерировать QRCode %%
-bindsym $mod+Pause $start $scripts/xcqr
+bindsym $mod+Pause $start ::xcqr
 # %%hotkey: Переключить вкладку -> %%
 bindsym $mod+$tab $start i3flip right
 # %%hotkey: Переключить вкладку <- %%
@@ -528,7 +522,7 @@ bindsym $mod+$shift+$tab $start i3flip left
 # Системные утилиты
 $start setxkbmap us,ru -option grp:caps_toggle
 #$start xmodmap -e "pointer = 3 2 1 6 7 8 9 10 11 12 4 5"
-$start feh --bg-scale ${HOME}/.config/i3/wall.png
+$start feh --bg-scale $i3/wall.png
 $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst

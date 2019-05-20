@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _ 
+# |  _ \|  \/  | ____| \ | | | | |
+# | | | | |\/| |  _| |  \| | | | |
+# | |_| | |  | | |___| |\  | |_| |
+# |____/|_|  |_|_____|_| \_|\___/ 
+#                                              
+# Запуск dmenu з параметрами
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+dmenu -nb '#2D303B' -nf white -sb blue -sf white -fn 'Terminus (TTF)-14' "$@"

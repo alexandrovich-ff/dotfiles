@@ -17,5 +17,5 @@ content-background = ${color.ac}
 content-foreground = ${color.mf}
 content-padding = 2
 
-click-left = $HOME/.config/polybar/scripts/launcher
-click-right = $HOME/.config/polybar/scripts/launcher
+click-left = ::launcher
+click-right = ::launcher

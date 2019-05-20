@@ -11,9 +11,9 @@
 
 # #---Proton---#
 # Proton run
-:proton() {python ~/.proton/run.py $1}
+:proton() {python $HOME/.proton/run.py $1}
 
 # #---Wine---#
 # Torchlight 2
-alias :torchlight2="WINEPREFIX=~/.wine/Torchlight\ 2 wine ~/.wine/Torchlight\ 2/drive_c/Program\ Files\ \(x86\)/Runic\ Games/Torchlight\ 2/Torchlight2.exe"
-alias :ss2="WINEPREFIX=~/.wine/SS2 wine ~/.wine/SS2/drive_c/Program\ Files/Serious\ Sam\ 2/Bin/Sam2.exe"
+alias :torchlight2="WINEPREFIX=$HOME/.wine/Torchlight\ 2 wine $HOME/.wine/Torchlight\ 2/drive_c/Program\ Files\ \(x86\)/Runic\ Games/Torchlight\ 2/Torchlight2.exe"
+alias :ss2="WINEPREFIX=$HOME/.wine/SS2 wine $HOME/.wine/SS2/drive_c/Program\ Files/Serious\ Sam\ 2/Bin/Sam2.exe"

@@ -15,5 +15,5 @@ content = 
 
 content-background = ${color.ac}
 
-click-left = $HOME/.config/i3/scripts/earth-wall &
-click-right = $HOME/.config/i3/scripts/earth-wall &
+click-left = ::earth-wall &
+click-right = ::earth-wall &

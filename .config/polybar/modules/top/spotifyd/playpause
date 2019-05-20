@@ -13,7 +13,7 @@
 type = custom/script
 interval = 1
 format = <label>
-exec = python $HOME/.config/polybar/scripts/spotify-playpause -p ','
+exec = ::spotify-playpause -p ','
 click-left = "playerctl play-pause"
 format-background = ${color.ac}
 format-padding = 1

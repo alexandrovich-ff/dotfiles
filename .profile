@@ -10,13 +10,14 @@
 # Website: http://malikov.red
 
 # Переменные окружения
-#export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
-export TERMINAL="termite --config ~/.config/termite/termite-dark.color"
+export TERMINAL="$HOME/.local/bin/tools/::terminal"
+export TERM=xterm-color
 export BROWSER="firefox"
 export READER="zathura"
 export FILE="vifm"
-export SUDO_ASKPASS="$HOME/.config/i3/scripts/dmenupass"
+export SUDO_ASKPASS="$HOME/.local/bin/tools/::dmenupass"
 
 # Цветовая палитра LESS
 export LESS=-R

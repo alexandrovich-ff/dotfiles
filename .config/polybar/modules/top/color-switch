@@ -15,5 +15,5 @@ content = 
 
 content-background = ${color.ac}
 
-click-left = $HOME/.config/polybar/scripts/color-switch-light &
-click-right = $HOME/.config/polybar/scripts/color-switch-dark &
+click-left = ::color-switch-light &
+click-right = ::color-switch-dark &

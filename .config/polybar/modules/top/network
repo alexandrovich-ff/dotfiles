@@ -11,12 +11,12 @@
 
 [module/network]
 type = custom/script
-exec = $HOME/.config/polybar/scripts/network
+exec = ::network
 tail = true
 interval = 5
 
 format-background = ${color.ac}
 format-padding = 1
 
-click-left = termite -c $HOME/.config/termite/termite-light.color -t "Настройка сети" -e nmtui &
-click-right = termite -c $HOME/.config/termite/termite-light.color -t "Настройка сети" -e nmtui &
+click-left = $TERMINAL -t "Настройка сети" -e nmtui &
+click-right = $TERMINAL -t "Настройка сети" -e nmtui &

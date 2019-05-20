@@ -11,11 +11,11 @@
 
 [module/updates]
 type = custom/script
-exec = $HOME/.config/polybar/scripts/updates
+exec = ::updates
 tail = true
 interval = 5
 
 format-background = ${color.ac}
 format-padding = 1
 
-click-left = $HOME/.config/polybar/scripts/lupdates &
+click-left = ::lupdates &

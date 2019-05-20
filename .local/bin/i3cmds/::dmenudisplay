@@ -1,0 +1,73 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _       ____ ___ ____  ____  _        _ __   __
+# |  _ \|  \/  | ____| \ | | | | |     |  _ \_ _/ ___||  _ \| |      / \\ \ / /
+# | | | | |\/| |  _| |  \| | | | |_____| | | | |\___ \| |_) | |     / _ \\ V / 
+# | |_| | |  | | |___| |\  | |_| |_____| |_| | | ___) |  __/| |___ / ___ \| |  
+# |____/|_|  |_|_____|_| \_|\___/      |____/___|____/|_|   |_____/_/   \_\_|  
+#
+# Скрипт выбора дисплея, с разными параметрами подключения
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+twoscreen() {
+
+    mirror=$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Отзеркалить экраны?")
+    if [ "$mirror" = "Да" ]; then
+        external=$(echo "$screens" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Оптимизировать разрешение для:")
+        internal=$(echo "$screens" | grep -v "$external")
+
+        res_external=$(xrandr --query | sed -n "/^$external/,/\+/p" | \
+            tail -n 1 | awk '{print $1}')
+        res_internal=$(xrandr --query | sed -n "/^$internal/,/\+/p" | \
+            tail -n 1 | awk '{print $1}')
+
+        res_ext_x=$(echo "$res_external" | sed 's/x.*//')
+        res_ext_y=$(echo "$res_external" | sed 's/.*x//')
+        res_int_x=$(echo "$res_internal" | sed 's/x.*//')
+        res_int_y=$(echo "$res_internal" | sed 's/.*x//')
+
+        scale_x=$(echo "$res_ext_x / $res_int_x" | bc -l)
+        scale_y=$(echo "$res_ext_y / $res_int_y" | bc -l)
+
+        xrandr --output "$external" --auto --scale 1.0x1.0 \
+            --output "$internal" --auto --same-as "$external" \
+            --scale "$scale_x"x"$scale_y"
+    else
+
+        primary=$(echo "$screens" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите основной дисплей:")
+        secondary=$(echo "$screens" | grep -v "$primary")
+        direction=$(printf "left-of\\nright-of\\nbelow\\nabove" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "На какой стороне от $primary должен быть $secondary?")
+        xrandr --output "$primary" --auto --scale 1.0x1.0 --output "$secondary" --"$direction" "$primary" --auto --scale 1.0x1.0
+    fi
+    }
+
+morescreen() {
+	primary=$(echo "$screens" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите основной дисплей:")
+	secondary=$(echo "$screens" | grep -v "$primary" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите дополнительный дисплей:")
+	direction=$(printf "Слева\\nСправа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "На какой стороне от $primary должен быть $secondary?")
+	tertiary=$(echo "$screens" | grep -v "$primary" | grep -v "$secondary" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите третий дисплей:")
+	xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "Слева\\nСправа" | grep -v "$direction")"-of "$primary" --auto
+	}
+
+multimon() {
+	case "$(echo "$screens" | wc -l)" in
+		1) xrandr $(echo "$allposs" | grep -v "$screens" | awk '{print "--output", $1, "--off"}' | tr '\n' ' ') ;;
+		2) twoscreen ;;
+		*) morescreen ;;
+	esac ;}
+
+allposs=$(xrandr -q | grep "connected")
+
+screens=$(echo "$allposs" | grep " connected" | awk '{print $1}')
+
+chosen=$(printf "%s\\nМульти-монитор\\nРучная настройка" "$screens" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите расположение дисплея:") &&
+case "$chosen" in
+	"Ручная настройка") arandr ; exit ;;
+	"Мульти-монитор") multimon ;;
+	*) xrandr --output "$chosen" --auto --scale 1.0x1.0 $(echo "$allposs" | grep -v "$chosen" | awk '{print "--output", $1, "--off"}' | tr '\n' ' ') ;;
+esac
+
+::setbg
+pgrep -x dunst >/dev/null && killall dunst && setsid dunst &

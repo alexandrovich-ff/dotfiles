@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _       __  __  ___  _   _ _   _ _____ 
+# |  _ \|  \/  | ____| \ | | | | |     |  \/  |/ _ \| | | | \ | |_   _|
+# | | | | |\/| |  _| |  \| | | | |_____| |\/| | | | | | | |  \| | | |  
+# | |_| | |  | | |___| |\  | |_| |_____| |  | | |_| | |_| | |\  | | |  
+# |____/|_|  |_|_____|_| \_|\___/      |_|  |_|\___/ \___/|_| \_| |_|  
+#
+# Скрипт для удобного монтирования внешних накопителей
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+pgrep -x dmenu && exit
+
+getmount() { \
+	[ -z "$chosen" ] && exit 1
+	mp="$(find $1 | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Введите точку монтирования.")"
+	[ "$mp" = "" ] && exit 1
+	if [ ! -d "$mp" ]; then
+		mkdiryn=$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "$mp не существует. Создать его?")
+		[ "$mkdiryn" = "Да" ] && (mkdir -p "$mp" || gksu -S mkdir -p "$mp")
+	fi
+	}
+
+mountusb() { \
+	chosen="$(echo "$usbdrives" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Какой диск смонтировать?" | awk '{print $1}')"
+	sudo -A mount "$chosen" && notify-send -i "$PIX/usb.svg" "$chosen mounted." && exit 0
+        alreadymounted=$(lsblk -nrpo "name,type,mountpoint" | awk '$2=="part"&&$3!~/\/boot|\/home$|SWAP/&&length($3)>1{printf "-not \( -path *%s -prune \) \ \n",$3}')
+	getmount "/mnt /media /mount /home -maxdepth 5 -type d $alreadymounted"
+	partitiontype="$(lsblk -no "fstype" "$chosen")"
+	case "$partitiontype" in
+		"vfat") gksu -S mount -t vfat "$chosen" "$mp" -o rw,umask=0000;;
+                *) sudo -A mount "$chosen" "$mp"; user="$(whoami)"; ug="$(groups | awk '{print $1}')"; sudo -A chown "$user":"$ug" 741 "$mp";;
+	esac
+	notify-send "💻 USB смонтирован" "$chosen смонтирован в $mp."
+	}
+
+mountandroid() { \
+	chosen=$(echo "$anddrives" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Какое устройство Android?" | cut -d : -f 1)
+	getmount "$HOME -maxdepth 3 -type d"
+	simple-mtpfs --device "$chosen" "$mp"
+	notify-send "🤖 Android смонтирован" "Android устройство подключено к $mp."
+	}
+
+asktype() { \
+	case $(printf "USB\\nAndroid" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Подключить USB-накопитель или устройство Android?") in
+		USB) mountusb ;;
+		Android) mountandroid ;;
+	esac
+	}
+
+anddrives=$(simple-mtpfs -l 2>/dev/null)
+usbdrives="$(lsblk -rpo "name,type,size,mountpoint" | awk '$2=="part"&&$4==""{printf "%s (%s)\n",$1,$3}')"
+
+if [ -z "$usbdrives" ]; then
+	[ -z "$anddrives" ] && echo "USB-накопитель или устройство Android не обнаружены" && exit
+	echo "Устройства Android обнаружены."
+	mountandroid
+else
+	if [ -z "$anddrives" ]; then
+		echo "USB-накопитель обнаружен."
+	       	mountusb
+	else
+		echo "Обнаружен подключаемый USB-накопитель и Android-устройство."
+		asktype
+	fi
+fi

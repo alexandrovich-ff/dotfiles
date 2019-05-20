@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _       _____ __  __  ___      _ ___ 
+# |  _ \|  \/  | ____| \ | | | | |     | ____|  \/  |/ _ \    | |_ _|
+# | | | | |\/| |  _| |  \| | | | |_____|  _| | |\/| | | | |_  | || | 
+# | |_| | |  | | |___| |\  | |_| |_____| |___| |  | | |_| | |_| || | 
+# |____/|_|  |_|_____|_| \_|\___/      |_____|_|  |_|\___/ \___/|___|
+#
+# Скрипт выбора смайликов Emoji
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+xclip -h >/dev/null || exit
+
+chosen=$(grep -v "#" $HOME/.config/emoji | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -l 20)
+
+[ "$chosen" != "" ] || exit
+
+c=$(echo "$chosen" | sed "s/ .*//")
+echo "$c" | tr -d '\n' | xclip -selection clipboard
+notify-send "'$c' скопировано в буфер обмена." &
+
+s=$(echo "$chosen" | sed "s/.*; //" | awk '{print $1}')
+echo "$s" | tr -d '\n' | xclip
+notify-send "'$s' скопировано." &
