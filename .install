@@ -206,8 +206,8 @@ debtap
 ## polybar
 cmake jsoncpp libnsl libuv python python2 rhash xorg-fonts-misc libmpdclient polybar
 
-## dmenu-manjaro
-dmenu-manjaro
+## dmenu2
+dmenu2
 
 ## dmenu-hotkeys
 python-dmenu-hotkeys
