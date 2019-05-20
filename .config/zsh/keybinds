@@ -24,6 +24,7 @@ export KEYTIMEOUT=1
 # #---Клавиатурные сокращения---# #
 alias :s="sudo"
 alias :pacman="sudo pacman"
+alias :aur="yay"
 alias :su="sudo -Hu"
 alias :c="clear"
 alias :q="exit"
