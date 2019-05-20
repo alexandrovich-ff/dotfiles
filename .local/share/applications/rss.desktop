@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Подключение RSS каналаhcmo
+Exec=/usr/bin/env ::rss-add %U
