@@ -14,7 +14,6 @@ alias :ka="killall"
 alias :hist="echo > $HOME/.config/zsh/histfile"
 alias :vpn="sudo openvpn --config"
 alias :cache="rm -rf $HOME/.cache/* $HOME/.thumbnails/*"
-alias :upd="yay -Syu"
 # Получение переменных
 alias :class="xprop | grep WM_CLASS | awk '{ print $4 }'"
 # Приложения
