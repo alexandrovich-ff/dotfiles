@@ -1,5 +1,5 @@
-
 [Desktop Entry]
 Type=Application
 Name=Почтовый клиент
 Exec=$TERMINAL -e neomutt %u
+Icon=email

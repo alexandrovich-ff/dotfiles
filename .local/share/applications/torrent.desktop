@@ -2,3 +2,4 @@
 Type=Application
 Name=Торрент
 Exec=/usr/bin/env ::transmission-add %U
+Icon=torrent

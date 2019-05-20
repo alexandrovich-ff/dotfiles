@@ -2,3 +2,4 @@
 Type=Application
 Name=Текстовый редактор
 Exec=$TERMINAL -e nvim %u
+Icon=text

@@ -2,3 +2,4 @@
 Type=Application
 Name=Подключение RSS канала
 Exec=/usr/bin/env ::rss-add %U
+Icon=rss
