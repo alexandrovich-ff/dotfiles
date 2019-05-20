@@ -70,10 +70,10 @@ set $netrefresh sudo -A systemctl restart NetworkManager
 set $proccess_kill xkill
 # Приложения
 set $passmenu ::passmenu
-set $editor termite -c $HOME/.config/termite/termite-dark.color -t 'Текстовый редактор' -e nvim
-set $filemanager termite -c $HOME/.config/termite/termite-dark.color -t 'Файловый менеджер' -e $HOME/.config/vifm/vifmrun
-set $proccess termite -c $HOME/.config/termite/termite-dark.color -t 'Менеджер процессов' -e gotop
-set $telegram termite -c $HOME/.config/termite/termite-dark.color -t "Телеграм" -e nctelegram
+set $editor $TERMINAL -t 'Текстовый редактор' -e nvim
+set $filemanager $TERMINAL -t 'Файловый менеджер' -e $HOME/.config/vifm/vifmrun
+set $proccess $TERMINAL -t 'Менеджер процессов' -e gotop
+set $telegram $TERMINAL -t "Телеграм" -e nctelegram
 set $xkill xkill
 set $calculate galculator
 set $equalizer $TERMINAL -t 'Эквалайзер' -e cava
