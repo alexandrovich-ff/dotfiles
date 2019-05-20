@@ -13,7 +13,7 @@
 source ~/.config/zsh/games
 source ~/.config/zsh/main
 source ~/.config/zsh/alias
-source ~/.config/zsh/alias_work
+source ~/.config/zsh/alias:work
 source ~/.config/zsh/functions
 source ~/.config/zsh/plugins
 source ~/.config/zsh/keybinds
