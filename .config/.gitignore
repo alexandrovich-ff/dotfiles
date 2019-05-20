@@ -16,6 +16,7 @@
 # #---Видимые---# #
 # Файлы
 !.gitignore
+!mimeapps.list
 # Директории
 !browser-homepage
 !compton
