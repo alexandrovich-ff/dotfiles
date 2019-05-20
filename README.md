@@ -21,9 +21,6 @@
       git clone https://github.com/alexandrovich-ff/dotfiles
 
           pacman -S dunst rofi ttf-font-awesome
-          yay -S i3-gaps-next-git polybar terminus-font-ll2-td1-ttf nerd-fonts-complete skippy-xd-git
-          pacman -U .config/dmenu-manjaro/dmenu-manjaro.tar.xz
-
-
+          yay -S i3-gaps-next-git polybar terminus-font-ll2-td1-ttf nerd-fonts-complete skippy-xd-git dmenu2
 
 ### v0.1 [alpha]
