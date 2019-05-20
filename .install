@@ -323,6 +323,9 @@ dnssec-anchors ldns x11-ssh-askpass openssh
 ## sshfs
 fuse3 sshfs
 
+## samba
+perl-perse-yapp samba
+
 ## ufw
 ufw
 
@@ -638,14 +641,11 @@ libxpm babl exiv2 gegl ilmbase intel-tbb lensfun libde265 libgexiv2 libheif libm
 ## blender
 alembic blosc hdf5 libaec libspnav log4cplus opencollada opencolorio openimageio openjpeg openshadinglanguage opensubdiv openvdb ptex tinyxml yaml-cpp blender
 
-## virtualbox
-virtualbox-host-modules-arch virtualbox
-
-  ## Support
-  vde2 virtualbox-guest-iso libvncserver virtualbox-ext-vnc virtualbox-ext-oracle virtualbox-guest-modules-arch virtualbox-guest-utils virtualbox-sdk
-
 ## crow-translate
 qt5-tools crow-translate
+
+## qemu
+celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
 
 ## ruby
 rubygems ruby
