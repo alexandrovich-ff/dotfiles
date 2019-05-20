@@ -647,6 +647,10 @@ qt5-tools crow-translate
 ## qemu
 celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
 
+  ## Support
+  ## libvirt
+  augeas ceph-libs glusterfs gperftools leveldb libiscsi liburcu netcf oath-toolkit xmlsec libvirt
+
 ## ruby
 rubygems ruby
 
