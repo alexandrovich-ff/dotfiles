@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Видео
+Exec=/usr/bin/mpv %U
+Icon=video
