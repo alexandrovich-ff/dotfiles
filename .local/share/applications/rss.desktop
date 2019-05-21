@@ -1,5 +1,5 @@
 [Desktop Entry]
 Type=Application
-Name=Подключение RSS канала
+Name=RSS канал
 Exec=/usr/bin/env ::rss-add %U
 Icon=rss
