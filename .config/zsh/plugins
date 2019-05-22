@@ -13,8 +13,13 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 source /usr/share/zsh/scripts/zplug/init.zsh
 
 # #---Плагины---# #
-zplug 'dracula/zsh', as:theme
-
+# Проверка пользователя
+if [[ $EUID -ne 0 ]]; then
+    zplug 'dracula/zsh', as:theme
+else
+    PROMPT="%{$fg[cyan]%}[%~] %{$reset_color%}%(#.%{$fg_bold[red]%}.%{$fg_bold[green]%})%n%{$reset_color%}%{$fg_bold[grey]%}@%m%{$reset_color%}%(?.%{$fg_bold[green]%}.%{$bg[red]%}%{$fg_bold[white]%}) >%{$reset_color%} "
+fi
+# Плагины
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
