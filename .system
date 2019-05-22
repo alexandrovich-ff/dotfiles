@@ -167,9 +167,13 @@ ln -sfT dash /usr/bin/sh
 ╚════██║  ╚██╔╝  ██║╚██╔╝██║██║     ██║██║╚██╗██║██╔═██╗ ╚════██║
 ███████║   ██║   ██║ ╚═╝ ██║███████╗██║██║ ╚████║██║  ██╗███████║
 ╚══════╝   ╚═╝   ╚═╝     ╚═╝╚══════╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
-                                                                 
+[user]
 ln -s /opt/balenaEtcher/balena-etcher-electron /usr/bin/etcher
 ln -s /home/flappy/.config/i3/wall.png /usr/share/slim/themes/flappy/background.png
 ln -s /home/flappy/.scripts/rdp /usr/bin/rdp
 ln -s /home/flappy/.scripts/xrdp /usr/bin/xrdp
 ln -s /usr/bin/chromium /usr/bin/google-chrome (brackets)
+
+[su]
+ln -s /home/flappy/.zshrc /root/.zshrc
+ln -s /home/flappy/.config/zsh /root/.config/zsh
