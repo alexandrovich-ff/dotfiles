@@ -15,16 +15,16 @@ pgrep -x dmenu && exit
 
 getmount() { \
 	[ -z "$chosen" ] && exit 1
-	mp="$(find $1 | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Введите точку монтирования.")"
+	mp="$(find $1 | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Введите точку монтирования.")"
 	[ "$mp" = "" ] && exit 1
 	if [ ! -d "$mp" ]; then
-		mkdiryn=$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "$mp не существует. Создать его?")
+		mkdiryn=$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "$mp не существует. Создать его?")
 		[ "$mkdiryn" = "Да" ] && (mkdir -p "$mp" || gksu -S mkdir -p "$mp")
 	fi
 	}
 
 mountusb() { \
-	chosen="$(echo "$usbdrives" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Какой диск смонтировать?" | awk '{print $1}')"
+	chosen="$(echo "$usbdrives" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Какой диск смонтировать?" | awk '{print $1}')"
 	sudo -A mount "$chosen" && notify-send -i "$PIX/usb.svg" "$chosen mounted." && exit 0
         alreadymounted=$(lsblk -nrpo "name,type,mountpoint" | awk '$2=="part"&&$3!~/\/boot|\/home$|SWAP/&&length($3)>1{printf "-not \( -path *%s -prune \) \ \n",$3}')
 	getmount "/mnt /media /mount /home -maxdepth 5 -type d $alreadymounted"
@@ -37,14 +37,14 @@ mountusb() { \
 	}
 
 mountandroid() { \
-	chosen=$(echo "$anddrives" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Какое устройство Android?" | cut -d : -f 1)
+	chosen=$(echo "$anddrives" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Какое устройство Android?" | cut -d : -f 1)
 	getmount "$HOME -maxdepth 3 -type d"
 	simple-mtpfs --device "$chosen" "$mp"
 	notify-send "🤖 Android смонтирован" "Android устройство подключено к $mp."
 	}
 
 asktype() { \
-	case $(printf "USB\\nAndroid" | ::dmenu -x 15 -y 40 -h 28 -w 545 -i -p "Подключить USB-накопитель или устройство Android?") in
+	case $(printf "USB\\nAndroid" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Подключить USB-накопитель или устройство Android?") in
 		USB) mountusb ;;
 		Android) mountandroid ;;
 	esac
