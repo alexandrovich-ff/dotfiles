@@ -901,8 +901,8 @@ user_pref("browser.download.useDownloadDir",			false);
 // PREF: Disable the "new tab page" feature and show a blank tab instead
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
 // https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off
-user_pref("browser.newtabpage.enabled",				false);
-user_pref("browser.newtab.url",					"about:blank");
+user_pref("browser.newtabpage.enabled",				true);
+user_pref("browser.newtab.url",					"file:///home/flappy/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F/browser-homepage/index.html");
 
 // PREF: Disable Activity Stream
 // https://wiki.mozilla.org/Firefox/Activity_Stream
