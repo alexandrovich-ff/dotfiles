@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# vim: filetype=polybar
+#   ____ ____  _   _ 
+#  / ___|  _ \| | | |
+# | |   | |_) | | | |
+# | |___|  __/| |_| |
+# \____|_|    \___/
+# 
+# Вывод в уведомление топ процессов
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+notify-send "🖥 CPU процессы" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)"

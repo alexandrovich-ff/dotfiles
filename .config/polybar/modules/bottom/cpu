@@ -14,12 +14,12 @@ type = internal/cpu
 
 interval = 0.5
 
-format = <bar-load> <label>
+format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/cpu:}<bar-load> <label>%{A}
 format-prefix = " "
 format-background = ${color.ac}
 format-padding = 1
 
-label = "%percentage%%"
+label = %percentage%%
 
 bar-load-width = 10
 bar-load-gradient = false
