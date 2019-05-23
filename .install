@@ -689,6 +689,10 @@ obs-studio
 ## metasploit
 postgresql-libs ruby-bundler metasploit
 
+  ## Support
+  # PostgreSQL
+  postgresql
+
 ## nmap
 nmap
 
@@ -702,7 +706,7 @@ ocl-icd xxhash hashcat
 wpscan
 
 ## mycroft
-oniguruma python-stevedore python-virtualenv-clone python2-virtualenv jq python-virtualenv python-virtualenvwrapper swig python2-appdirs python2-pyparsing python2-packaging python2-setuptools mimic-git fann mycroft-core
+jq oniguruma python-stevedore python-virtualenv python-virtualenv-clone python-virtualenvwrapper python2-appdirs python2-packaging python2-pyparsing python2-setuptools python2-virtualenv swig mimic-git fann mycroft-core
 
 ## cronie
 cronie
@@ -712,6 +716,9 @@ stfl newsboat
 
 ## pypi2pkgbuild
 elfutils namcap pyalpm python-cachecontrol python-colorama python-distlib python-distro python-html5lib python-lockfile python-msgpack python-pep517 python-pip python-progress python-pyelftools python-pytoml python-retrying python-webencodings python-pypi2pkgbuild
+
+## figlet
+figlet
 
 ██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
 ██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
