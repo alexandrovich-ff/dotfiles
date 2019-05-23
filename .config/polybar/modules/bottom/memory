@@ -18,7 +18,7 @@ format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/memory:}<bar-used> 
 format-background = ${color.ac}
 format-prefix = " "
 
-label = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/memory:}%mb_used%%{A}
+label = %mb_used%
 
 bar-used-width = 10
 bar-used-gradient = false
