@@ -544,6 +544,9 @@ mailcap mozilla-common firefox firefox-i18n-ru
 
 ## qutebrowser
 pyqt5-common python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
+  
+  ## Support (pass)
+  python-requests-file python-tldextract
 
 ## surf
 surf
