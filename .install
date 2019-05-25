@@ -440,6 +440,9 @@ peerflix
 ## clamav
 libmspack bind-tools clamav clamav-unofficial-sigs
 
+## vt-cli
+dep vt-cli
+
 ## tree
 tree
 
@@ -719,6 +722,9 @@ elfutils namcap pyalpm python-cachecontrol python-colorama python-distlib python
 
 ## figlet
 figlet
+
+## insragram-scraper
+python-tqdm instagram-scraper
 
 ██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
 ██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
