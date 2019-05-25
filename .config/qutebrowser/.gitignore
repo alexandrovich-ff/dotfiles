@@ -1,0 +1,5 @@
+!bookmarks/*
+qsettings/
+index.html
+__pycache__/
+*.pyc

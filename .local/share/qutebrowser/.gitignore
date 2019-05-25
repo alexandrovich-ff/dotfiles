@@ -16,30 +16,5 @@
 # #---Видимые---# #
 # Файлы
 !.gitignore
-!mimeapps.list
 # Директории
-!browser-homepage
-!qutebrowser
-!compton
-!dunst
-!fontconfig
-!flashfocus
-!gtk-3.0
-!htop
-!i3
-!jack
-!mc
-!mpv
-!neofetch
-!nvim
-!polybar
-!psd
-!ranger
-!rofi
-!rtorrent
-!sxiv
-!systemd
-!termite
-!zsh
-!vifm
-!newsboat
+!userscripts
