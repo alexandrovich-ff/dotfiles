@@ -146,7 +146,7 @@ xorg-xinput
 ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
 
 ## pulseaudio
-rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
+rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulsemixer pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
 
 ## jack
 realtime-privileges celt dbus-c++ libffado libxml++ python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
