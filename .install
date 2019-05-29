@@ -309,7 +309,7 @@ galculator
 libndp libnewt libteam slang libmbim usb_modeswitch tcl libqmi dnsmasq modemmanager networkmanager
 
   ## Support
-  ppp iwd pptpclient libnma mobile-broadband-provider-info nm-connection-editor network-manager-applet
+  ppp iwd pptpclient
 
 ## openvpn
 easy-rsa pkcs11-helper openvpn
@@ -514,6 +514,7 @@ capitaine-cursors
 ██║     ╚██████╔╝██║ ╚████║   ██║   ███████║
 ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 
+## custom
 ttf-symbola nerd-fonts-complete ttf-weather-icons
 
 ## adobe-source-code-pro-fonts
@@ -521,6 +522,9 @@ adobe-source-code-pro-fonts
 
 ## terminus-font-ll2-td1-ttf
 fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
+
+## system fonts
+ttf-liberation cantarell-fonts ttf-dejavu
 
 ██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗ 
 ██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
