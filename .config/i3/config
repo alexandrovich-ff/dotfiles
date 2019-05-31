@@ -15,8 +15,9 @@ for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
 # Шрифты
-font pango:Terminus (TTF) 14
-# Цветовая схема
+font pango:TerminessTTF Nerd Font 14
+# #---Цветовая схема---# #
+# Основная
 set_from_resource $darkblack     color0    #000000
 set_from_resource $black         color8    #000000
 set_from_resource $darkred       color1    #000000
@@ -34,13 +35,32 @@ set_from_resource $cyan          color14   #000000
 set_from_resource $darkwhite     color7    #000000
 set_from_resource $white         color15   #ffffff
 set               $transparent             #00000000
-# Цветовая схема
+# Дополнительная
+set $cyan0   #4ec2f7
+set $silver0 #e4e4e4
+set $orange  #ff8700
+set $cyan    #4ec2f799
+set $acqua   #00708999
+set $wine    #72003e99
+set $magenta #af005f99
+set $silver  #e4e4e499
+set $toxic   #8EC00099
+set $elegant #00002c30
+# #---Панели---# #
+  # Polybar
+  #  NAME'S               BORDER         BACKG     TEXT        INDICATOR      CHILD_BORDER
+  #client.focused          #383C4A        $red      $magenta    $darkmagenta   #383C4A
+  #client.unfocused        #383C4A        $blue     $white      $darkblue      #383C4A
+  #client.focused_inactive #383C4A        $blue     $white      $darkblue      #383C4A
+  #client.urgent           #383C4A        $darkred  $black      $darkred       #383C4A
+  #client.background       #383C4
+# i3blocks
 #  NAME'S               BORDER         BACKG     TEXT        INDICATOR      CHILD_BORDER
-client.focused          #383C4A        $red      $magenta    $darkmagenta   #383C4A
-client.unfocused        #383C4A        $blue     $white      $darkblue      #383C4A
-client.focused_inactive #383C4A        $blue     $white      $darkblue      #383C4A
-client.urgent           #383C4A        $darkred  $black      $darkred       #383C4A
-client.background       #383C4A
+client.focused           $cyan          $cyan     $elegant    $cyan
+client.unfocused         $elegant       $elegant  $cyan       $elegant
+client.focused_inactive  $acqua         $acqua    $silver     $acqua
+client.urgent            $magenta       $magenta  $silver     $magenta
+client.placeholder       $magenta       $magenta  $silver     $magenta
 
 # #---Переменные---# #
 # Клавишы
@@ -56,7 +76,7 @@ set $del Delete
 set $r --release
 # Директории
 set $i3 ${HOME}/.config/i3
-set $polybar ${HOME}/.config/polybar
+  #set $polybar ${HOME}/.config/polybar
 # Выполнение / запуск
 set $start exec --no-startup-id
 set $run exec
@@ -80,46 +100,47 @@ set $equalizer $TERMINAL -t 'Эквалайзер' -e cava
 
 # #---Рабочая панель--# #
 # Статус бар
-#bar {
-#   font pango:Terminus (TTF) 12
-#   colors {
-#      background $darkblack
-#      statusline $darkwhite
-#      separator $cyan
-#      focused_workspace  $blue $darkblue $darkblack
-#      active_workspace   $blue $blue $darkwhite
-#      inactive_workspace $darkblack $darkblack $white
-#      urgent_workspace   $darkblack $darkblack $white
-#   }
-#   status_command i3blocks
-#   position top
-#   mode dock
-#   modifier None
-#}
+bar {
+   font pango:TerminessTTF Nerd Font Bold 14
+   colors {
+      background $elegant
+      statusline $darkwhite
+      separator $cyan
+      focused_workspace   $silver0  $silver0  $elegant
+      active_workspace    $silver0  $silver0  $elegant
+      inactive_workspace  $elegant  $elegant  $cyan0
+      urgent_workspace    $acqua    $acqua    $silver0
+   }
+   status_command i3blocks
+   i3bar_command i3bar -t
+   position top
+   mode dock
+   modifier None
+}
 
 # #----Рабочие столы---# #
 # Консольные рабочие столы
 set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 ""
+set $ws5 ""
 set $ws6 ""
-set $ws7 ""
-set $ws8 ""
-set $ws9 ""
+set $ws7 ""
+set $ws8 ""
+set $ws9 ""
 set $ws10 ""
 # Графические рабочие столы
 set $ws11 ""
 set $ws12 ""
 set $ws13 ""
-set $ws14 ""
+set $ws14 ""
 set $ws15 ""
 set $ws16 ""
 set $ws17 ""
-set $ws18 ""
-set $ws19 ""
-set $ws20 ""
+set $ws18 ""
+set $ws19 ""
+set $ws20 ""
 # Перейти на консольный рабочий стол
 # %%hotkey: Консольный рабочий стол 1 %%
 bindsym $mod+1 workspace $ws1
@@ -376,13 +397,12 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+$ctrl+space floating toggle
 
 # %%hotkey: Режим привязки окна %%
-bindsym $mod+o      sticky toggle
-#bindsym $mod+p     bar mode toggle
+bindsym $mod+o     sticky toggle
+# %%hotkey: Включить/выключить панель %%
+bindsym $mod+p     bar mode toggle
 
-# %%hotkey: Включить панель %%
-bindsym $mod+p $start $polybar/launch & notify-send "🧰 Панель включена"
-# %%hotkey: Выключить панель %%
-bindsym $mod+$shift+p $start $polybar/stop & notify-send "🧰 Панель выключена"
+  #bindsym $mod+p $start $polybar/launch & notify-send "🧰 Панель включена"
+  #bindsym $mod+$shift+p $start $polybar/stop & notify-send "🧰 Панель выключена"
 
 # %%hotkey: Запустить горизонтальный терминал %%
 bindsym $mod+bracketright   split horizontal ;; exec $TERMINAL
@@ -400,9 +420,9 @@ bindsym $mod+$shift+z gaps outer current minus 5
 # %%hotkey: Режим заголовка окон %%
 bindsym $mod+b border toggle
 # Мультимедийные клавиши (Fn's)
-bindsym XF86AudioRaiseVolume $start pamixer -i 5
-bindsym XF86AudioLowerVolume $start pamixer -d 5
-bindsym XF86AudioMute $start pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume $start pamixer -i 5 && pkill -RTMIN+9 i3blocks
+bindsym XF86AudioLowerVolume $start pamixer -d 5 && pkill -RTMIN+9 i3blocks
+bindsym XF86AudioMute $start pactl set-sink-mute 0 toggle && pkill -RTMIN+9 i3blocks
 bindsym XF86MonBrightnessUp $start xbacklight -inc 10
 bindsym XF86MonBrightnessDown $start xbacklight -dec 10
 bindsym XF86TouchpadToggle $start ::toggletouchpad
@@ -458,11 +478,11 @@ bindsym $mod+F1 $start ::dmenusearch
 # %%hotkey: Поиск на YouTube %%
 bindsym $mod+$alt+F1 $start ::dmenusearch-youtube
 # %%hotkey: Запуск почтового клиента %%
-bindsym $mod+$shift+F1 $start mailsync; $start $TERMINAL -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
+bindsym $mod+$shift+F1 $start mailsync && pkill -RTMIN+5 i3blocks & $TERMINAL -t 'Почта' -e neomutt & notify-send ": Почтовый клиент запущен"
 # %%hotkey: Настройка подключения сети %%
-bindsym $mod+F2 $start $TERMINAL -t 'Настройка сети' -e nmtui
+bindsym $mod+F2 $start $TERMINAL -t 'Настройка сети' -e nmtui && pkill -RTMIN+7 i3blocks
 # %%hotkey: Перезапустить службу сети %%
-bindsym $mod+$shift+F2 $start $netrefresh & notify-send "Служба сети перезапущена"
+bindsym $mod+$shift+F2 $start $netrefresh && pkill -RTMIN+7 i3blocks & notify-send "Служба сети перезапущена"
 # %%hotkey: Поиск на Moonwalk %%
 bindsym $mod+$alt+F2 $start ::dmenusearch-moonwalk
 # %%hotkey: Поиск пароля %%
@@ -490,7 +510,7 @@ bindsym $mod+grave $start ::dmenuunicode
 # %%hotkey; Список FontAwesome %%
 bindsym $alt+grave $start ::dmenufontawesome
 # %%hotkey: Запись экрана %%
-bindsym $mod+Print $start $::dmenurecord
+bindsym $mod+Print $start ::dmenurecord
 # %%hotkey: Содержимое буфера %%
 bindsym $mod+Home $start ::showclip
 # %%hotkey: Изменить размер окна [влево] %%
@@ -522,12 +542,10 @@ bindsym $mod+$shift+$tab $start i3flip left
 # #---Автозагрузка---# #
 # Системные утилиты
 $start setxkbmap us,ru -option grp:caps_toggle
-#$start xmodmap -e "pointer = 3 2 1 6 7 8 9 10 11 12 4 5"
-$start feh --bg-scale $i3/wall.png
+$start ::setbg
 $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
 $start synclient TouchpadOff=1
-$always flashfocus --no-flash-on-focus
-$always $polybar/launch
-$start greenclip daemon
+# Панели
+  #$always $polybar/launch
