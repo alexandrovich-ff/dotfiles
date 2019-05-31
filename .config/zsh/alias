@@ -10,21 +10,25 @@
 # Website: http://malikov.red
 
 # Функции
-alias :ka="killall"
 alias :hist="echo > $HOME/.config/zsh/histfile"
 alias :vpn="sudo openvpn --config"
+alias :vpnd="sudo vpnd"
+alias ::vpnd="wget https://raw.githubusercontent.com/Angristan/openvpn-install/master/openvpn-install.sh -O $HOME/.local/bin/utilites/vpnd"
+alias :wired="sudo wired"
 alias :cache="rm -rf $HOME/.cache/* $HOME/.thumbnails/*"
+alias :fan:max="echo 255 > /sys/devices/platform/asus-nb-wmi/hwmon/hwmon[[:print:]]*/pwm1"
+alias :fan:auto="echo 2 > /sys/devices/platform/asus-nb-wmi/hwmon/hwmon[[[:print:]]*/pwm1_enable"
 # Получение переменных
 alias :class="xprop | grep WM_CLASS | awk '{ print $4 }'"
 # Приложения
 alias :bb="$HOME/.local/bin/utilites/bbsh"
 alias :bbsh="wget -O $HOME/.local/bin/utilites/bbsh https://raw.githubusercontent.com/cfenollosa/bashblog/master/bb.sh"
-alias :rss="newsboat"
+alias :rss="newsboat && pkill -RTMIN+4 i3blocks"
 alias :nvidia="nvidia-xrun"
 alias :e="$EDITOR"
 alias :f="$FILE"
 alias :inf="neofetch"
-alias :subl="subl3"
+alias :es3="subl3"
 alias :torrent="screen -D -r rtorrent"
 alias :src="screen -S "
 alias :srr="screen -r "
@@ -44,18 +48,17 @@ alias :trans="crow -p -a -t"
 alias :cow="fortune | cowsay | lolcat"
 alias :wth="curl http://wttr.in/Novovolynsk"
 alias :moon="curl http://wttr.in/Moon"
-alias :mail="neomutt"
 alias :g="googler -n 5"
 # Файлы
-alias :faq="nvim $HOME/.config/i3/faq"
-alias :install="nvim $HOME/.install"
-alias :system="nvim $HOME/.system"
-alias :i3="nvim $HOME/.config/i3/config"
+alias :faq="$EDITOR $HOME/.config/i3/faq"
+alias :install="$EDITOR $HOME/.install"
+alias :system="$EDITOR $HOME/.system"
+alias :i3="$EDITOR $HOME/.config/i3/config"
       :i3conf() { du -a $HOME/.config/i3/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-alias :i3blocks="nvim $HOME/.config/i3blocks/config"
+alias :i3blocks="$EDITOR $HOME/.config/i3blocks/config"
       :i3bconf() { du -a $HOME/.config/i3blocks/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 :poly() { du -a $HOME/.config/polybar/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-alias :zsh="nvim $HOME/.zshrc"
+alias :zsh="$EDITOR $HOME/.zshrc"
 # Директории
 alias :h="$HOME/"
 alias :d="$HOME/Документы"

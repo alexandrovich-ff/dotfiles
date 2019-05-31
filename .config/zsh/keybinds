@@ -22,6 +22,7 @@ bindkey '^r' history-incremental-search-backward
 export KEYTIMEOUT=1
 
 # #---Клавиатурные сокращения---# #
+# Пользователя
 alias :s="sudo"
 alias :pacman="sudo pacman"
 alias :aur="yay $@ --aur"
@@ -30,5 +31,10 @@ alias :su="su -"
 alias :rm="rm -rf"
 alias :c="clear"
 alias :q="exit"
-alias :b="bluetoothctl"
+alias :bth="bluetoothctl"
 alias :sys="systemctl"
+alias :ka="killall"
+# Суперпользователя
+alias ::sys="sudo systemctl"
+alias ::rm="sudo rm -rf"
+alias ::ka="sudo killall"

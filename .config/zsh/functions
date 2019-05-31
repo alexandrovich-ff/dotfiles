@@ -21,6 +21,8 @@
 :vf() { fzf | xargs -r -I % $EDITOR % ;}
 # Переустановка всех пакетов системы
 :rebuild() { sudo pacman -S $(pacman -Qnq) }
+# Поиск по файлу
+:cat() { cat $1 | grep "$2" }
 # Архивация
 :unpack() {
     if [ -f $1 ] ; then
