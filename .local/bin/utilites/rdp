@@ -35,7 +35,7 @@ elif [ -n "$resolution_HDMI" ]; then
         --text="Введите IP адресс удаленного компьютера") >/dev/null 2>/dev/null
 else
 
-    resolution=`xrandr -q | awk '/ connected / {print $4;exit}' | awk -F "x" '{print int($1)"x"int($2*0.90)}'`
+    resolution=`xrandr -q | awk '/ connected / {print $3;exit}' | awk -F "x" '{print int($1)"x"int($2*0.93)}'`
 
     rdesktop -g $resolution -P -z -x l -r sound:off -K \
     $(zenity \
