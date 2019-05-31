@@ -37,7 +37,7 @@ elif [ -n "$resolution_HDMI" ]; then
         --text="Введите IP адресс удаленного компьютера") >/dev/null 2>/dev/null
 else
 
-    resolution=`xrandr -q | awk '/ connected / {print $4;exit}' | awk -F "x" '{print int($1)"x"int($2*0.92)}'`
+    resolution=`xrandr -q | awk '/ connected / {print $3;exit}' | awk -F "x" '{print int($1)"x"int($2*0.93)}'`
 
     xfreerdp -grab-keyboard /bpp:16 +clipboard /sound:sys:pulse \
     /size:$resolution \
