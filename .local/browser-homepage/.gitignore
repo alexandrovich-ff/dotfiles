@@ -17,7 +17,9 @@
 # Файлы
 !.gitignore
 !example.html
+!README.md
 # Директории
 !components
 !css
 !img
+!screenshots
