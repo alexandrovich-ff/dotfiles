@@ -17,19 +17,19 @@ arguments=""
 helperPath=`dirname "$0"`
 
 providearguments(){  
-	arguments=`echo -e 'no\n-k 1M -x 5' |dmenu -i -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -p "arguments"`
+	arguments=`echo -e 'no\n-k 1M -x 5' |::dmenu -x 15 -y 40 -h 28 -w 545 -l 10 -p "arguments"`
 	[[ $arguments = "" ]] && exit 0
 }
 
 selecturl(){
-	url=`greenclip print | xargs -0 | $helperPath/extract |dmenu -i -l 10 -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -p "Ссылка на видео: "`
+	url=`xclip -selection clip -o |::dmenu -x 15 -y 40 -h 28 -w 545 -l 10 -p "Ссылка на видео: "`
 	[[ $url = "" ]] && exit 0
 }
 
 selectquality(){
 	quality=`notify-send "Загрузка" "вариантов качества" | youtube-dl -F $url | \
 	sed -n '7,50p' | \
-	dmenu -i -l 10 -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -p "Качесто: " | \
+	::dmenu -x 15 -y 40 -h 28 -w 545 -l 10 -p "Качесто: " | \
 	awk '{print $1;}'`
 	[[ $quality = "" ]] && exit 0
 }

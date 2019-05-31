@@ -20,7 +20,7 @@ elif command -v xsel 2>/dev/null; then
     url_text=$(xsel -o -b)
 fi
 
-url=$(::dmenu -x 15 -y 40 -h 28 -w 1000 -p "Ссылка на композицию: " <<< "$url_text")
+url=$(::dmenu -x 15 -y 40 -h 28 -w 1000 -l 10 -p "Ссылка на композицию: " <<< "$url_text")
 
 if [[ -z "$url" ]]; then
     echo "URL не указан" >&2
