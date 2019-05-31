@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  _   _ _______        ______  
+# | \ | | ____\ \      / / ___| 
+# |  \| |  _|  \ \ /\ / /\___ \ 
+# | |\  | |___  \ V  V /  ___) |
+# |_| \_|_____|  \_/\_/  |____/ 
+#
+# Скрипт отображения количества RSS новостей
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+        1) setsid "$TERMINAL" -e newsboat && pkill -RTMIN+4 i3blocks ;;
+esac
+
+cat /tmp/newsupdate 2>/dev/null || echo "$(newsboat -x print-unread | awk '{ print $1}' | sed s/^0$//g)$(cat ~/.config/newsboat/.update 2>/dev/null)"

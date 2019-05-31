@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  ____    _  _____ _____ _____ ______   __
+# | __ )  / \|_   _|_   _| ____|  _ \ \ / /
+# |  _ \ / _ \ | |   | | |  _| | |_) \ V / 
+# | |_) / ___ \| |   | | | |___|  _ < | |  
+# |____/_/   \_\_|   |_| |_____|_| \_\|_|  
+#
+# Скрипт состояния батареи
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+
+capacity=$(cat /sys/class/power_supply/BAT0/capacity) || exit
+status=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ "$capacity" -ge 75 ]; then
+    color="#E88939"
+elif [ "$capacity" -ge 50 ]; then
+    color="#E88939"
+elif [ "$capacity" -ge 25 ]; then
+    color="#E88939"
+else
+    color="#ff0000"
+    warn="❗"
+fi
+
+[ -z $warn ] && warn=" "
+
+[ "$status" = "Charging" ] && color="#E88939"
+
+printf "<span color='%s'>%s%s%s</span>" "$color" "$(echo "$status" | sed -e "s/,//;s/Discharging/🔋/;s/Not Charging/🛑/;s/Charging//;s/Unknown/♻️/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g")" "$warn" "$(echo "$capacity" | sed -e 's/$/%/')"

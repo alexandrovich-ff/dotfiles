@@ -18,3 +18,5 @@ else
 	::ifinstalled transmission-cli || exit
 	[ "$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Запустить торрент службу?")" = "Да" ] && transmission-daemon && notify-send "💡 Служба [Transmission]: запущена."
 fi
+
+sleep 3 && pkill -RTMIN+6 i3blocks

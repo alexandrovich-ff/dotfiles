@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  _____ ___  ____  ____  _____ _   _ _____ 
+# |_   _/ _ \|  _ \|  _ \| ____| \ | |_   _|
+#   | || | | | |_) | |_) |  _| |  \| | | |  
+#   | || |_| |  _ <|  _ <| |___| |\  | | |  
+#   |_| \___/|_| \_\_| \_\_____|_| \_| |_|  
+#
+# Скрипт состояния торрент клиента
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+    1) $TERMINAL -e transmission-remote-cli ;;
+esac
+
+transmission-remote -l | grep % |
+    sed " # This first sed command is to ensure a desirable order with sort
+    s/.*Stopped.*/A/g;
+    s/.*Seeding.*/Z/g;
+    s/.*100%.*/N/g;
+    s/.*Idle.*/B/g;
+    s/.*Uploading.*/L/g;
+    s/.*%.*/M/g" |
+        sort -h | uniq -c | sed " # Now we replace the standin letters with icons.
+                s/A/🛑/g;
+                s/B/⌛️/g;
+                s/L/🔼/g;
+                s/M/🔽/g;
+                s/N/✅/g;
+                s/Z/🌱/g" | awk '{print $2, $1}' | tr '\n' ' ' | sed -e "s/ $//g"

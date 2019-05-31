@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+# __        _______ ____   ____    _    __  __ 
+# \ \      / / ____| __ ) / ___|  / \  |  \/  |
+#  \ \ /\ / /|  _| |  _ \| |     / _ \ | |\/| |
+#   \ V  V / | |___| |_) | |___ / ___ \| |  | |
+#    \_/\_/  |_____|____/ \____/_/   \_\_|  |_|
+#
+# Скрипт отображения состояния веб-камеры
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+
+if [[ -c /dev/video0 ]]; then
+  if [[ "$(fuser /dev/video0)" != "" ]]; then
+    echo "ЗАПИСЬ"
+    echo "ЗАПИСЬ"
+    echo ""
+  else
+    echo "ВКЛ"
+    echo "ВКЛ"
+    echo ""
+  elseif
+    echo "ВЫКЛ"
+    echo "ВЫКЛ"
+    echo ""
+  fi
+fi

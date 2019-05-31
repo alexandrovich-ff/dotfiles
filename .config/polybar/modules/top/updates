@@ -11,11 +11,11 @@
 
 [module/updates]
 type = custom/script
-exec = ::updates
+exec = ::p:updates
 tail = true
 interval = 5
 
 format-background = ${color.ac}
 format-padding = 1
 
-click-left = ::lupdates &
+click-left = ::p:lupdates &

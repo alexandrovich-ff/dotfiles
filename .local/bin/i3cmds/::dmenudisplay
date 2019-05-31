@@ -49,7 +49,7 @@ morescreen() {
 	direction=$(printf "Слева\\nСправа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "На какой стороне от $primary должен быть $secondary?")
 	tertiary=$(echo "$screens" | grep -v "$primary" | grep -v "$secondary" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Выберите третий дисплей:")
 	xrandr --output "$primary" --auto --output "$secondary" --"$direction"-of "$primary" --auto --output "$tertiary" --"$(printf "Слева\\nСправа" | grep -v "$direction")"-of "$primary" --auto
-	}
+        }
 
 multimon() {
 	case "$(echo "$screens" | wc -l)" in
@@ -71,3 +71,6 @@ esac
 
 ::setbg
 pgrep -x dunst >/dev/null && killall dunst && setsid dunst &
+
+# Перезагрузка модуля i3blocks
+pkill -RTMIN+1 i3blocks

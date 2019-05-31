@@ -14,7 +14,7 @@ type = internal/memory
 
 interval = 2
 
-format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/memory:}<bar-used> <label>%{A}
+format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/::p:memory:}<bar-used> <label>%{A}
 format-background = ${color.ac}
 format-prefix = " "
 

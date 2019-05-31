@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+# __     _____  _    _   _ __  __ _____ 
+# \ \   / / _ \| |  | | | |  \/  | ____|
+#  \ \ / / | | | |  | | | | |\/| |  _|  
+#   \ V /| |_| | |__| |_| | |  | | |___ 
+#    \_/  \___/|_____\___/|_|  |_|_____|
+#
+# Скрипт отображения уровня громкости
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+    1) setsid "$TERMINAL" -e pulsemixer & ;;
+    2) pulsemixer --toggle-mute && pkill -RTMIN+9 i3blocks ;;
+    4) pulsemixer --change-volume +5 && pkill -RTMIN+9 i3blocks ;;
+    5) pulsemixer --change-volume -5 && pkill -RTMIN+9 i3blocks ;;
+esac
+
+[ "$(pulsemixer --get-mute)" = "1" ] && printf "\\n" && exit
+
+vol=$(pulsemixer --get-volume | awk '{print $1}')
+
+if [ "$vol" -gt "70" ]; then
+    icon=""
+elif [ "$vol" -lt "30" ]; then
+    icon=""
+else
+    icon=""
+fi
+
+printf "%s %s%%\\n" "$icon" "$vol"

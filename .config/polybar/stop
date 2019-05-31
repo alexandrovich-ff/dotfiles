@@ -12,3 +12,4 @@
 # Website: http://malikov.red
 
 killall -q polybar
+killall -q bash

@@ -11,7 +11,7 @@
 
 [module/network]
 type = custom/script
-exec = ::network
+exec = ::p:network
 tail = true
 interval = 5
 

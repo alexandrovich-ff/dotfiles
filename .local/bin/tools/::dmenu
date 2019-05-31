@@ -11,4 +11,4 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-dmenu -nb '#2D303B' -nf white -sb blue -sf white -fn 'Terminus (TTF)-14' "$@"
+dmenu -nb '#2D303B' -nf white -sb blue -sf white -fn 'TerminessTTF Nerd Font-14' "$@"

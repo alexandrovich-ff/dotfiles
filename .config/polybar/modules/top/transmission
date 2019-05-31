@@ -11,7 +11,7 @@
 
 [module/transmission]
 type = custom/script
-exec = ::polytrans
+exec = ::p:transmission
 interval = 7
 
 format-background = ${color.ac}

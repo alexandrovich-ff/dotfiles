@@ -13,7 +13,7 @@
 type = custom/script
 interval = 1
 format = <label>
-exec = ::spotify-playpause -p ','
+exec = ::p:spotify-playpause -p ','
 click-left = "playerctl play-pause"
 format-background = ${color.ac}
 format-padding = 1

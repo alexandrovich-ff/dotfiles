@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+# __  __ ___ ____ ____   ___  ____  _   _  ___  _   _ _____ 
+# |  \/  |_ _/ ___|  _ \ / _ \|  _ \| | | |/ _ \| \ | | ____|
+# | |\/| || | |   | |_) | | | | |_) | |_| | | | |  \| |  _|  
+# | |  | || | |___|  _ <| |_| |  __/|  _  | |_| | |\  | |___ 
+# |_|  |_|___\____|_| \_\\___/|_|   |_| |_|\___/|_| \_|_____|
+#
+# Скрипт отображения уровня микрофона
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  amixer -q sset Capture 5%+
+  # Перезагрузка модуля i3blocks
+  pkill -RTMIN+3 i3blocks
+elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+  amixer -q sset Capture toggle
+  # Перезагрузка модуля i3blocks
+  pkill -RTMIN+3 i3blocks
+elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+  amixer -q sset Capture 5%-
+  # Перезагрузка модуля i3blocks
+  pkill -RTMIN+3 i3blocks
+fi
+
+statusLine=$(amixer get Capture | tail -n 1)
+status=$(echo "${statusLine}" | grep -wo "on")
+volume=$(echo "${statusLine}" | awk -F ' ' '{print $5}' | tr -d '[]%')
+
+if [[ "${status}" == "on" ]]; then
+  echo "${volume}%"
+  echo "${volume}%"
+  echo ""
+else
+  echo "ВЫКЛ"
+  echo "ВЫКЛ"
+  echo ""
+fi

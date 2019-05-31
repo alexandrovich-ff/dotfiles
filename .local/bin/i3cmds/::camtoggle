@@ -12,3 +12,6 @@
 # Website: http://malikov.red
 
 pkill -f /dev/video || mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --geometry=-0-0 --autofit=30%  --title="mpvfloat" /dev/video0
+
+# Перезагрузка модуля i3blocks
+pkill -RTMIN+2 i3blocks

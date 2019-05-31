@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  __  __ _____ __  __  ___  ______   __
+# |  \/  | ____|  \/  |/ _ \|  _ \ \ / /
+# | |\/| |  _| | |\/| | | | | |_) \ V / 
+# | |  | | |___| |  | | |_| |  _ < | |  
+# |_|  |_|_____|_|  |_|\___/|_| \_\|_|  
+#
+# Скрипт отображения загруженности оперативной памяти
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+TYPE="${BLOCK_INSTANCE:-mem}"
+
+awk -v type=$TYPE '
+/^MemTotal:/ {
+    mem_total=$2
+}
+/^MemFree:/ {
+    mem_free=$2
+}
+/^Buffers:/ {
+    mem_free+=$2
+}
+/^Cached:/ {
+    mem_free+=$2
+}
+/^SwapTotal:/ {
+    swap_total=$2
+}
+/^SwapFree:/ {
+    swap_free=$2
+}
+END {
+    if (type == "swap")
+        printf("%.1fG\n", (swap_total-swap_free)/1024/1024)
+    else
+        printf("%.1fG\n", mem_free/1024/1024)
+}
+' /proc/meminfo

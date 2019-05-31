@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  __  __    _    ___ _     ____   _____  __
+# |  \/  |  / \  |_ _| |   | __ ) / _ \ \/ /
+# | |\/| | / _ \  | || |   |  _ \| | | \  / 
+# | |  | |/ ___ \ | || |___| |_) | |_| /  \ 
+# |_|  |_/_/   \_\___|_____|____/ \___/_/\_\
+#
+# Скрипт почты
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+        1) setsid "$TERMINAL" -e newsboat && pkill -RTMIN+5 i3blocks ;;
+esac
+
+echo "$(du -a ~/.local/share/mail/*/INBOX/new/* 2>/dev/null | sed -n '$=')$(cat /tmp/imapsyncicon_$USER 2>/dev/null)"

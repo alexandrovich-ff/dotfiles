@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  ____   _    ____ ____   _    ____ _  __    _    ____ _____ ____  
+# |  _ \ / \  / ___|  _ \ / \  / ___| |/ /   / \  / ___| ____/ ___| 
+# | |_) / _ \| |   | |_) / _ \| |   | ' /   / _ \| |  _|  _| \___ \ 
+# |  __/ ___ \ |___|  __/ ___ \ |___| . \  / ___ \ |_| | |___ ___) |
+# |_| /_/   \_\____|_| /_/   \_\____|_|\_\/_/   \_\____|_____|____/ 
+#
+# Скрипт наличия обновлений
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+    1) $TERMINAL -e ::update && pkill -RTMIN+8 i3blocks;;
+    2) notify-send "$(/usr/bin/pacman -Qu)" ;;
+esac
+
+pacman -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g"

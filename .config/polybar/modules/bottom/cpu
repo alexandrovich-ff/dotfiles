@@ -14,7 +14,7 @@ type = internal/cpu
 
 interval = 0.5
 
-format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/cpu:}<bar-load> <label>%{A}
+format = %{A1:$HOME/.local/bin/statusbar/polybar/notify-send/::p:cpu:}<bar-load> <label>%{A}
 format-prefix = " "
 format-background = ${color.ac}
 format-padding = 1

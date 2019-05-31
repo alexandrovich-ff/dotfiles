@@ -15,5 +15,5 @@ content = 
 
 content-background = ${color.ac}
 
-click-left = ::color-switch-light &
-click-right = ::color-switch-dark &
+click-left = ::p:color-switch-light &
+click-right = ::p:color-switch-dark &

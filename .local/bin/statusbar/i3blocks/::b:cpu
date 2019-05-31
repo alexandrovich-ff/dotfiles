@@ -1,0 +1,57 @@
+#!/bin/perl
+
+# vim: filetype=i3blocks
+#   ____ ____  _   _ 
+#  / ___|  _ \| | | |
+# | |   | |_) | | | |
+# | |___|  __/| |_| |
+#  \____|_|    \___/ 
+#
+# Скрипт нагрузки на процессор
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+use strict;
+use warnings;
+use utf8;
+use Getopt::Long;
+
+my $t_warn = 50;
+my $t_crit = 80;
+my $cpu_usage = -1;
+
+sub help {
+    print "Usage: cpu_usage [-w <warning>] [-c <critical>]\n";
+    print "-w <percent>: warning threshold to become yellow\n";
+    print "-c <percent>: critical threshold to become red\n";
+    exit 0;
+}
+
+GetOptions("help|h" => \&help,
+           "w=i"    => \$t_warn,
+           "c=i"    => \$t_crit);
+
+$ENV{LC_ALL}="en_US";
+open (MPSTAT, 'mpstat 1 1 |') or die;
+while (<MPSTAT>) {
+    if (/^.*\s+(\d+\.\d+)\s+$/) {
+        $cpu_usage = 100 - $1;
+        last;
+    }
+}
+close(MPSTAT);
+
+$cpu_usage eq -1 and die 'Can\'t find CPU information';
+
+printf "%.2f%%\n", $cpu_usage;
+
+if ($cpu_usage >= $t_crit) {
+    print "#f2021a\n";
+    exit 33;
+} elsif ($cpu_usage >= $t_warn) {
+    print "#fd971f\n";
+} else {
+    print "#8CE000\n";
+}
+
+exit 0;
