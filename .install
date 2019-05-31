@@ -280,7 +280,6 @@ python-psutil glances
   ## Support
   python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
 
-
 ## cowsay
 cowsay
 
@@ -408,7 +407,7 @@ dkms asus-fan-dkms-git
 xclip
   
   ## Support
-  glew slop maim rofi-greenclip
+  glew slop maim
 
 ## speedtest-cli
 speedtest-cli
