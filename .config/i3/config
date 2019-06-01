@@ -230,6 +230,20 @@ bindsym $alt+$tab workspace prev
 bindsym $alt+$shift+$tab workspace next
 bindsym $shift+$tab $start skippy-xd
 
+# #---Отступы рабочих столов---# #
+# Консольные рабочие столы
+workspace $ws1 gaps inner 0 gaps outer 0
+workspace $ws2 gaps inner 0 gaps outer 0
+workspace $ws3 gaps inner 0 gaps outer 0
+workspace $ws4 gaps inner 0 gaps outer 0
+workspace $ws5 gaps inner 0 gaps outer 0
+workspace $ws6 gaps inner 0 gaps outer 0
+workspace $ws7 gaps inner 0 gaps outer 0
+workspace $ws8 gaps inner 0 gaps outer 0
+workspace $ws9 gaps inner 0 gaps outer 0
+workspace $ws10 gaps inner 0 gaps outer 0
+# Графические рабочие столы
+
 # #---Настройка плавающих окон---# #
 # Модификатор
 floating_modifier $mod
@@ -257,20 +271,20 @@ for_window [class="^mpv$"] floating enable, resize set 250 150, move absolute po
 
 # #---Группировка консольных окон---# #
 # Терминал
-for_window [title="Терминал"] move to workspace $ws1 focus, gaps inner current set 0; gaps outer current set 0
+for_window [title="Терминал"] move to workspace $ws1 focus
 # Текстовые редакторы
-for_window [title="Текстовый редактор"] move to workspace $ws2 focus, gaps inner current set 0; gaps outer current set 0
+for_window [title="Текстовый редактор"] move to workspace $ws2 focus
 # Файловые менеджеры
-for_window [title="Файловый менеджер"] move to workspace $ws4 focus, gaps inner current set 0; gaps outer current set 0
+for_window [title="Файловый менеджер"] move to workspace $ws4 focus
 # Разработка
 
 # Мультимедия
-for_window [title="Видео YouTube"] move to workspace $ws6 focus, gaps inner current set 0; gaps outer current set 0
-for_window [title="Музыкальный плеер"] move to workspace $ws6 focus, gaps inner current set 0; gaps outer current set 0
+for_window [title="Видео YouTube"] move to workspace $ws6 focus
+for_window [title="Музыкальный плеер"] move to workspace $ws6 focus
 # Администрирование
 
 # Социальные общение
-for_window [title="Почта"] move to workspace $ws8 focus, gaps inner current set 0; gaps outer current set 0
+for_window [title="Почта"] move to workspace $ws8 focus
 # Остальное
 
 # Развлечения
@@ -314,8 +328,8 @@ for_window [class="^TelegramDesktop$"] move to workspace $ws18 focus
 for_window [class="^discord$"] move to workspace $ws18 focus
 for_window [class="^Messenger for Desktop$"] move to workspace $ws18 focus
 # Администрирование
-for_window [class="^rdesktop$"] floating disable, move to workspace $ws19 focus, layout tabbed, gaps inner current set 0; gaps outer current set 0, border normal
-for_window [class="^Virt-manager$"] floating disable, move to workspace $ws19 focus, layout tabbed, gaps inner current set 0; gaps outer current set 0, border normal
+for_window [class="^rdesktop$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
+for_window [class="^Virt-manager$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
 for_window [class="^Nxplayer.bin|Nxclient.bin$"] floating disable, move to workspace $ws19 focus
 # Развлечения
 for_window [class="^Steam|dota2|hl2_linux$"] move to workspace $ws20 focus
