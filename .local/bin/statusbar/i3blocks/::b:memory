@@ -11,6 +11,10 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
+case $BLOCK_BUTTON in
+	1) notify-send "🧠 RAM процессы" "$(ps axch -o cmd:15,%mem --sort=-%mem | head)" ;;
+esac
+
 TYPE="${BLOCK_INSTANCE:-mem}"
 
 awk -v type=$TYPE '

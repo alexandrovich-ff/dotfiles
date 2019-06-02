@@ -1,4 +1,4 @@
-#!/bin/perl
+#!/bin/sh
 
 # vim: filetype=i3blocks
 #   ____ ____  _   _ 
@@ -11,47 +11,49 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-use strict;
-use warnings;
-use utf8;
-use Getopt::Long;
+case $BLOCK_BUTTON in
+	1) notify-send "🖥CPU процессы" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)" ;;
+esac
 
-my $t_warn = 50;
-my $t_crit = 80;
-my $cpu_usage = -1;
+URGENT_VALUE=90
 
-sub help {
-    print "Usage: cpu_usage [-w <warning>] [-c <critical>]\n";
-    print "-w <percent>: warning threshold to become yellow\n";
-    print "-c <percent>: critical threshold to become red\n";
-    exit 0;
-}
+PREV_TOTAL=0
+PREV_IDLE=0
 
-GetOptions("help|h" => \&help,
-           "w=i"    => \$t_warn,
-           "c=i"    => \$t_crit);
+cpuFile="/tmp/.cpu"
 
-$ENV{LC_ALL}="en_US";
-open (MPSTAT, 'mpstat 1 1 |') or die;
-while (<MPSTAT>) {
-    if (/^.*\s+(\d+\.\d+)\s+$/) {
-        $cpu_usage = 100 - $1;
-        last;
-    }
-}
-close(MPSTAT);
+if [[ -f "${cpuFile}" ]]; then
+  fileCont=$(cat "${cpuFile}")
+  PREV_TOTAL=$(echo "${fileCont}" | head -n 1)
+  PREV_IDLE=$(echo "${fileCont}" | tail -n 1)
+fi
 
-$cpu_usage eq -1 and die 'Can\'t find CPU information';
+CPU=(`cat /proc/stat | grep '^cpu '`)
+unset CPU[0]
+IDLE=${CPU[4]}
 
-printf "%.2f%%\n", $cpu_usage;
+TOTAL=0
 
-if ($cpu_usage >= $t_crit) {
-    print "#f2021a\n";
-    exit 33;
-} elsif ($cpu_usage >= $t_warn) {
-    print "#fd971f\n";
-} else {
-    print "#8CE000\n";
-}
+for VALUE in "${CPU[@]:0:4}"; do
+  let "TOTAL=$TOTAL+$VALUE"
+done
 
-exit 0;
+if [[ "${PREV_TOTAL}" != "" ]] && [[ "${PREV_IDLE}" != "" ]]; then
+  let "DIFF_IDLE=$IDLE-$PREV_IDLE"
+  let "DIFF_TOTAL=$TOTAL-$PREV_TOTAL"
+  let "DIFF_USAGE=(1000*($DIFF_TOTAL-$DIFF_IDLE)/$DIFF_TOTAL+5)/10"
+  echo "${DIFF_USAGE}%"
+  echo "${DIFF_USAGE}%"
+  echo ""
+else
+  echo "?"
+  echo "?"
+  echo ""
+fi
+
+echo "${TOTAL}" > "${cpuFile}"
+echo "${IDLE}" >> "${cpuFile}"
+
+if [[ "${DIFF_USAGE}" -gt 0 ]] && [[ "${DIFF_USAGE}" -gt "${URGENT_VALUE}" ]]; then
+  exit 33
+fi

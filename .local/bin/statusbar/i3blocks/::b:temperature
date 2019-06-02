@@ -1,4 +1,4 @@
-#!/bin/perl
+#!/bin/sh
 
 # vim: filetype=i3blocks
 #  _____ _____ __  __ ____  _____ ____      _  _____ _   _ ____  _____ 
@@ -11,52 +11,4 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-use strict;
-use warnings;
-use utf8;
-use Getopt::Long;
-
-binmode(STDOUT, ":utf8");
-
-my $t_warn = 70;
-my $t_crit = 90;
-my $chip = "";
-my $temperature = -9999;
-
-sub help {
-    print "Usage: temperature [-w <warning>] [-c <critical>] [--chip <chip>]\n";
-    print "-w <percent>: warning threshold to become yellow\n";
-    print "-c <percent>: critical threshold to become red\n";
-    print "--chip <chip>: sensor chip\n";
-    exit 0;
-}
-
-GetOptions("help|h" => \&help,
-           "w=i"    => \$t_warn,
-           "c=i"    => \$t_crit,
-           "chip=s" => \$chip);
-
-open (SENSORS, "sensors -u $chip |") or die;
-while (<SENSORS>) {
-    if (/^\s+temp1_input:\s+[\+]*([\-]*\d+\.\d)/) {
-        $temperature = $1;
-        last;
-    }
-}
-close(SENSORS);
-
-$temperature eq -9999 and die 'Cannot find temperature';
-
-if ($temperature >= $t_crit) {
-    print "\x{f2c7} $temperature°C\n" x2;
-    #print "#FF0000\n";
-    exit 33;
-} elsif ($temperature >= $t_warn) {
-    print "\x{f2c8} $temperature°C\n" x2;
-    #print "#FFFC00\n";
-} else {
-    print "\x{f2c9} $temperature°C\n" x2;
-    #print "#4ec2f7\n";
-}
-
-exit 0;
+sensors | awk '/Core 0/ {print $3}'
