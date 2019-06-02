@@ -83,6 +83,9 @@ egl-wayland eglexternalplatform opencl-headers opencl-nvidia libxnvctrl cuda nvi
 ## nvidia-xrun
 bbswitch nvidia-xrun
 
+## optimus-manager
+mesa-demos optimus-manager
+
 ## libva
 libva-vdpau-driver libva-intel-driver
 
@@ -514,7 +517,7 @@ capitaine-cursors
 ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
 
 ## custom
-ttf-symbola nerd-fonts-complete ttf-weather-icons
+ttf-symbola nerd-fonts-complete
 
 ## adobe-source-code-pro-fonts
 adobe-source-code-pro-fonts
