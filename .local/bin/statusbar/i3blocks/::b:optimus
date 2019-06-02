@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#   ___  ____ _____ ___ __  __ _   _ ____  
+#  / _ \|  _ \_   _|_ _|  \/  | | | / ___| 
+# | | | | |_) || |  | || |\/| | | | \___ \ 
+# | |_| |  __/ | |  | || |  | | |_| |___) |
+#  \___/|_|    |_| |___|_|  |_|\___/|____/ 
+#
+# Скрипт отображения активной видеокарты
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+	1) notify-send "🖥CPU процессы" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)" ;;
+esac
+
+GRAPHICS=$(optimus-manager --print-mode | awk '{print $5}')
+
+if [ $GRAPHICS = "intel" ]; then
+    printf  "<span color='#589DF6'></span>"
+else
+    printf  "<span color='#21B089'></span>"
+fi
