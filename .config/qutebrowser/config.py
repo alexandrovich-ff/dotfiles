@@ -5,8 +5,8 @@ c.content.host_blocking.lists.append( str(config.configdir) + "/adblock")
 config.source('themes/nord.py')
 
 # general settings
-c.url.start_pages = 'file:///home/flappy/.local/browser-homepage/index.html'
-c.url.default_page = 'file:///home/flappy/.local/browser-homepage/index.html'
+c.url.start_pages = 'file:///home/flappy/.local/browser-homepage/v1/index.html'
+c.url.default_page = 'file:///home/flappy/.local/browser-homepage/v1/index.html'
 c.editor.command = ["$TERMINAL", "--title", "qutebrowser-edit", "-e", "nvim", "-f", "{}"]
 c.new_instance_open_target = "tab-bg"
 c.prompt.filebrowser = True
