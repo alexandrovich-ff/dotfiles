@@ -16,10 +16,6 @@
 # #---Видимые---# #
 # Файлы
 !.gitignore
-!example.html
-!README.md
 # Директории
-!components
-!css
-!img
-!screenshots
+!v1
+!v2
