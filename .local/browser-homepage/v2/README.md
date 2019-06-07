@@ -5,4 +5,4 @@
 # Скриншоты
 
 Начальная страница
-![Screenshot](screenshots/sreenshot.png)
+![Screenshot](screenshots/screenshot.png)
