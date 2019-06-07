@@ -1,0 +1,201 @@
+<!doctype html>
+
+<!--
+========================================
+oooo    oooo               .            
+`888   .8P'              .o8            
+ 888  d8'     .ooooo.  .o888oo  .oooo.  
+ 88888[      d88' `88b   888   `P  )88b 
+ 888`88b.    888   888   888    .oP"888 
+ 888  `88b.  888   888   888 . d8(  888 
+o888o  o888o `Y8bod8P'   "888" `Y888""8o
+               @nilsu.org               
+=== Copyright (C) 2017  Dakota Walsh ===
+-->
+
+<head>
+	<title>~</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script>WebFontConfig={google:{families:['Roboto:300:latin']}};</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async></script>
+</head>
+<main>
+	<time id="js-clock"></time>
+	<form id="js-search-form" autocomplete="off">
+		<input id="js-search-input" type="text" autofocus>
+	</form>
+</main>
+
+<aside id="js-overlay" class="overlay">
+	<ul id="js-lists" class="lists"></ul>
+</aside>
+
+<script>
+  'use strict';
+
+  var config = {
+    categories: [
+      { name: "Tools", commands: [
+        { key: 'g', name: 'GitLab', url: 'https://gitlab.com', search: '/search?utf8=✓&search=' },
+        { key: 'gh', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
+		{ key: 'do', name: 'DigitalOcean', url: 'https://cloud.digitalocean.com/dashboard', search: '/' },
+      ] },
+      { name: "News", commands: [
+        { key: 'r', name: 'Reddit', url: 'https://www.reddit.com', search: '/r/' },
+        { key: 'hn', name: 'Hacker News', url: 'https://news.ycombinator.com', search: '/?query=' },
+        { key: 'sl', name: 'Slashdot', url: 'https://slashdot.org/', search: '/index2.pl?fhfilter=' },
+      ] },
+      { name: "Social", commands: [
+        { key: 'p', name: 'ProtonMail', url: 'https://mail.protonmail.com/inbox', search: '/' },
+        { key: 'ma', name: 'Mastodon', url: 'https://mastodon.technology', search: '/search/top/?q=' },
+        { key: 'tw', name: 'Twitter', url: 'https://twitter.com', search: '/search?q=' },
+		{ key: 'le', name: 'Level1Techs', url: 'https://forum.level1techs.com', search: '/search?q=' },
+      ] },
+      { name: "Media", commands: [
+        { key: 'n', name: 'Nilsu', url: 'https://www.nilsu.org/media', search: '/' },
+        { key: 'yo', name: 'YouTube', url: 'https://www.youtube.com', search: '/results?search_query=' },
+        { key: 'vi', name: 'Vimeo', url: 'https://vimeo.com', search: '/search?q=' },
+        { key: 'so', name: 'SoundCloud', url: 'https://soundcloud.com', search: '/search?q=' },
+      ] },
+      { name: "Education", commands: [
+        { key: 'd', name: 'DebianWiki', url: 'https://wiki.debian.org', search: '/FrontPage?action=fullsearch&value=' },
+        { key: 'ha', name: 'Hacc', url: 'https://my.hacc.edu/', search: '' },
+        { key: 'lo', name: 'LÖVEWiki', url: 'https://love2d.org/wiki', search: '/' },
+        { key: 'wi', name: 'Wikipedia', url: 'https://en.wikipedia.org', search: '/wiki/' },
+      ] },
+      { name: "Shopping", commands: [
+        { key: 'm', name: 'Massdrop', url: 'https://www.massdrop.com', search: '/search/' },
+        { key: 'pc', name: 'PcPartPicker', url: 'https://www.pcpartpicker.com', search: '/search/?cc=us&q=' },
+        { key: 'ne', name: 'Newegg', url: 'https://www.newegg.com', search: '/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=' },
+      ] },
+    ],
+
+    // if none of the keys are matched, this is used for searching
+    defaultSearch: 'https://duckduckgo.com/?q=',
+    // the delimiter between the key and your search query
+    // e.g. to search GitHub for potatoes you'd type "g:potatoes"
+    searchDelimiter: ':'
+  };
+
+  function $(s) {
+    return document.querySelector(s);
+  };
+
+  var Clock = (function() {
+    var clock = $('#js-clock');
+
+    function pad(num) {
+      return ('0' + num.toString()).slice(-2);
+    }
+
+    function setTime() {
+      var date = new Date();
+      clock.innerHTML = pad(date.getHours()) + ' ' + pad(date.getMinutes());
+    }
+
+    setTime();
+    setInterval(setTime, 1000);
+  })();
+
+  var Help = (function(config) {
+    var charRegex = /[a-zA-Z0-9-_ ]/;
+    var head = $('head');
+    var overlay = $('#js-overlay');
+    var lists = $('#js-lists');
+    var categoryItems = '';
+
+    config.categories.forEach(function(category) {
+      var commandItems = '';
+
+      category.commands.forEach(function(command) {
+        var prerenderLink = '<link rel="prerender" href="' + command.url + '">';
+        head.insertAdjacentHTML('beforeend', prerenderLink);
+
+        commandItems += (
+          '<li class="command">' +
+            '<a href="' + command.url + '">' +
+              '<span class="command-key">' + command.key + '</span>' +
+              '<span class="command-name">' + command.name + '</span>' +
+            '</a>' +
+          '</li>'
+        );
+      });
+
+      lists.insertAdjacentHTML(
+        'beforeend',
+        '<li class="category">' +
+          '<h2 class="category-name">' + category.name + '</h2>' +
+          '<ul>' + commandItems + '</ul>' +
+        '</li>'
+      );
+    });
+
+    document.addEventListener('keydown', function(event) {
+      var isEscape = event.keyCode === 27;
+      var isAlphaNum = charRegex.test(String.fromCharCode(event.keyCode));
+
+      if (isEscape || isAlphaNum) {
+        overlay.removeAttribute('data-toggled');
+        Form.focus();
+      }
+    });
+
+    return {
+      toggle: function() {
+        var toggle = overlay.getAttribute('data-toggled') !== 'true';
+        overlay.setAttribute('data-toggled', toggle);
+      }
+    };
+  })(config);
+
+  var Form = (function(config) {
+    var urlRegex = /(\b(https?|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i;
+    var searchForm = $('#js-search-form');
+    var searchInput = $('#js-search-input');
+
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var q = searchInput.value.trim();
+
+      if (q === '' || q === '?') {
+        Help.toggle();
+        searchInput.value = '';
+      } else {
+        var qSplit = q.split(config.searchDelimiter);
+        var qIsUrl = q.match(new RegExp(urlRegex));
+        var redirect = '';
+
+        if (qIsUrl) redirect = q;
+        else redirect = config.defaultSearch + encodeURIComponent(q);
+
+        config.categories.forEach(function(category) {
+          category.commands.forEach(function(command) {
+            if (qSplit[0] === command.key) {
+              if (qSplit[1] && command.search) {
+                qSplit.shift();
+                var search = encodeURIComponent(qSplit[0].trim());
+                redirect = command.url + command.search + search;
+              } else {
+                redirect = command.url;
+              }
+            }
+          });
+        });
+
+        window.location.href = redirect;
+      }
+    }, false);
+
+    return {
+      focus: function() {
+        searchInput.focus();
+      }
+    };
+  })(config);
+</script>
