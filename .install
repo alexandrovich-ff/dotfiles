@@ -590,7 +590,7 @@ asar gnome-keyring skypeforlinux-stable-bin
 clang compiler-rt ninja libc++ libc++abi libc++experimental discord
 
 ## messengerfordesktop
-anydesk bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
+bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
 
 ## mpv
 cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
@@ -687,6 +687,9 @@ musixmatch-bin
 
 ## nomachine
 nomachine
+
+## anydesk
+anydesk
 
 ## stellarium
 gpsd qt5-multimedia qt5-script qt5-serialport stellarium
