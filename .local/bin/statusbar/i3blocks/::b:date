@@ -11,9 +11,8 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-date '+%A%e'
-
 case $BLOCK_BUTTON in
-	1) pgrep -x dunst >/dev/null && notify-send "This Month" "$(cal --color=always | sed "s/..7m/<b><span color=\"red\">/;s/..27m/<\/span><\/b>/")" && notify-send "Appointments" "$(calcurse -D ~/.config/calcurse -d3)" ;;
-	2) "$TERMINAL" -e calcurse -D ~/.config/calcurse ;;
+	1) pgrep -x dunst >/dev/null && notify-send "$(cal)" && notify-send "$(calcurse -D ~/.config/calcurse -d3)" ;;
 esac
+
+date '+%A%e'
