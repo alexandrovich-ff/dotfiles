@@ -422,7 +422,7 @@ speedtest-cli
 libgssglue pcsclite libao rdesktop
 
 ## freerdp
-freerdp
+libmp4v2 faac mbedtls freerdp
 
 ## grafana
 grafana
