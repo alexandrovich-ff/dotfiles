@@ -11,11 +11,11 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-case $BLOCK_BUTTON in
-	1) notify-send "🖥CPU процессы" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)" ;;
-esac
-
 GRAPHICS=$(optimus-manager --print-mode | awk '{print $5}')
+
+case $BLOCK_BUTTON in
+	1) notify-send " Активная видеокарта" "Сейчас используется $GRAPHICS видеокарта" ;
+esac
 
 if [ $GRAPHICS = "intel" ]; then
     printf  "<span color='#589DF6'></span>"
