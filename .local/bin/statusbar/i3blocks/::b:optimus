@@ -14,7 +14,7 @@
 GRAPHICS=$(optimus-manager --print-mode | awk '{print $5}')
 
 case $BLOCK_BUTTON in
-	1) notify-send " Активная видеокарта" "Сейчас используется $GRAPHICS видеокарта" ;
+	1) notify-send " Активная видеокарта" "Сейчас используется $GRAPHICS видеокарта" ;;
 esac
 
 if [ $GRAPHICS = "intel" ]; then
