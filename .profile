@@ -12,11 +12,13 @@
 # Переменные окружения
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
+export EDITOR_G="subl3"
 export TERMINAL="$HOME/.local/bin/tools/::terminal"
 export TERM=xterm-color
 export BROWSER="qutebrowser"
 export READER="zathura"
 export FILE="vifm"
+export FILE_G="pcmanfm"
 export SUDO_ASKPASS="$HOME/.local/bin/tools/::dmenupass"
 
 # Цветовая палитра LESS

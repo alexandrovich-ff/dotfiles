@@ -15,9 +15,13 @@
 :timer() {termdown $1 | lolcat}
 # Просмотр конфигурационных файлов
 :sec() { du -a $HOME/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+    ::sec() { du -a $HOME/.config/* | awk '{print $2}' | fzf | xargs -r $EDITOR_G ; }
 :ses() { du -a $HOME/.local/bin/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-:serv() {du -a $HOME/Документация/*UNIX/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
-:bz() {du -a $HOME/База\ знаний/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+    ::ses() { du -a $HOME/.local/bin/* | awk '{print $2}' | fzf | xargs -r $EDITOR_G ; }
+:serv() { du -a $HOME/Документация/*UNIX/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+    ::serv() { du -a $HOME/Документация/*UNIX/* | awk '{print $2}' | fzf | xargs -r $EDITOR_G ; }
+:bz() { du -a $HOME/База\ знаний/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+    ::bz() { du -a $HOME/База\ знаний/* | awk '{print $2}' | fzf | xargs -r $EDITOR_G ; }
 :vf() { fzf | xargs -r -I % $EDITOR % ;}
 # Переустановка всех пакетов системы
 :rebuild() { sudo pacman -S $(pacman -Qnq) }
