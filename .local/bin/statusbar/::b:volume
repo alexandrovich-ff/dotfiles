@@ -15,13 +15,12 @@
 #!/bin/sh
 
 case $BLOCK_BUTTON in
-    1) setsid "$TERMINAL" -e pulsemixer & ;;
     2) pulsemixer --toggle-mute && pkill -RTMIN+9 i3blocks ;;
-    4) pulsemixer --change-volume +5 && pkill -RTMIN+9 i3blocks ;;
-    5) pulsemixer --change-volume -5 && pkill -RTMIN+9 i3blocks ;;
+    3) pulsemixer --change-volume +5 && pkill -RTMIN+9 i3blocks ;;
+    1) pulsemixer --change-volume -5 && pkill -RTMIN+9 i3blocks ;;
 esac
 
-[ "$(pulsemixer --get-mute)" = "1" ] && printf "\\n" && exit
+[ "$(pulsemixer --get-mute)" = "1" ] && printf " ВЫКЛ\\n" && exit
 
 vol=$(pulsemixer --get-volume | awk '{print $1}')
 
