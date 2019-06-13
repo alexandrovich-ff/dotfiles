@@ -152,7 +152,7 @@ xorg-xinput
 rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulsemixer pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
 
 ## jack
-realtime-privileges celt dbus-c++ libffado libxml++ python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
+realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
 
 ## gstreamer
 aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer
@@ -206,9 +206,6 @@ go yay
 ## debtap
 debtap
 
-## polybar
-cmake jsoncpp libnsl libuv python python2 rhash xorg-fonts-misc libmpdclient polybar
-
 ## dmenu2
 dmenu2
 
@@ -227,6 +224,9 @@ skippy-xd-git
    ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██╔══██║██║         ██║   ██║   ██║   ██║██║     ╚════██║
    ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ██║  ██║███████╗    ╚██████╔╝   ██║   ██║███████╗███████║
    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝
+
+## python
+libnsl python
 
 ## git
 perl-error perl-timedate perl-mailtools git
@@ -257,7 +257,7 @@ liblqr libraqm imagemagick
 time
 
 ## neovim
-jemalloc libtermkey libvterm luajit msgpack unibilium neovim
+jemalloc libtermkey libvterm luajit msgpack unibilium libuv neovim
 
 ## hdparm
 hdparm
