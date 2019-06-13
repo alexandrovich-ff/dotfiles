@@ -11,6 +11,11 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
+case $BLOCK_BUTTON in
+    1) ::dmenudisplay ;;
+    3) arandr ;;
+esac
+
 xrandrOut=$(xrandr)
 
 hdmiName=$(echo "${xrandrOut}" | grep -i 'HDMI' | awk '{print $1}')
