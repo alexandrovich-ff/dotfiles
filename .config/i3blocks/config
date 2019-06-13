@@ -1,0 +1,115 @@
+# vim: filetype=i3blocks
+#  ___ _____ ____  _     ___   ____ _  ______  
+# |_ _|___ /| __ )| |   / _ \ / ___| |/ / ___| 
+#  | |  |_ \|  _ \| |  | | | | |   | ' /\___ \ 
+#  | | ___) | |_) | |__| |_| | |___| . \ ___) |
+# |___|____/|____/|_____\___/ \____|_|\_\____/ 
+#
+# Настройка панели i3blocks
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+command=~/.local/bin/statusbar/$BLOCK_NAME
+align=center
+separator=false
+separator_block_width=15
+markup=pango
+
+[::b:display]
+label=
+interval=once
+color=#E88939
+signal=1
+
+[::b:optimus]
+interval=once
+
+[::b:webcam]
+label=
+interval=once
+color=#589df6
+signal=2
+
+[::b:record]
+command=cat /tmp/recordingicon
+interval=once
+signal=2
+
+[::b:microphone]
+label=
+interval=once
+color=#E88939
+signal=3
+
+[::b:locale]
+label=
+interval=once
+color=#21b089
+
+[::b:keystate]
+label=
+instance=caps
+interval=once
+color=#ADFF2F
+
+[::b:news]
+label=
+interval=once
+color=#f9555f
+signal=4
+
+[::b:mailbox]
+label=
+interval=600
+color=#f9555f
+signal=5 
+
+[::b:torrent]
+interval=20
+color=#f9555f
+signal=6
+
+[::b:internet]
+interval=once
+color=#589df6
+signal=7
+
+[::b:pacpackages]
+label=
+interval=once
+color=#1793D1
+signal=8
+
+[::b:volume]
+interval=once
+color=#f9555f
+signal=9
+
+[::b:temperature]
+label=
+interval=30
+color=#E88939
+
+[::b:memory]
+label=
+interval=30
+color=#21b089
+
+[::b:cpu]
+label=
+interval=30
+color=#589df6
+
+[::b:battery]
+interval=once
+
+[time]
+label=
+command=date '+%I:%M' 
+interval=60
+color=#21b089
+
+[::b:date]
+label=
+interval=once
+color=#f9555f
