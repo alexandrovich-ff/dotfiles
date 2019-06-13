@@ -43,8 +43,8 @@ if [[ "$activeDisplays" =~ "${hdmiName}" && "$activeDisplays" =~ "${vgaName}" ]]
     $(xrandr --output "${vgaName}" --auto)
     $(xrandr --output "${hdmiName}" --primary --auto)
   fi
-  echo "VGA1 & HDMI"
-  echo "VGA1 & HDMI"
+  echo "VGA & HDMI"
+  echo "VGA & HDMI"
   echo ""
 elif [[ "$activeDisplays" =~ "${hdmiName}" ]]; then
   if [[ "${change}" = "yes" ]]; then
@@ -70,8 +70,8 @@ elif [[ "$activeDisplays" =~ "${edpName}" ]]; then
     $(xrandr --output "${vgaName}" --off)
     $(xrandr --output "${hdmiName}" --off)
   fi
-  echo "eDP"
-  echo "eDP"
+  echo "ВЫКЛ"
+  echo "ВЫКЛ"
   echo ""
 fi
 
