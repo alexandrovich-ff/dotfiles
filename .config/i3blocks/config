@@ -76,7 +76,6 @@ signal=7
 
 [::b:vpn]
 interval=once
-color=#21b089
 signal=10
 
 [::b:pacpackages]
