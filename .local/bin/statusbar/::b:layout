@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  _        _ __   _____  _   _ _____ 
+# | |      / \\ \ / / _ \| | | |_   _|
+# | |     / _ \\ V / | | | | | | | |  
+# | |___ / ___ \| || |_| | |_| | | |  
+# |_____/_/   \_\_| \___/ \___/  |_|  
+#
+# Скрипт отображения раскладки
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+killall kbdd 2>/dev/null
+kbdd >/dev/null || exit 1
+
+N=$( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService\
+    /ru/gentoo/KbddService ru.gentoo.kbdd.getCurrentLayout 2>/dev/null |\
+    sed -un 's/^.*uint32 //p' )
+LAYOUT=$( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService \
+    /ru/gentoo/KbddService ru.gentoo.kbdd.getLayoutName uint32:$N )
+
+if [[ $LAYOUT = "   English (US)" ]]; then
+  echo "АНГ"
+else
+  echo "РУС"
+fi

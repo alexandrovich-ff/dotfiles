@@ -73,6 +73,7 @@ set $esc Escape
 set $enter Return
 set $space space
 set $del Delete
+set $caps ISO_Next_Group
 set $r --release
 # Директории
 set $i3 ${HOME}/.config/i3
@@ -548,6 +549,8 @@ bindsym $mod+Pause $start ::xcqr
 bindsym $mod+$tab $start i3flip right
 # %%hotkey: Переключить вкладку <- %%
 bindsym $mod+$shift+$tab $start i3flip left
+# %%hotkey: Переключить раскладку %%
+bindsym $caps $start pkill -RTMIN+11 i3blocks
 # Быстрый доступ
 #bindsym $mod+$alt+m [title="Видео YouTube"] scratchpad show
 

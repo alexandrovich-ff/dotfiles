@@ -41,10 +41,11 @@ interval=once
 color=#E88939
 signal=3
 
-[::b:locale]
+[::b:layout]
 label=
 interval=once
 color=#21b089
+signal=11
 
 [::b:keystate]
 label=
