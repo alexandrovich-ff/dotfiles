@@ -11,18 +11,16 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-browser=${BROWSER:-firefox}
-
 pgrep -x dmenu && exit
 
 choice=$(echo "" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Поиск Google:") || exit 1
 
 if [ "$choice" = ""  ]; then
-    $browser "https://google.ru"
+    $BROWSER "https://google.ru"
 else
     if echo "$choice" | grep "^(http:\/\/|https:\/\/)?[a-zA-Z0-9]+\.[a-zA-Z]+(/)?.*$"; then
-        $browser "$choice"
+        $BROWSER "$choice"
     else
-        $browser "https://www.google.ru/search?q=$choice"
+        $BROWSER "https://www.google.ru/search?q=$choice"
     fi
 fi
