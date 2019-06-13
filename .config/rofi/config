@@ -1,2 +1,2 @@
 rofi.font:     Terminus (TTF) 14
-rofi.theme:    ~/.config/rofi/dark.rasi
+rofi.theme:    ~/.config/rofi/light.rasi

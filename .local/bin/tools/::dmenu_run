@@ -11,4 +11,4 @@
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
-dmenu_run -nb '#2D303B' -nf white -sb blue -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -p "Запуск приложения:"
+dmenu_run -nb white -nf black -sb red -sf white -fn 'TerminessTTF Nerd Font-14' -x 15 -y 40 -h 28 -w 545 -p "Запуск приложения:"

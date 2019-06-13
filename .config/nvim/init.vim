@@ -71,7 +71,7 @@ set incsearch
 set encoding=utf-8
 
 "colorscheme PaperColor
-"set background=dark
+"set background=light
 
 " --- Параметры для плагинов ---
 " Ranger

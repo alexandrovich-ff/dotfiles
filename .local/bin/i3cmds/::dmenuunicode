@@ -13,7 +13,7 @@
 
 xclip -h >/dev/null || exit
 
-chosen=$(grep -v "#" $HOME/.config/emoji | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -l 20)
+chosen=$(grep -v "#" $HOME/.config/emoji | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -l 20 )
 
 [ "$chosen" != "" ] || exit
 
