@@ -76,7 +76,6 @@ set $del Delete
 set $r --release
 # Директории
 set $i3 ${HOME}/.config/i3
-  #set $polybar ${HOME}/.config/polybar
 # Выполнение / запуск
 set $start exec --no-startup-id
 set $run exec
@@ -415,9 +414,6 @@ bindsym $mod+o     sticky toggle
 # %%hotkey: Включить/выключить панель %%
 bindsym $mod+p     bar mode toggle
 
-  #bindsym $mod+p $start $polybar/launch & notify-send "🧰 Панель включена"
-  #bindsym $mod+$shift+p $start $polybar/stop & notify-send "🧰 Панель выключена"
-
 # %%hotkey: Запустить горизонтальный терминал %%
 bindsym $mod+bracketright   split horizontal ;; exec $TERMINAL
 # %%hotkey: Запустить вертикальный терминал %%
@@ -561,5 +557,3 @@ $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
 $start synclient TouchpadOff=1
-# Панели
-  #$always $polybar/launch
