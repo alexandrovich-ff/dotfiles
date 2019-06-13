@@ -101,6 +101,7 @@ set $equalizer $TERMINAL -t 'Эквалайзер' -e cava
 # Статус бар
 bar {
    font pango:TerminessTTF Nerd Font Bold 14
+   strip_workspace_numbers yes
    colors {
       background $elegant
       statusline $darkwhite
@@ -119,27 +120,27 @@ bar {
 
 # #----Рабочие столы---# #
 # Консольные рабочие столы
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
-set $ws4 ""
-set $ws5 ""
-set $ws6 ""
-set $ws7 ""
-set $ws8 ""
-set $ws9 ""
-set $ws10 ""
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
+set $ws10 "10:"
 # Графические рабочие столы
-set $ws11 ""
-set $ws12 ""
-set $ws13 ""
-set $ws14 ""
-set $ws15 ""
-set $ws16 ""
-set $ws17 ""
-set $ws18 ""
-set $ws19 ""
-set $ws20 ""
+set $ws11 "1:"
+set $ws12 "2:"
+set $ws13 "3:"
+set $ws14 "4:"
+set $ws15 "5:"
+set $ws16 "6:"
+set $ws17 "7:"
+set $ws18 "8:"
+set $ws19 "9:"
+set $ws20 "10:"
 # Перейти на консольный рабочий стол
 # %%hotkey: Консольный рабочий стол 1 %%
 bindsym $mod+1 workspace $ws1
@@ -486,7 +487,7 @@ bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send "Визуал
 # %%hotkey: Поиск в Google %%
 bindsym $mod+F1 $start ::dmenusearch
 # %%hotkey: Подключение к VPN серверу %%
-bindsym $alt+F1 $start ::dmenuvpn && pkill -RTMIN+77 i3blocks
+bindsym $alt+F1 $start ::dmenuvpn
 # %%hotkey: Поиск на YouTube %%
 bindsym $mod+$alt+F1 $start ::dmenusearch-youtube
 # %%hotkey: Запуск почтового клиента %%
