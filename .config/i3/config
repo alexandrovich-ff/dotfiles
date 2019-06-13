@@ -485,6 +485,8 @@ bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send "Визуал
 # Скрипты
 # %%hotkey: Поиск в Google %%
 bindsym $mod+F1 $start ::dmenusearch
+# %%hotkey: Подключение к VPN серверу %%
+bindsym $alt+F1 $start ::dmenuvpn && pkill -RTMIN+77 i3blocks
 # %%hotkey: Поиск на YouTube %%
 bindsym $mod+$alt+F1 $start ::dmenusearch-youtube
 # %%hotkey: Запуск почтового клиента %%
@@ -557,3 +559,4 @@ $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
 $start synclient TouchpadOff=1
+$start ::display
