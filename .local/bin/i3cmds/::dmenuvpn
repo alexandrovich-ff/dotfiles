@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _    __     ______  _   _ 
+# |  _ \|  \/  | ____| \ | | | | |   \ \   / /  _ \| \ | |
+# | | | | |\/| |  _| |  \| | | | |____\ \ / /| |_) |  \| |
+# | |_| | |  | | |___| |\  | |_| |_____\ V / |  __/| |\  |
+# |____/|_|  |_|_____|_| \_|\___/       \_/  |_|   |_| \_|
+#
+# Скрипт поключения к VPN серверам
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+if pgrep -x openvpn >/dev/null ;
+then
+    [ "$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Отключится от VPN сервера?")" = "Да" ] && sudo -A killall openvpn && notify-send "💡 Отключен от VPN сервера"
+else
+    keys=$(for ovpn in `find $HOME/.vpn*/* -type f -name "*.ovpn"`; do echo $ovpn | cut -f5 -d/ ; done)
+    ovpn=$(printf "$keys" | ::dmenu -x 15 -y 40 -h 28 -w 600 -l 10 -i -p "Выберите VPN сервер :")
+    connect=$(sudo -A openvpn --config "$HOME/.vpn/$ovpn")
+    $connect
+fi
+
+pkill -RTMIN+10 i3blocks
