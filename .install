@@ -271,7 +271,7 @@ hddtemp
 iotop
 
 ## htop
-htop lsof strace
+htop-vim-git lsof strace
 
 ## gotop
 gotop-bin
