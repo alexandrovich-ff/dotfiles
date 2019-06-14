@@ -1,18 +1,18 @@
 #!/bin/sh
 
 # vim: filetype=i3blocks
-#   ____ _     ___   ____ _  __
-#  / ___| |   / _ \ / ___| |/ /
-# | |   | |  | | | | |   | ' / 
-# | |___| |__| |_| | |___| . \ 
-#  \____|_____\___/ \____|_|\_\
-#   
+#  ____    _  _____ _____ 
+# |  _ \  / \|_   _| ____|
+# | | | |/ _ \ | | |  _|  
+# | |_| / ___ \| | | |___ 
+# |____/_/   \_\_| |_____|
+#
 # Скрипт состояния батареи
 # Написан: @alexandrovich.ff
 # Website: http://malikov.red
 
 case $BLOCK_BUTTON in
-	1) pgrep -x dunst >/dev/null && notify-send "$(cal)" && notify-send "$(calcurse -D ~/.config/calcurse -d3)" ;;
+	1) pgrep -x dunst >/dev/null && notify-send "$(cal | sed "s/..7m/<b><span color=\"red\">/;s/..27m/<\/span><\/b>/")" && notify-send "Напоминания:" "$(calcurse -D ~/.config/calcurse -d3)" ;;
 esac
 
 date '+%A%e'
