@@ -563,4 +563,5 @@ $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
 $start synclient TouchpadOff=1
+#$start unclutter
 $start ::display
