@@ -544,7 +544,7 @@ ttf-liberation cantarell-fonts ttf-dejavu
 atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 js60 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-lib tdb sound-theme-freedesktop libcanberra gtk3 vte-common termite-terminfo termite
 
 ## chromium
-nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore ffmpeg minizip libxslt re2 snappy flac chromium
+nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore ffmpeg minizip libxslt re2 snappy flac pipewire chromium
 
 ## pepper-flash & flashplugin
 pepper-flash & gtk2 flashplugin
