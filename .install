@@ -746,7 +746,10 @@ calcurse
 unclutter
 
 ## android-tools
-android-tools
+android-tools android-udev
+
+  ## Heimdall
+  cmake jsoncp rhash heimdall
 
 ██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
 ██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
