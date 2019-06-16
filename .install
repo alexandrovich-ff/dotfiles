@@ -15,7 +15,7 @@ mlocate pacman-contrib
 btrfs-progs dmraid dosfstools fuse-common fuse2 gcr gptfdisk libatasmart libblockdev libbytesize libcddb libcdio libcdio-paranoia libyaml ndctl parted udisks2 volume_key gvfs
 
   ## Support
-  gvfs-smb
+  gvfs-smb libmtp gvfs-mtp
 
 ## refind-efi
 sbsigntools efibootmgr efivar refind-efi
@@ -744,6 +744,9 @@ calcurse
 
 ## unclutter
 unclutter
+
+## android-tools
+android-tools
 
 ██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
 ██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
