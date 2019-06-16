@@ -172,8 +172,6 @@ xcb-util-keysyms xcb-util-wm libev yajl startup-notification libdatrie libthai l
 
   ## i3blocks
   i3-blocks acpi playerctl sysstat
-    ## Support
-    kbdd-git
 
   ## i3ass
   i3ass
