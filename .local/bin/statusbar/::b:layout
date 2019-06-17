@@ -16,5 +16,5 @@ LAYOUT=$(xkblang -ps)
 if [[ $LAYOUT = "En" ]]; then
   printf "<span color='#21b089'>АНГ</span>"
 else
-  printf "<span color='#5692B1'>РУС</span>"
+  printf "<span color='#F5CC40'>РУС</span>"
 fi
