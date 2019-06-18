@@ -1,6 +1,15 @@
 # adblock
 c.content.host_blocking.enabled = True
-c.content.host_blocking.lists = ['https://raw.githubusercontent.com/alexandrovich-ff/blocklists/master/blocklists/ruadlist%2Beasylist' , 'https://raw.githubusercontent.com/alexandrovich-ff/blocklists/master/blocklists/steveblack']
+c.content.host_blocking.lists = ['https://raw.githubusercontent.com/alexandrovich-ff/blocklists/master/blocklists/ruadlist%2Beasylist' , 'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts' , 'https://raw.githubusercontent.com/StevenBlack/hosts/master/data/StevenBlack/hosts' , 'http://www.malwaredomainlist.com/hostslist/delisted.txt' , 'http://www.malwaredomainlist.com/hostslist/ip.txt' , 'https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt' , 'https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Dead/hosts' , 'https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts' , 'https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts']
+
+# privacy
+c.content.javascript.alert                       = True
+c.content.javascript.can_access_clipboard        = False
+c.content.javascript.can_close_tabs              = False
+c.content.javascript.can_open_tabs_automatically = False
+c.content.javascript.enabled                     = False
+c.content.javascript.modal_dialog                = False
+c.content.javascript.prompt                      = True
 
 ## themes
 config.source('themes/nord.py')
