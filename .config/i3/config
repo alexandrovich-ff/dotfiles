@@ -564,4 +564,4 @@ $start lxpolkit
 $start dunst
 $start synclient TouchpadOff=1
 #$start unclutter
-$start ::display
+#$start ::display
