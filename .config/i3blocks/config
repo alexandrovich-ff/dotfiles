@@ -53,11 +53,11 @@ instance=caps
 interval=once
 color=#ADFF2F
 
-#[::b:news]
-#label=
-#interval=once
-#color=#f9555f
-#signal=4
+[::b:news]
+label=
+interval=once
+color=#f9555f
+signal=4
 
 [::b:mailbox]
 label=
