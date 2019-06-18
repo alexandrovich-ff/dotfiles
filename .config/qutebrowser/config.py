@@ -1,3 +1,7 @@
+# adblock
+c.content.host_blocking.enabled = True
+c.content.host_blocking.lists = ['https://raw.githubusercontent.com/alexandrovich-ff/blocklists/master/blocklists/ruadlist%2Beasylist' , 'https://raw.githubusercontent.com/alexandrovich-ff/blocklists/master/blocklists/steveblack']
+
 ## themes
 config.source('themes/nord.py')
 
@@ -67,6 +71,3 @@ config.bind('<Ctrl-m>', 'set-cmd-text -s :quickmark-save', mode='normal')
 config.bind('<Escape>', 'leave-mode', mode='passthrough')
 config.bind('gi', 'enter-mode insert ;; jseval --quiet var inputs = document.getElementsByTagName("input"); for(var i = 0; i < inputs.length; i++) { var hidden = false; for(var j = 0; j < inputs[i].attributes.length; j++) { hidden = hidden || inputs[i].attributes[j].value.includes("hidden"); }; if(!hidden) { inputs[i].focus(); break; } }')
 config.bind('<Ctrl-p>', 'jseval document.location=\'https://pinboard.in/add?next=same&url=\'+encodeURIComponent(location.href)+\'&title=\'+encodeURIComponent(document.title)', mode="normal")
-
-# adblock
-c.content.host_blocking.lists.append( str(config.configdir) + "/blocklists/ruadlist+easylist")
