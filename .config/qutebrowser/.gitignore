@@ -17,6 +17,6 @@
 # Файлы
 !.gitignore
 !config.py
-!adblock
 # Директории
 !themes
+!blocklists
