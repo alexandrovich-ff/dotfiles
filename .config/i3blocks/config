@@ -52,6 +52,7 @@ label=
 instance=caps
 interval=once
 color=#ADFF2F
+signal=13
 
 [::b:news]
 label=

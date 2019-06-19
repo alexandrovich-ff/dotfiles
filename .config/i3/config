@@ -47,14 +47,6 @@ set $silver  #e4e4e499
 set $toxic   #8EC00099
 set $elegant #00002c30
 # #---Панели---# #
-  # Polybar
-  #  NAME'S               BORDER         BACKG     TEXT        INDICATOR      CHILD_BORDER
-  #client.focused          #383C4A        $red      $magenta    $darkmagenta   #383C4A
-  #client.unfocused        #383C4A        $blue     $white      $darkblue      #383C4A
-  #client.focused_inactive #383C4A        $blue     $white      $darkblue      #383C4A
-  #client.urgent           #383C4A        $darkred  $black      $darkred       #383C4A
-  #client.background       #383C4
-# i3blocks
 #  NAME'S               BORDER         BACKG     TEXT        INDICATOR      CHILD_BORDER
 client.focused           $cyan          $cyan     $elegant    $cyan
 client.unfocused         $elegant       $elegant  $cyan       $elegant
@@ -551,6 +543,8 @@ bindsym $mod+$tab $start i3flip right
 bindsym $mod+$shift+$tab $start i3flip left
 # %%hotkey: Переключить раскладку %%
 bindsym $caps $start pkill -RTMIN+11 i3blocks
+# %%hotkey: Включить CapsLock %%
+bindsym $shift+$caps $start pkill -RTMIN+13 i3blocks
 # Быстрый доступ
 #bindsym $mod+$alt+m [title="Видео YouTube"] scratchpad show
 
