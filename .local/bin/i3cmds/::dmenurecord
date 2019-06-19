@@ -1,4 +1,4 @@
--i $DISPLAY #!/bin/sh
+#!/bin/sh
 
 # vim: filetype=dmenu
 #  ____  __  __ _____ _   _ _   _       ____  _____ ____ ___  ____  ____  
