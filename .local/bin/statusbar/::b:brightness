@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# vim: filetype=i3blocks
+#  ____  ____  ___ ____ _   _ _____ _   _ _____ ____ ____  
+# | __ )|  _ \|_ _/ ___| | | |_   _| \ | | ____/ ___/ ___| 
+# |  _ \| |_) || | |  _| |_| | | | |  \| |  _| \___ \___ \ 
+# | |_) |  _ < | | |_| |  _  | | | | |\  | |___ ___) |__) |
+# |____/|_| \_\___\____|_| |_| |_| |_| \_|_____|____/____/ 
+#
+# Скрипт отображения яркости подсветки монитора
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+case $BLOCK_BUTTON in
+  1) xbacklight -dec 5 && pkill -RTMIN+12 i3blocks ;;
+  3) xbacklight -inc 5 && pkill -RTMIN+12 i3blocks ;;
+esac
+
+level=$(xbacklight -get | cut -d'.' -f 1)
+echo "$level%"

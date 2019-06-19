@@ -435,8 +435,8 @@ bindsym $mod+b border toggle
 bindsym XF86AudioRaiseVolume $start pamixer -i 5 && pkill -RTMIN+9 i3blocks
 bindsym XF86AudioLowerVolume $start pamixer -d 5 && pkill -RTMIN+9 i3blocks
 bindsym XF86AudioMute $start pactl set-sink-mute 0 toggle && pkill -RTMIN+9 i3blocks
-bindsym XF86MonBrightnessUp $start xbacklight -inc 10
-bindsym XF86MonBrightnessDown $start xbacklight -dec 10
+bindsym XF86MonBrightnessUp $start xbacklight -inc 10 && pkill -RTMIN+12 i3blocks
+bindsym XF86MonBrightnessDown $start xbacklight -dec 10 && pkill -RTMIN+12 i3blocks
 bindsym XF86TouchpadToggle $start ::toggletouchpad
 bindsym XF86AudioPlay $start playerctl play-pause
 bindsym XF86AudioStop $start playerctl stop

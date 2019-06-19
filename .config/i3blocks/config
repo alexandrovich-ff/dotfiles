@@ -90,6 +90,12 @@ interval=once
 color=#f9555f
 signal=9
 
+[::b:brightness]
+label=
+interval=once
+color=#F5CC40
+signal=12
+
 [::b:temperature]
 label=
 interval=30
