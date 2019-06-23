@@ -78,7 +78,7 @@ libxi libxtst libevdev xf86-input-synaptics
 mtdev libgudev libwacom libinput xf86-input-libinput
 
 ## nvidia nvidia-utils nvidia-settings cuda
-egl-wayland eglexternalplatform opencl-headers opencl-nvidia libxnvctrl cuda nvidia-utils nvidia-settings nvidia
+egl-wayland eglexternalplatform opencl-headers opencl-nvidia libxnvctrl gcc8 gcc8-libs cuda nvidia-utils nvidia-settings nvidia
 
 ## nvidia-xrun
 bbswitch nvidia-xrun
@@ -665,7 +665,7 @@ celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte
   ## libvirt
   augeas ceph-libs glusterfs gperftools leveldb libiscsi liburcu netcf oath-toolkit xmlsec libvirt
   ## virt-manager
-  gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk virt-install virt-manager
+  gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk gtksourceview4 virt-install virt-manager
 
 ## ruby
 rubygems ruby
