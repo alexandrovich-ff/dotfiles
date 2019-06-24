@@ -324,6 +324,7 @@ for_window [class="^Messenger for Desktop$"] move to workspace $ws18 focus
 for_window [class="^rdesktop$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
 for_window [class="^Virt-manager$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
 for_window [class="^Nxplayer.bin|Nxclient.bin$"] floating disable, move to workspace $ws19 focus
+for_window [class="^TeamViewer$"] move to workspace $ws19 focus
 # Развлечения
 for_window [class="^Steam|dota2|hl2_linux$"] move to workspace $ws20 focus
 for_window [class="^stellarium$"] move to workspace $ws20 focus
