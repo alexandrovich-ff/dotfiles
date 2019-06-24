@@ -467,7 +467,7 @@ anything-sync-daemon
 xrectsel ffcast
 
 ## neomutt
-gmime kyotocabinet notmuch-runtime xapian-core neomutt
+gmime gmime3 kyotocabinet notmuch-runtime xapian-core neomutt
 
   ## Support
   abook
