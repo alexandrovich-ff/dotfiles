@@ -694,6 +694,9 @@ nomachine
 ## anydesk
 anydesk
 
+## teamviewer
+qt5-quickcontrols qt5-sensors qt5-webkit teamviewer
+
 ## stellarium
 gpsd qt5-multimedia qt5-script qt5-serialport stellarium
 
