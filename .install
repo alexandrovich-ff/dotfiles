@@ -587,13 +587,10 @@ boost-libs gpick
 double-conversion libmng openal tslib telegram-desktop
 
 ## viber
-gst-plugins-uglgst-plugins-ugly libsidplay libsidplay viber
+gst-plugins-ugly libsidplay viber
 
 ## skypeforlinux-stable-bin
 asar gnome-keyring skypeforlinux-stable-bin
-
-## discord
-clang compiler-rt ninja libc++ libc++abi libc++experimental discord
 
 ## messengerfordesktop
 bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
