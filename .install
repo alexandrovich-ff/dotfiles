@@ -586,6 +586,9 @@ boost-libs gpick
 ## telegram-desktop
 double-conversion libmng openal tslib telegram-desktop
 
+## viber
+gst-plugins-uglgst-plugins-ugly libsidplay libsidplay viber
+
 ## skypeforlinux-stable-bin
 asar gnome-keyring skypeforlinux-stable-bin
 
