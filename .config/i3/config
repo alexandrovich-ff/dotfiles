@@ -321,6 +321,7 @@ for_window [class="^TelegramDesktop$"] move to workspace $ws18 focus
 for_window [class="^discord$"] move to workspace $ws18 focus
 for_window [class="^Messenger for Desktop$"] move to workspace $ws18 focus
 for_window [class="^IGdm$"] move to workspace $ws18 focus
+for_window [class="^ViberPC$"] move to workspace $ws18 focus
 # Администрирование
 for_window [class="^rdesktop$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
 for_window [class="^Virt-manager$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
