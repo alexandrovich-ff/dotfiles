@@ -595,6 +595,9 @@ clang compiler-rt ninja libc++ libc++abi libc++experimental discord
 ## messengerfordesktop
 bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
 
+## igdm
+igdm
+
 ## mpv
 cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
 
