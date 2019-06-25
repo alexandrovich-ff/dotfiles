@@ -318,7 +318,6 @@ for_window [class="^balena-etcher-electron$"] move to workspace $ws17 focus
 for_window [class="^Angry IP Scanner$"] move to workspace $ws17 focus
 # Социальное общение
 for_window [class="^TelegramDesktop$"] move to workspace $ws18 focus
-for_window [class="^discord$"] move to workspace $ws18 focus
 for_window [class="^Messenger for Desktop$"] move to workspace $ws18 focus
 for_window [class="^IGdm$"] move to workspace $ws18 focus
 for_window [class="^ViberPC$"] move to workspace $ws18 focus
