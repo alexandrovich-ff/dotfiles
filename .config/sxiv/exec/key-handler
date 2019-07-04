@@ -26,7 +26,7 @@ do
 		echo -n "$(readlink -f "$file")" | xclip -selection clipboard &&
 			notify-send "$(readlink -f "$file") copied to clipboard" & ;;
 	"d")
-		[ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
-	"g")	ifinstalled gimp && gimp "$file" & ;;
+		[ "$(printf "No\\nYes" | ::dmenu -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send "$file deleted." ;;
+	"g")	::ifinstalled gimp && gimp "$file" & ;;
         esac
 done
