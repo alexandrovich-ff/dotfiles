@@ -563,7 +563,7 @@ surf
 sublime-text-dev
 
 ## code
-electron ripgrep libevent code
+ripgrep libevent code
 
 ## atom
 ctags apm electron4 atom
@@ -754,6 +754,9 @@ android-tools android-udev
 
   ## Heimdall
   cmake jsoncp rhash heimdall
+
+## azuredatastudio
+azuredatastudio
 
 ██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
 ██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
