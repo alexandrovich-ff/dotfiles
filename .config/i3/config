@@ -475,9 +475,9 @@ bindsym $ctrl+$esc $start $proccess & notify-send ": Менеджер про�
 # %%hotkey: Принудительно закрыть окно %%
 bindsym $r $alt+$esc $start $proccess_kill & notify-send ": Выберите окно для принудительного закрытия"
 # %%hotkey: Установить визуализатор на фон рабочего стола %%
-bindsym $mod+$alt+backslash $start glava --desktop & notify-send "Визуалитор установлен в качестве фона рабочего стола"
+bindsym $mod+$alt+backslash $start glava --desktop & notify-send ": Визуалитор установлен в качестве фона рабочего стола"
 # %%hotkey: Запустить визуализатор %%
-bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send "Визуализатор запущен"
+bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send ": Визуализатор запущен"
 #bindsym $mod+$shift+m $start $TERMINAL -t 'Видео YouTube' -e mpsyt & notify-send "Медиа плеер YouTube открыт в режиме быстрого доступа"
 # Скрипты
 # %%hotkey: Поиск в Google %%
