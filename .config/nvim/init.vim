@@ -52,7 +52,7 @@ call plug#end()
 syntax on
 set encoding=utf-8
 set number relativenumber
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
