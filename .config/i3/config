@@ -412,9 +412,9 @@ bindsym $mod+o     sticky toggle
 bindsym $mod+p     bar mode toggle
 
 # %%hotkey: Запустить горизонтальный терминал %%
-bindsym $mod+bracketright   split horizontal ;; exec $TERMINAL
+bindsym $mod+bracketright   split horizontal ;; exec $TERMINAL & notify-send ": Терминал запущен"
 # %%hotkey: Запустить вертикальный терминал %%
-bindsym $mod+bracketleft    split vertical ;; exec $TERMINAL
+bindsym $mod+bracketleft    split vertical ;; exec $TERMINAL & notify-send ": Терминал запущен"
 
 # %%hotkey: Включить отступы %%
 bindsym $mod+$shift+t gaps inner current set 15; gaps outer current set 15
