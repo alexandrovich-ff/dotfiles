@@ -17,7 +17,7 @@ resolution_HDMI=`xrandr | awk '/HDMI1 connected/ { getline; print  $1}'`
 # Проверка и запуск
 if [ -n "$resolution_VGA" ]; then
 
-    resolution=`xrandr | awk '/VGA1 connected/ { getline; print  $1}' | awk -F "x" '{print int($1)"x"int($2*0.92)}'`
+    resolution=`xrandr | awk '/VGA1 connected/ { getline; print  $1}' | awk -F "x" '{print int($1)"x"int($2*0.95)}'`
 
     xfreerdp -grab-keyboard /bpp:16 +clipboard /sound:sys:pulse \
     /size:$resolution \
