@@ -239,7 +239,7 @@ vifm
 
   ## Support
   # python-ueberzug
-  python-apipkg python-atomicwrites python-docopt python-iniconfig python-more-itertools python-zipp python-importlib-metadata python-pluggy python-py python-pytest python-xlib tk python-pillow-simd python-ueberzug
+  python-apipkg python-atomicwrites python-docopt python-iniconfig python-more-itertools python-zipp python-importlib-metadata python-pluggy python-py python-wcwidth python-pytest python-xlib tk python-pillow-simd python-ueberzug
 
 ## mc
 mc
