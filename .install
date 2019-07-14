@@ -479,7 +479,7 @@ gsasl isync msmtp mutt-wizard-git
 cpupower
 
 ## oomd
-gmock gtest meson oomd
+gmock gtest ninja meson oomd
 
 ## arch-install-scripts
 arch-install-scripts
