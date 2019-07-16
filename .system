@@ -42,7 +42,12 @@ HOOKS=(base systemd sd-plymouth autodetect modconf block sd-lvm2 filesystems key
 ## Relink bash to dash
 ln -sfT dash /usr/bin/sh
 
+## All core for aur
+/etc/makepkg.conf
 
+    MAKEFLAGS="-j$(nproc)"
+    COMPRESSXZ=(xz -c -z - --threads=0)
+    PKGEXT='.pkg.tar.lzo'
 
 
 
