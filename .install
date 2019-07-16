@@ -218,6 +218,9 @@ rofi
 ## skippy-xd
 skippy-xd-git
 
+## flatpak
+appstream-glib bubblewrap ostree xdg-dbus-proxy xdg-desktop-portal xdg-desktop-portal-gtk flatpak
+
 ████████╗███████╗██████╗ ███╗   ███╗██╗████████╗ █████╗ ██╗         ██╗   ██╗████████╗██╗██╗     ███████╗
 ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔══██╗██║         ██║   ██║╚══██╔══╝██║██║     ██╔════╝
    ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║   ███████║██║         ██║   ██║   ██║   ██║██║     ███████╗
@@ -592,9 +595,6 @@ gst-plugins-ugly libsidplay viber
 ## skypeforlinux-stable-bin
 asar gnome-keyring skypeforlinux-stable-bin
 
-## messengerfordesktop
-bash-completion gtkglext libappindicator-gtk3 libdbusmenu-gtk3 libindicator-gtk3 pangox-compat python-shiboken2 messengerfordesktop
-
 ## igdm
 igdm
 
@@ -646,18 +646,6 @@ girara libsynctex zathura
   ## Support
   djvulibre ghostscript jbig2dec libspectre zathura-cb zathura-djvu libmupdf zathura-pdf-mupdf zathura-ps
 
-## inkscape
-gsl gtkspell libcdr libmagick6 librevenge libwpd poppler-glib inkscape
-
-  ## Support
-  blas cblas lapack libsigsegv libxaw plotutils python2-six t1lib zziplib texlive-bin gd pstoedit python2-lxml python2-numpy python2-scour texlive-core
-
-## gimp
-libxpm babl exiv2 gegl ilmbase intel-tbb lensfun libde265 libgexiv2 libheif libmypaint libraw libwmf metis mypaint-brushes openexr suitesparse gimp
-
-## blender
-alembic blosc hdf5 libaec libspnav log4cplus opencollada opencolorio openimageio openjpeg openshadinglanguage opensubdiv openvdb ptex tinyxml yaml-cpp blender
-
 ## crow-translate
 qt5-tools crow-translate
 
@@ -693,9 +681,6 @@ musixmatch-bin
 
 ## nomachine
 nomachine
-
-## anydesk
-anydesk
 
 ## teamviewer
 qt5-quickcontrols qt5-sensors qt5-webkit teamviewer
