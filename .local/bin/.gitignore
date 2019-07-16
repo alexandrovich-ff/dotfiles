@@ -18,9 +18,7 @@
 !.gitignore
 !README.md
 # Директории
-!ccache
 !cron
-!flatpak
 !i3cmds
 !statusbar
 !tools
