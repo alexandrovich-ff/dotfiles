@@ -595,12 +595,6 @@ igdm
 ## mpv
 cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
 
-## vlc
-a52dec aribb24 libdca libdvbpsi libebml libmatroska libmpeg2 libplacebo libtar libmpcdec faad2 libupnp libmad vlc
-
-  ## Support
-  dav1d libdvdcss libdc1394 vcdimager protobuf live-media zvbi libkate libtiger srt chromaprint libgoom2 glm projectm
-
 ## pcmanfm
 libfm libfm-extra libfm-gtk2 lxmenu-data menu-cache pcmanfm
 
@@ -745,29 +739,4 @@ azuredatastudio
  ╚══╝╚══╝ ╚══════╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
 
 ## nginx
-geoip-database geoip nginx  
-
-███████╗████████╗███████╗ █████╗ ███╗   ███╗
-██╔════╝╚══██╔══╝██╔════╝██╔══██╗████╗ ████║
-███████╗   ██║   █████╗  ███████║██╔████╔██║
-╚════██║   ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║
-███████║   ██║   ███████╗██║  ██║██║ ╚═╝ ██║
-╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝
-
-## steam
-openssl-1.0 aspell brotli enchant geocode-glib geoclue harfbuzz-icu hspell hunspell hyphen iso-codes libmm-glib libnotify libvoikko webkit2gtk woff2 zenity steam
-
-    ## lib32-packages
-    lib32-mesa-vdpau lib32-alsa-lib lib32-alsa-plugins lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxss lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-zlib lib32-attr lib32-db lib32-dbus lib32-flac lib32-glib2 lib32-libasyncns lib32-libcap lib32-libgcrypt lib32-libgpg-error lib32-libice lib32-libogg lib32-libsm lib32-libsndfile lib32-libvorbis lib32-libxi lib32-libxtst lib32-pcre lib32-speexdsp lib32-systemd lib32-util-linux lib32-xz lib32-celt lib32-opus lib32-jack2 lib32-libpulse lib32-libsamplerate lib32-speex lib32-nvidia-utils lib32-opencl-nvidia
-
-## steam-native-runtime
-dbus-glib freeglut glew1.10 glu libappindicator-gtk2 libcurl-compat libcurl-gnutls libdbusmenu-glib libdbusmenu-gtk2 libgcrypt15 libidn11 libindicator-gtk2 libjpeg6-turbo libmikmod libnm libnm-glib libpng12 librtmp0 libtiff4 libudev0-shim libva1 libvpx1.3 libwrap sdl2_image opusfile sdl2_mixer sdl2_ttf sdl_image sdl_mixer sdl_ttf smpeg portaudio fluidsynth steam-native-runtime
-
-    ## lib32-packages
-    lib32-atk lib32-cairo lib32-curl lib32-dbus-glib lib32-e2fsprogs lib32-fontconfig lib32-freeglut lib32-freetype2 lib32-fribidi lib32-gdk-pixbuf2 lib32-giflib lib32-glew1.10 lib32-glu lib32-gmp lib32-gnutls lib32-gtk2 lib32-harfbuzz lib32-imlib2 lib32-keyutils lib32-krb5 lib32-libappindicator-gtk2 lib32-libcaca lib32-libcanberra lib32-libcups lib32-libcurl-compat lib32-libcurl-gnutls lib32-libdatrie lib32-libdbusmenu-glib lib32-libdbusmenu-gtk2 lib32-libgcrypt15 lib32-libgudev lib32-libid3tag lib32-libidn lib32-libidn11 lib32-libidn2 lib32-libindicator-gtk2 lib32-libjpeg-turbo lib32-libjpeg6-turbo lib32-libldap lib32-libltdl lib32-libmikmod lib32-libmodplug lib32-libnm-glib lib32-libnsl lib32-libpng lib32-libpng12 lib32-libpsl lib32-librtmp0 lib32-libssh2 lib32-libtasn1 lib32-libthai lib32-libtheora lib32-libtiff lib32-libtiff4 lib32-libtirpc lib32-libudev0-shim lib32-libunistring lib32-libusb lib32-libva1 lib32-libvdpau lib32-libvpx1.3 lib32-libwebp lib32-libwrap lib32-libxcomposite lib32-libxcursor lib32-libxft lib32-libxinerama lib32-libxmu lib32-libxrandr lib32-libxrender lib32-libxt lib32-lz4 lib32-mpg123 lib32-nettle lib32-nspr lib32-nss lib32-openal lib32-openssl-1.0 lib32-openssl lib32-p11-kit lib32-pango lib32-pixman lib32-sdl lib32-sdl2 lib32-sdl2_image lib32-sdl2_mixer lib32-sdl2_ttf lib32-sdl_image lib32-sdl_mixer lib32-sdl_ttf lib32-smpeg lib32-sqlite lib32-tdb lib32-zstd lib32-portaudio lib32-fluidsynth lib32-libcanberra-pulse
-
-## wine
-faudio lib32-acl lib32-faudio lib32-gettext lib32-lcms2 lib32-libnl lib32-libpcap wine wine-mono wine_gecko
-
-  ## winetricks
-  abextract xorg-xmessage winetricks
+geoip-database geoip nginx 
