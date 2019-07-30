@@ -12,8 +12,8 @@
 # #---Основные настройки---# #
 # Рамки окон и отступы
 for_window [class="^.*"] border pixel 2
-gaps inner 15
-gaps outer 15
+gaps inner 0
+gaps outer 0
 # Шрифты
 font pango:TerminessTTF Nerd Font 14
 # #---Цветовая схема---# #
