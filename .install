@@ -196,7 +196,7 @@ mksh
 
   ## Support
   ## Shellcheck
-  ghc-libs haskell-aeson haskell-attoparsec haskell-base-compat haskell-dlist haskell-erf haskell-hashable haskell-integer-logarithms haskell-primitive haskell-quickcheck haskell-random haskell-regex-base haskell-regex-tdfa haskell-scientific haskell-tagged haskell-tf-random haskell-th-abstraction haskell-time-locale-compat haskell-unordered-containers haskell-uuid-types haskell-vector haskell-splitmix haskell-base-orphans haskell-time-compat shellcheck
+  ghc-libs haskell-aeson haskell-attoparsec haskell-base-compat haskell-dlist haskell-erf haskell-hashable haskell-integer-logarithms haskell-primitive haskell-quickcheck haskell-random haskell-regex-base haskell-regex-tdfa haskell-scientific haskell-tagged haskell-tf-random haskell-th-abstraction haskell-time-locale-compat haskell-unordered-containers haskell-uuid-types haskell-vector haskell-splitmix haskell-base-orphans haskell-time-compat haskell-diff shellcheck
   ## Dash
   dash
 
@@ -218,8 +218,14 @@ rofi
 ## skippy-xd
 skippy-xd-git
 
+## zenity
+zenity
+
 ## flatpak
 appstream-glib bubblewrap ostree xdg-dbus-proxy xdg-desktop-portal xdg-desktop-portal-gtk flatpak
+
+## ccache
+ccache
 
 ████████╗███████╗██████╗ ███╗   ███╗██╗████████╗ █████╗ ██╗         ██╗   ██╗████████╗██╗██╗     ███████╗
 ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔══██╗██║         ██║   ██║╚══██╔══╝██║██║     ██╔════╝
@@ -284,7 +290,7 @@ nmon
 python-psutil glances
 
   ## Support
-  python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
+  python-future python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
 
 ## cdrtools
 cdrtools
@@ -646,6 +652,9 @@ celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte
   ## virt-manager
   gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk gtksourceview4 virt-install virt-manager
 
+## VirtualBox
+virtualbox-host-modules-arch virtualbox
+
 ## ruby
 rubygems ruby
 
@@ -739,4 +748,13 @@ azuredatastudio
  ╚══╝╚══╝ ╚══════╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
 
 ## nginx
-geoip-database geoip nginx 
+geoip-database geoip nginx
+
+## php-fpm
+php php-fpm
+
+## mysql
+mariadb-clients mariadb-libs mariadb
+
+## lib32-drivers-nvidia
+lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-xz lib32-zlib lib32-nvidia-utils lib32-mesa-vdpau lib32-opencl-nvidia
