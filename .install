@@ -535,7 +535,7 @@ ttf-symbola nerd-fonts-complete
 adobe-source-code-pro-fonts
 
 ## terminus-font-ll2-td1-ttf
-fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
+libuninameslist fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
 
 ## system fonts
 ttf-liberation cantarell-fonts ttf-dejavu
