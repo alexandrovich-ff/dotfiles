@@ -1,9 +1,9 @@
-██████╗  █████╗ ███████╗███████╗
+██████╗ █████╗ ███████╗███████╗
 ██╔══██╗██╔══██╗██╔════╝██╔════╝
-██████╔╝███████║███████╗█████╗  
-██╔══██╗██╔══██║╚════██║██╔══╝  
-██████╔╝██║  ██║███████║███████╗
-╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+██████╔╝███████║███████╗█████╗ 
+██╔══██╗██╔══██║╚════██║██╔══╝ 
+██████╔╝██║ ██║███████║███████╗
+╚═════╝ ╚═╝ ╚═╝╚══════╝╚══════╝
 
 ## pacstrab base base-devel
 libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
@@ -14,8 +14,8 @@ mlocate pacman-contrib
 ## gvfs
 btrfs-progs dmraid dosfstools fuse-common fuse2 gcr gptfdisk libatasmart libblockdev libbytesize libcddb libcdio libcdio-paranoia libyaml ndctl parted udisks2 volume_key gvfs
 
-  ## Support
-  gvfs-smb libmtp gvfs-mtp
+ ## Support
+ gvfs-smb libmtp gvfs-mtp
 
 ## refind-efi
 sbsigntools efibootmgr efivar refind-efi
@@ -26,22 +26,22 @@ plymouth plymouth-theme-arch-beat
 ## archlinuxcn-keyring
 archlinuxcn-keyring
 
-███████╗██╗██╗     ███████╗███████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗ █████╗ ████████╗
-██╔════╝██║██║     ██╔════╝██╔════╝    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝
-█████╗  ██║██║     █████╗  ███████╗    █████╗  ██║   ██║██████╔╝██╔████╔██║███████║   ██║   
-██╔══╝  ██║██║     ██╔══╝  ╚════██║    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║██╔══██║   ██║   
-██║     ██║███████╗███████╗███████║    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║██║  ██║   ██║   
-╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   
+███████╗██╗██╗   ███████╗███████╗  ███████╗ ██████╗ ██████╗ ███╗  ███╗ █████╗ ████████╗
+██╔════╝██║██║   ██╔════╝██╔════╝  ██╔════╝██╔═══██╗██╔══██╗████╗ ████║██╔══██╗╚══██╔══╝
+█████╗ ██║██║   █████╗ ███████╗  █████╗ ██║  ██║██████╔╝██╔████╔██║███████║  ██║  
+██╔══╝ ██║██║   ██╔══╝ ╚════██║  ██╔══╝ ██║  ██║██╔══██╗██║╚██╔╝██║██╔══██║  ██║  
+██║   ██║███████╗███████╗███████║  ██║   ╚██████╔╝██║ ██║██║ ╚═╝ ██║██║ ██║  ██║  
+╚═╝   ╚═╝╚══════╝╚══════╝╚══════╝  ╚═╝   ╚═════╝ ╚═╝ ╚═╝╚═╝   ╚═╝╚═╝ ╚═╝  ╚═╝  
 
 ## archive
 cpio lhasa lzop p7zip unace unrar unzip zip lrzip libunrar
 
-███╗   ██╗███████╗████████╗██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗
-████╗  ██║██╔════╝╚══██╔══╝██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝
-██╔██╗ ██║█████╗     ██║   ██║ █╗ ██║██║   ██║██████╔╝█████╔╝ 
-██║╚██╗██║██╔══╝     ██║   ██║███╗██║██║   ██║██╔══██╗██╔═██╗ 
-██║ ╚████║███████╗   ██║   ╚███╔███╔╝╚██████╔╝██║  ██║██║  ██╗
-╚═╝  ╚═══╝╚══════╝   ╚═╝    ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+███╗  ██╗███████╗████████╗██╗  ██╗ ██████╗ ██████╗ ██╗ ██╗
+████╗ ██║██╔════╝╚══██╔══╝██║  ██║██╔═══██╗██╔══██╗██║ ██╔╝
+██╔██╗ ██║█████╗   ██║  ██║ █╗ ██║██║  ██║██████╔╝█████╔╝ 
+██║╚██╗██║██╔══╝   ██║  ██║███╗██║██║  ██║██╔══██╗██╔═██╗ 
+██║ ╚████║███████╗  ██║  ╚███╔███╔╝╚██████╔╝██║ ██║██║ ██╗
+╚═╝ ╚═══╝╚══════╝  ╚═╝  ╚══╝╚══╝ ╚═════╝ ╚═╝ ╚═╝╚═╝ ╚═╝
 
 ## wpa_supplicant
 dialog wpa_supplicant
@@ -58,12 +58,12 @@ wireless_tools
 ## ethtool
 ethtool
 
-██████╗ ██████╗ ██╗██╗   ██╗███████╗██████╗ ███████╗
-██╔══██╗██╔══██╗██║██║   ██║██╔════╝██╔══██╗██╔════╝
-██║  ██║██████╔╝██║██║   ██║█████╗  ██████╔╝███████╗
-██║  ██║██╔══██╗██║╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║
-██████╔╝██║  ██║██║ ╚████╔╝ ███████╗██║  ██║███████║
-╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝
+██████╗ ██████╗ ██╗██╗  ██╗███████╗██████╗ ███████╗
+██╔══██╗██╔══██╗██║██║  ██║██╔════╝██╔══██╗██╔════╝
+██║ ██║██████╔╝██║██║  ██║█████╗ ██████╔╝███████╗
+██║ ██║██╔══██╗██║╚██╗ ██╔╝██╔══╝ ██╔══██╗╚════██║
+██████╔╝██║ ██║██║ ╚████╔╝ ███████╗██║ ██║███████║
+╚═════╝ ╚═╝ ╚═╝╚═╝ ╚═══╝ ╚══════╝╚═╝ ╚═╝╚══════╝
 
 ## intel-ucode
 intel-ucode
@@ -101,12 +101,12 @@ wd719x-firmware
 ## aic94xx-firmware
 aic94xx-firmware
 
-██╗  ██╗    ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
-╚██╗██╔╝    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
- ╚███╔╝     ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
- ██╔██╗     ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
-██╔╝ ██╗    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
-╚═╝  ╚═╝    ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+██╗ ██╗  ███████╗███████╗██████╗ ██╗  ██╗███████╗██████╗ 
+╚██╗██╔╝  ██╔════╝██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗
+ ╚███╔╝   ███████╗█████╗ ██████╔╝██║  ██║█████╗ ██████╔╝
+ ██╔██╗   ╚════██║██╔══╝ ██╔══██╗╚██╗ ██╔╝██╔══╝ ██╔══██╗
+██╔╝ ██╗  ███████║███████╗██║ ██║ ╚████╔╝ ███████╗██║ ██║
+╚═╝ ╚═╝  ╚══════╝╚══════╝╚═╝ ╚═╝ ╚═══╝ ╚══════╝╚═╝ ╚═╝
 
 ## xorg-server
 libepoxy libpng graphite harfbuzz freetype2-cleartype libfontenc libxfont2 xkeyboard-config libxkbfile xorg-xkbcomp xorg-setxkbmap xorg-server-common xorg-server
@@ -141,12 +141,12 @@ xorg-xwininfo
 ## xorg-xinput
 xorg-xinput
 
-███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
-██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
-███████╗██║   ██║██║   ██║██╔██╗ ██║██║  ██║    ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
-╚════██║██║   ██║██║   ██║██║╚██╗██║██║  ██║    ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
-███████║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
-╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+███████╗ ██████╗ ██╗  ██╗███╗  ██╗██████╗   ███████╗███████╗██████╗ ██╗  ██╗███████╗██████╗ 
+██╔════╝██╔═══██╗██║  ██║████╗ ██║██╔══██╗  ██╔════╝██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗
+███████╗██║  ██║██║  ██║██╔██╗ ██║██║ ██║  ███████╗█████╗ ██████╔╝██║  ██║█████╗ ██████╔╝
+╚════██║██║  ██║██║  ██║██║╚██╗██║██║ ██║  ╚════██║██╔══╝ ██╔══██╗╚██╗ ██╔╝██╔══╝ ██╔══██╗
+███████║╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝  ███████║███████╗██║ ██║ ╚████╔╝ ███████╗██║ ██║
+╚══════╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═══╝╚═════╝   ╚══════╝╚══════╝╚═╝ ╚═╝ ╚═══╝ ╚══════╝╚═╝ ╚═╝
 
 ## pulseaudio
 rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulsemixer pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
@@ -157,12 +157,12 @@ realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-
 ## gstreamer
 aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer
 
-███████╗███╗   ██╗██╗   ██╗██╗██████╗  ██████╗ ███╗   ██╗███╗   ███╗███████╗███╗   ██╗████████╗
-██╔════╝████╗  ██║██║   ██║██║██╔══██╗██╔═══██╗████╗  ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
-█████╗  ██╔██╗ ██║██║   ██║██║██████╔╝██║   ██║██╔██╗ ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║   
-██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║   ██║██║╚██╗██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   
-███████╗██║ ╚████║ ╚████╔╝ ██║██║  ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   
-╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝
+███████╗███╗  ██╗██╗  ██╗██╗██████╗ ██████╗ ███╗  ██╗███╗  ███╗███████╗███╗  ██╗████████╗
+██╔════╝████╗ ██║██║  ██║██║██╔══██╗██╔═══██╗████╗ ██║████╗ ████║██╔════╝████╗ ██║╚══██╔══╝
+█████╗ ██╔██╗ ██║██║  ██║██║██████╔╝██║  ██║██╔██╗ ██║██╔████╔██║█████╗ ██╔██╗ ██║  ██║  
+██╔══╝ ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║  ██║██║╚██╗██║██║╚██╔╝██║██╔══╝ ██║╚██╗██║  ██║  
+███████╗██║ ╚████║ ╚████╔╝ ██║██║ ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║  ██║  
+╚══════╝╚═╝ ╚═══╝ ╚═══╝ ╚═╝╚═╝ ╚═╝ ╚═════╝ ╚═╝ ╚═══╝╚═╝   ╚═╝╚══════╝╚═╝ ╚═══╝  ╚═╝
 
 ## slim
 libice libsm libxt libxmu libjpeg-turbo fontconfig libxrender libxft libxrandr xorg-xauth xorg-fonts-encodings xorg-bdftopcf xorg-mkfontscale xorg-font-util xorg-font-utils slim
@@ -170,17 +170,17 @@ libice libsm libxt libxmu libjpeg-turbo fontconfig libxrender libxft libxrandr x
 ## i3-gaps
 xcb-util-keysyms xcb-util-wm libev yajl startup-notification libdatrie libthai lzo cairo fribidi pango xcb-util-renderutil xcb-util-image xcb-util-cursor xcb-util-xrm libxkbcommon libxkbcommon-x11 i3lock i3-gaps
 
-  ## i3blocks
-  i3-blocks acpi playerctl sysstat
+ ## i3blocks
+ i3-blocks acpi playerctl sysstat
 
-  ## i3ass
-  i3ass
+ ## i3ass
+ i3ass
 
 ## edex-ui
 edex-ui
 
-## compton
-libconfig compton
+## compton-tryone
+libconfig asciidoc compton-tryone-git
 
 ## dunst
 libxdg-basedir dunst
@@ -188,17 +188,17 @@ libxdg-basedir dunst
 ## zsh & pkgfile & zplug
 zsh & pkgfile
 
-  ## zplug
-  zplug
+ ## zplug
+ zplug
 
 ## mksh
 mksh
 
-  ## Support
-  ## Shellcheck
-  ghc-libs haskell-aeson haskell-attoparsec haskell-base-compat haskell-dlist haskell-erf haskell-hashable haskell-integer-logarithms haskell-primitive haskell-quickcheck haskell-random haskell-regex-base haskell-regex-tdfa haskell-scientific haskell-tagged haskell-tf-random haskell-th-abstraction haskell-time-locale-compat haskell-unordered-containers haskell-uuid-types haskell-vector haskell-splitmix haskell-base-orphans haskell-time-compat haskell-diff shellcheck
-  ## Dash
-  dash
+ ## Support
+ ## Shellcheck
+ ghc-libs haskell-aeson haskell-attoparsec haskell-base-compat haskell-dlist haskell-erf haskell-hashable haskell-integer-logarithms haskell-primitive haskell-quickcheck haskell-random haskell-regex-base haskell-regex-tdfa haskell-scientific haskell-tagged haskell-tf-random haskell-th-abstraction haskell-time-locale-compat haskell-unordered-containers haskell-uuid-types haskell-vector haskell-splitmix haskell-base-orphans haskell-time-compat haskell-diff shellcheck
+ ## Dash
+ dash
 
 ## yay
 go yay
@@ -227,12 +227,12 @@ appstream-glib bubblewrap ostree xdg-dbus-proxy xdg-desktop-portal xdg-desktop-p
 ## ccache
 ccache
 
-████████╗███████╗██████╗ ███╗   ███╗██╗████████╗ █████╗ ██╗         ██╗   ██╗████████╗██╗██╗     ███████╗
-╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔══██╗██║         ██║   ██║╚══██╔══╝██║██║     ██╔════╝
-   ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║   ███████║██║         ██║   ██║   ██║   ██║██║     ███████╗
-   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██╔══██║██║         ██║   ██║   ██║   ██║██║     ╚════██║
-   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ██║  ██║███████╗    ╚██████╔╝   ██║   ██║███████╗███████║
-   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝
+████████╗███████╗██████╗ ███╗  ███╗██╗████████╗ █████╗ ██╗     ██╗  ██╗████████╗██╗██╗   ███████╗
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔══██╗██║     ██║  ██║╚══██╔══╝██║██║   ██╔════╝
+  ██║  █████╗ ██████╔╝██╔████╔██║██║  ██║  ███████║██║     ██║  ██║  ██║  ██║██║   ███████╗
+  ██║  ██╔══╝ ██╔══██╗██║╚██╔╝██║██║  ██║  ██╔══██║██║     ██║  ██║  ██║  ██║██║   ╚════██║
+  ██║  ███████╗██║ ██║██║ ╚═╝ ██║██║  ██║  ██║ ██║███████╗  ╚██████╔╝  ██║  ██║███████╗███████║
+  ╚═╝  ╚══════╝╚═╝ ╚═╝╚═╝   ╚═╝╚═╝  ╚═╝  ╚═╝ ╚═╝╚══════╝   ╚═════╝  ╚═╝  ╚═╝╚══════╝╚══════╝
 
 ## python
 libnsl python
@@ -246,9 +246,9 @@ gpm imlib2 libid3tag libidn libmediainfo libmms libzen libzip lua lua51 python-a
 ## vifm
 vifm
 
-  ## Support
-  # python-ueberzug
-  python-apipkg python-atomicwrites python-docopt python-iniconfig python-more-itertools python-zipp python-importlib-metadata python-pluggy python-py python-wcwidth python-pytest python-xlib tk python-pillow-simd python-ueberzug
+ ## Support
+ # python-ueberzug
+ python-apipkg python-atomicwrites python-docopt python-iniconfig python-more-itertools python-zipp python-importlib-metadata python-pluggy python-py python-wcwidth python-pytest python-xlib tk python-pillow-simd python-ueberzug
 
 ## mc
 mc
@@ -289,8 +289,8 @@ nmon
 ## glances
 python-psutil glances
 
-  ## Support
-  python-future python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
+ ## Support
+ python-future python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
 
 ## cdrtools
 cdrtools
@@ -322,8 +322,8 @@ galculator
 ## networkmanager
 libndp libnewt libteam slang libmbim usb_modeswitch tcl libqmi dnsmasq modemmanager networkmanager
 
-  ## Support
-  ppp iwd pptpclient
+ ## Support
+ ppp iwd pptpclient
 
 ## openvpn
 easy-rsa pkcs11-helper openvpn
@@ -383,7 +383,7 @@ qt5-base qt5-imageformats qt5-svg qt5ct qt5-x11extras
 smartmontools
 
 ## nodejs
-c-ares http-parser node-gyp semver nodejs  npm
+c-ares http-parser node-gyp semver nodejs npm
 
 ## rtorrent
 libtorrent xmlrpc-c rtorrent
@@ -400,11 +400,11 @@ downgrade
 ## cups
 ijs libpaper run-parts libcups cups-filters cups-pdf liblouis qpdf cups
 
-  ## support
-  perl-clone perl-dbi antiword perl-xml-libxml perl-xml-namespacesupport perl-xml-sax perl-xml-sax-base perl-capture-tiny  perl-ffi-checklib perl-file-chdir perl-file-which perl-path-tiny perl-alien-build perl-alien-libxml2 foomatic-db foomatic-db-ppds foomatic-db-nonfree-ppds foomatic-db-engine foomatic-db-nonfree foomatic-db-gutenprint-ppds gutenprint gsfonts
+ ## support
+ perl-clone perl-dbi antiword perl-xml-libxml perl-xml-namespacesupport perl-xml-sax perl-xml-sax-base perl-capture-tiny perl-ffi-checklib perl-file-chdir perl-file-which perl-path-tiny perl-alien-build perl-alien-libxml2 foomatic-db foomatic-db-ppds foomatic-db-nonfree-ppds foomatic-db-engine foomatic-db-nonfree foomatic-db-gutenprint-ppds gutenprint gsfonts
 
-  ## GUI (system-config-printer)
-  python-pysmbc cups-pk-helper gobject-introspection-runtime pygobject-devel python-cairo python-gobject python-pycups python-pycurl python-requests python-idna python-urllib3 system-config-printer
+ ## GUI (system-config-printer)
+ python-pysmbc cups-pk-helper gobject-introspection-runtime pygobject-devel python-cairo python-gobject python-pycups python-pycurl python-requests python-idna python-urllib3 system-config-printer
 
 ## tty-clock
 tty-clock
@@ -420,9 +420,9 @@ dkms asus-fan-dkms-git
 
 ## xclip
 xclip
-  
-  ## Support
-  glew slop maim
+ 
+ ## Support
+ glew slop maim
 
 ## speedtest-cli
 speedtest-cli
@@ -432,12 +432,6 @@ libgssglue pcsclite libao rdesktop
 
 ## freerdp
 libmp4v2 faac mbedtls freerdp
-
-## grafana
-grafana
-
-## prometheus
-prometheus
 
 ## lnav
 lnav
@@ -478,8 +472,8 @@ xrectsel ffcast
 ## neomutt
 gmime gmime3 kyotocabinet notmuch-runtime xapian-core neomutt
 
-  ## Support
-  abook
+ ## Support
+ abook
 
 ## mutt-wizard
 gsasl isync msmtp mutt-wizard-git
@@ -494,17 +488,17 @@ gmock gtest ninja meson oomd
 arch-install-scripts
 
 ## fwupd
-gcab libsmbios libstemmer  libxmlb fwupd
+gcab libsmbios libstemmer libxmlb fwupd
 
 ## termdown
 espeak python-click python-pyfiglet termdown
 
-████████╗██╗  ██╗███████╗███╗   ███╗███████╗███████╗
-╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝██╔════╝
-   ██║   ███████║█████╗  ██╔████╔██║█████╗  ███████╗
-   ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝  ╚════██║
-   ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗███████║
-   ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝╚══════╝
+████████╗██╗ ██╗███████╗███╗  ███╗███████╗███████╗
+╚══██╔══╝██║ ██║██╔════╝████╗ ████║██╔════╝██╔════╝
+  ██║  ███████║█████╗ ██╔████╔██║█████╗ ███████╗
+  ██║  ██╔══██║██╔══╝ ██║╚██╔╝██║██╔══╝ ╚════██║
+  ██║  ██║ ██║███████╗██║ ╚═╝ ██║███████╗███████║
+  ╚═╝  ╚═╝ ╚═╝╚══════╝╚═╝   ╚═╝╚══════╝╚══════╝
 
 ## basic
 gnome-themes-extra gtk-engine-murrine
@@ -521,12 +515,12 @@ zafiro-icon-theme
 ## capitaine-cursors
 capitaine-cursors
 
-███████╗ ██████╗ ███╗   ██╗████████╗███████╗
-██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝
-█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗
-██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║
-██║     ╚██████╔╝██║ ╚████║   ██║   ███████║
-╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+███████╗ ██████╗ ███╗  ██╗████████╗███████╗
+██╔════╝██╔═══██╗████╗ ██║╚══██╔══╝██╔════╝
+█████╗ ██║  ██║██╔██╗ ██║  ██║  ███████╗
+██╔══╝ ██║  ██║██║╚██╗██║  ██║  ╚════██║
+██║   ╚██████╔╝██║ ╚████║  ██║  ███████║
+╚═╝   ╚═════╝ ╚═╝ ╚═══╝  ╚═╝  ╚══════╝
 
 ## custom
 ttf-symbola nerd-fonts-complete
@@ -540,12 +534,12 @@ libuninameslist fontforge libpgm libsodium libspiro libunicodenames libxkbui pot
 ## system fonts
 ttf-liberation cantarell-fonts ttf-dejavu
 
-██████╗ ███████╗███████╗██╗  ██╗████████╗ ██████╗ ██████╗ 
+██████╗ ███████╗███████╗██╗ ██╗████████╗ ██████╗ ██████╗ 
 ██╔══██╗██╔════╝██╔════╝██║ ██╔╝╚══██╔══╝██╔═══██╗██╔══██╗
-██║  ██║█████╗  ███████╗█████╔╝    ██║   ██║   ██║██████╔╝
-██║  ██║██╔══╝  ╚════██║██╔═██╗    ██║   ██║   ██║██╔═══╝ 
-██████╔╝███████╗███████║██║  ██╗   ██║   ╚██████╔╝██║     
-╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝     
+██║ ██║█████╗ ███████╗█████╔╝  ██║  ██║  ██║██████╔╝
+██║ ██║██╔══╝ ╚════██║██╔═██╗  ██║  ██║  ██║██╔═══╝ 
+██████╔╝███████╗███████║██║ ██╗  ██║  ╚██████╔╝██║   
+╚═════╝ ╚══════╝╚══════╝╚═╝ ╚═╝  ╚═╝  ╚═════╝ ╚═╝   
 
 ## termite
 atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 js60 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-lib tdb sound-theme-freedesktop libcanberra gtk3 vte-common termite-terminfo termite
@@ -560,10 +554,10 @@ pepper-flash & gtk2 flashplugin
 mailcap mozilla-common firefox firefox-i18n-ru
 
 ## qutebrowser
-pyqt5-common python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
-  
-  ## Support (pass)
-  python-requests-file python-tldextract
+pdfjs pyqt5-common python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
+ 
+ ## Support (pass)
+ python-requests-file python-tldextract
 
 ## surf
 surf
@@ -582,9 +576,9 @@ brackets-bin
 
 ## pavucontrol
 libcanberra-pulse libsigc++ glibmm cairomm pangomm atkmm gtkmm3 pavucontrol
-  
-  ## Support
-  pamixer
+ 
+ ## Support
+ pamixer
 
 ## lxappearance
 lxappearance
@@ -622,8 +616,8 @@ aria2
 ## gparted
 gtkmm gparted
 
-  ## support
-  f2fs-tools udftools nilfs-utils gpart mtools ntfs-3g exfat-utils
+ ## support
+ f2fs-tools udftools nilfs-utils gpart mtools ntfs-3g exfat-utils
 
 ## xarchiver
 xarchiver
@@ -637,8 +631,8 @@ electron2 etcher-bin
 ## zathura
 girara libsynctex zathura
 
-  ## Support
-  djvulibre ghostscript jbig2dec libspectre zathura-cb zathura-djvu libmupdf zathura-pdf-mupdf zathura-ps
+ ## Support
+ djvulibre ghostscript jbig2dec libspectre zathura-cb zathura-djvu libmupdf zathura-pdf-mupdf zathura-ps
 
 ## crow-translate
 qt5-tools crow-translate
@@ -646,11 +640,11 @@ qt5-tools crow-translate
 ## qemu
 celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
 
-  ## Support
-  ## libvirt
-  augeas ceph-libs glusterfs gperftools leveldb libiscsi liburcu netcf oath-toolkit xmlsec libvirt
-  ## virt-manager
-  gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk gtksourceview4 virt-install virt-manager
+ ## Support
+ ## libvirt
+ augeas ceph-libs glusterfs gperftools leveldb libiscsi liburcu netcf oath-toolkit xmlsec libvirt
+ ## virt-manager
+ gtk-vnc libosinfo libvirt-glib libvirt-python osinfo-db phodav spice-gtk gtksourceview4 virt-install virt-manager
 
 ## VirtualBox
 virtualbox-host-modules-arch virtualbox
@@ -694,9 +688,9 @@ obs-studio
 ## metasploit
 postgresql-libs ruby-bundler metasploit
 
-  ## Support
-  # PostgreSQL
-  postgresql
+ ## Support
+ # PostgreSQL
+ postgresql
 
 ## nmap
 nmap
@@ -734,18 +728,18 @@ unclutter
 ## android-tools
 android-tools android-udev
 
-  ## Heimdall
-  cmake jsoncp rhash heimdall
+ ## Heimdall
+ cmake jsoncp rhash heimdall
 
 ## azuredatastudio
 azuredatastudio
 
-██╗    ██╗███████╗██████╗     ███████╗███████╗██████╗ ██╗   ██╗███████╗██████╗ 
-██║    ██║██╔════╝██╔══██╗    ██╔════╝██╔════╝██╔══██╗██║   ██║██╔════╝██╔══██╗
-██║ █╗ ██║█████╗  ██████╔╝    ███████╗█████╗  ██████╔╝██║   ██║█████╗  ██████╔╝
-██║███╗██║██╔══╝  ██╔══██╗    ╚════██║██╔══╝  ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗
-╚███╔███╔╝███████╗██████╔╝    ███████║███████╗██║  ██║ ╚████╔╝ ███████╗██║  ██║
- ╚══╝╚══╝ ╚══════╝╚═════╝     ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝
+██╗  ██╗███████╗██████╗   ███████╗███████╗██████╗ ██╗  ██╗███████╗██████╗ 
+██║  ██║██╔════╝██╔══██╗  ██╔════╝██╔════╝██╔══██╗██║  ██║██╔════╝██╔══██╗
+██║ █╗ ██║█████╗ ██████╔╝  ███████╗█████╗ ██████╔╝██║  ██║█████╗ ██████╔╝
+██║███╗██║██╔══╝ ██╔══██╗  ╚════██║██╔══╝ ██╔══██╗╚██╗ ██╔╝██╔══╝ ██╔══██╗
+╚███╔███╔╝███████╗██████╔╝  ███████║███████╗██║ ██║ ╚████╔╝ ███████╗██║ ██║
+ ╚══╝╚══╝ ╚══════╝╚═════╝   ╚══════╝╚══════╝╚═╝ ╚═╝ ╚═══╝ ╚══════╝╚═╝ ╚═╝
 
 ## nginx
 geoip-database geoip nginx
@@ -755,6 +749,12 @@ php php-fpm
 
 ## mysql
 mariadb-clients mariadb-libs mariadb
+
+## Steam
+lib32-alsa-lib lib32-alsa-plugins lib32-libxss steam
+
+  ## steam-native-runtime
+  glew1.10 lib32-atk lib32-attr lib32-cairo lib32-curl lib32-dbus lib32-dbus-glib lib32-e2fsprogs lib32-flac lib32-fontconfig lib32-freeglut lib32-freetype2 lib32-fribidi lib32-gdk-pixbuf2 lib32-giflib lib32-glew1.10 lib32-glib2 lib32-glu lib32-gmp lib32-gnutls lib32-gtk2 lib32-harfbuzz lib32-imlib2 lib32-keyutils lib32-krb5 lib32-libappindicator-gtk2 lib32-libasyncns+3+g68cd5af lib32-libcacabeta19 lib32-libcanberra+2+gc0620e4 lib32-libcap lib32-libcups lib32-libcurl-compat lib32-libcurl-gnutls lib32-libdatrie lib32-libdbusmenu-glib lib32-libdbusmenu-gtk2 lib32-libgcrypt lib32-libgcrypt15 lib32-libgpg-error lib32-libgudev lib32-libice lib32-libid3tagb lib32-libidn lib32-libidn11 lib32-libidn2 lib32-libindicator-gtk2 lib32-libjpeg-turbo lib32-libjpeg6-turbo lib32-libldap lib32-libltdl lib32-libmikmod lib32-libmodplug lib32-libnm-glib lib32-libnsl lib32-libogg lib32-libpng lib32-libpng12 lib32-libpsl lib32-libpulse lib32-librtmp0 lib32-libsm lib32-libsndfile lib32-libssh2 lib32-libtasn1 lib32-libthai lib32-libtheora lib32-libtiff lib32-libtiff4 lib32-libtirpc lib32-libudev0-shim lib32-libunistring lib32-libusb lib32-libva1 lib32-libvdpau lib32-libvorbis lib32-libvpx1.3 lib32-libwebp lib32-libwrap lib32-libxcomposite lib32-libxcursor lib32-libxft lib32-libxi lib32-libxinerama lib32-libxmu lib32-libxrandr lib32-libxrender lib32-libxt lib32-libxtst lib32-lz4 lib32-mpg123 lib32-nettle lib32-nspr lib32-nss lib32-openal lib32-openssl lib32-p11-kit lib32-pango lib32-pcre lib32-pixman lib32-sdl lib32-sdl2 lib32-sdl2_image lib32-sdl2_mixer lib32-sdl2_ttf lib32-sdl_image lib32-sdl_mixer lib32-sdl_ttf lib32-smpeg lib32-sqlite lib32-systemd lib32-tdb lib32-util-linux lib32-zstd libappindicator-gtk2 libcurl-compat libdbusmenu-glib libdbusmenu-gtk2 libgcrypt15 libidn11 libindicator-gtk2 libjpeg6-turbo libmikmod libpng12 librtmp0 libtiff4 libudev0-shim libva1 libvpx1.3 libwrap opusfile sdl2_image sdl2_mixer sdl2_ttf sdl_image sdl_mixer sdl_ttf smpeg lib32-db lib32-speexdsp lib32-jack lib32-libpulse lib32-libsamplerate lib32-speex steam-native-runtime
 
 ## lib32-drivers-nvidia
 lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-xz lib32-zlib lib32-nvidia-utils lib32-mesa-vdpau lib32-opencl-nvidia
