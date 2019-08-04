@@ -30,6 +30,14 @@ frame-opacity = 0.95;
 inactive-opacity-override = false;
 alpha-step = 0.06;
 
+# Размытие
+blur-background = true;
+blur-background-frame = false;
+blue-background-fixed = true;
+blur-method = "kawase";
+blur-strength = 5;
+blur-kern = "3x3box";
+
 # Отключение прозрачности для приложений 
 opacity-rule = [
   "99:class_g = 'mpv'",
