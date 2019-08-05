@@ -47,5 +47,6 @@ opacity-rule = [
   "99:class_g = 'Chromium'",
   "99:class_g = 'Firefox'",
   "99:class_g = 'qutebrowser'",
-  "99:class_g = 'stellarium'"
+  "99:class_g = 'stellarium'",
+  "99:class_g = 'rdesktop'"
 ];
