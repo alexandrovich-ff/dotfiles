@@ -109,7 +109,7 @@ aic94xx-firmware
 ╚═╝ ╚═╝  ╚══════╝╚══════╝╚═╝ ╚═╝ ╚═══╝ ╚══════╝╚═╝ ╚═╝
 
 ## xorg-server
-libepoxy libpng graphite harfbuzz freetype2-cleartype libfontenc libxfont2 xkeyboard-config libxkbfile xorg-xkbcomp xorg-setxkbmap xorg-server-common xorg-server
+libepoxy libpng graphite harfbuzz glu ftgl freetype2-cleartype libfontenc libxfont2 xkeyboard-config libxkbfile xorg-xkbcomp xorg-setxkbmap xorg-server-common xorg-server
 
 ## xorg-xprop
 xorg-xprop
@@ -155,7 +155,7 @@ rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulsemixer 
 realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
 
 ## gstreamer
-aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer
+aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer iso-codes
 
 ███████╗███╗  ██╗██╗  ██╗██╗██████╗ ██████╗ ███╗  ██╗███╗  ███╗███████╗███╗  ██╗████████╗
 ██╔════╝████╗ ██║██║  ██║██║██╔══██╗██╔═══██╗████╗ ██║████╗ ████║██╔════╝████╗ ██║╚══██╔══╝
@@ -183,7 +183,7 @@ edex-ui
 libconfig asciidoc compton-tryone-git
 
 ## dunst
-libxdg-basedir dunst
+libnotify libxdg-basedir dunst
 
 ## zsh & pkgfile & zplug
 zsh & pkgfile
@@ -222,7 +222,7 @@ skippy-xd-git
 zenity
 
 ## flatpak
-appstream-glib bubblewrap ostree xdg-dbus-proxy xdg-desktop-portal xdg-desktop-portal-gtk flatpak
+appstream-glib bubblewrap ostree xdg-dbus-proxy geocode-glib geoclue xdg-desktop-portal xdg-desktop-portal-gtk flatpak
 
 ## ccache
 ccache
@@ -290,7 +290,7 @@ nmon
 python-psutil glances
 
  ## Support
- python-future python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
+ python-future python-cycler python-dateutil python-docker-pycreds python-ifaddr python-kiwisolver blas cblas lapack python-numpy python-websocket-client python-bottle python-docker python-bcrypt python-asn1crypto python-cryptography python-pyasn1 python-pynacl python-paramiko python-ply python-pycparser python-cffi python-matplotlib python-netifaces python-zeroconf
 
 ## cdrtools
 cdrtools
@@ -320,7 +320,7 @@ ruby-optimist ruby-diff-lcs ruby-manpages ruby-paint ruby-rainbow ruby-rdoc ruby
 galculator
 
 ## networkmanager
-libndp libnewt libteam slang libmbim usb_modeswitch tcl libqmi dnsmasq modemmanager networkmanager
+libnm lbinm-glib libndp libnewt libteam slang libmbim usb_modeswitch tcl libqmi dnsmasq modemmanager libmm-glib networkmanager
 
  ## Support
  ppp iwd pptpclient
@@ -431,7 +431,7 @@ speedtest-cli
 libgssglue pcsclite libao rdesktop
 
 ## freerdp
-libmp4v2 faac mbedtls freerdp
+libmp4v2 faac mbedtls faad2 freerdp
 
 ## lnav
 lnav
@@ -491,7 +491,7 @@ arch-install-scripts
 gcab libsmbios libstemmer libxmlb fwupd
 
 ## termdown
-espeak python-click python-pyfiglet termdown
+portaudio espeak python-click python-pyfiglet termdown
 
 ████████╗██╗ ██╗███████╗███╗  ███╗███████╗███████╗
 ╚══██╔══╝██║ ██║██╔════╝████╗ ████║██╔════╝██╔════╝
@@ -529,7 +529,7 @@ ttf-symbola nerd-fonts-complete
 adobe-source-code-pro-fonts
 
 ## terminus-font-ll2-td1-ttf
-libuninameslist fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
+libuninameslist brotli woff2 fontforge libpgm libsodium libspiro libunicodenames libxkbui potrace zeromq terminus-font-ll2-td1-ttf
 
 ## system fonts
 ttf-liberation cantarell-fonts ttf-dejavu
@@ -542,7 +542,7 @@ ttf-liberation cantarell-fonts ttf-dejavu
 ╚═════╝ ╚══════╝╚══════╝╚═╝ ╚═╝  ╚═╝  ╚═════╝ ╚═╝   
 
 ## termite
-atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 js60 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-lib tdb sound-theme-freedesktop libcanberra gtk3 vte-common termite-terminfo termite
+atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 js60 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-lib tdb sound-theme-freedesktop libcanberra webkitgtk aspell hunspell hspell libvoikko enchant harfbuzz-icu webkit2gtk gtk3 vte-common termite-terminfo termite
 
 ## chromium
 nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore ffmpeg minizip libxslt re2 snappy flac pipewire chromium
@@ -665,7 +665,7 @@ grub wxgtk2 wxgtk-common woeusb
 handbrake
 
 ## spotify
-spotify
+openssl-1.0 spotify
 
 ## musixmatch-bin
 musixmatch-bin
@@ -674,7 +674,7 @@ musixmatch-bin
 nomachine
 
 ## teamviewer
-qt5-quickcontrols qt5-sensors qt5-webkit teamviewer
+qt5-quickcontrols qt5-sensors hyphen qt5-webkit teamviewer
 
 ## stellarium
 gpsd qt5-multimedia qt5-script qt5-serialport stellarium
@@ -705,7 +705,7 @@ ocl-icd xxhash hashcat
 wpscan
 
 ## mycroft
-jq oniguruma python-stevedore python-virtualenv python-virtualenv-clone python-virtualenvwrapper python2-appdirs python2-packaging python2-pyparsing python2-setuptools python2-virtualenv swig mimic-git fann mycroft-core
+jq oniguruma python-stevedore python-virtualenv python-virtualenv-clone python-virtualenvwrapper python2-appdirs python2-packaging python2-pyparsing python2-setuptools python2-virtualenv swig mimic-git fann python2-six mycroft-core
 
 ## cronie
 cronie
@@ -754,7 +754,7 @@ mariadb-clients mariadb-libs mariadb
 lib32-alsa-lib lib32-alsa-plugins lib32-libxss steam
 
   ## steam-native-runtime
-  glew1.10 lib32-atk lib32-attr lib32-cairo lib32-curl lib32-dbus lib32-dbus-glib lib32-e2fsprogs lib32-flac lib32-fontconfig lib32-freeglut lib32-freetype2 lib32-fribidi lib32-gdk-pixbuf2 lib32-giflib lib32-glew1.10 lib32-glib2 lib32-glu lib32-gmp lib32-gnutls lib32-gtk2 lib32-harfbuzz lib32-imlib2 lib32-keyutils lib32-krb5 lib32-libappindicator-gtk2 lib32-libasyncns+3+g68cd5af lib32-libcacabeta19 lib32-libcanberra+2+gc0620e4 lib32-libcap lib32-libcups lib32-libcurl-compat lib32-libcurl-gnutls lib32-libdatrie lib32-libdbusmenu-glib lib32-libdbusmenu-gtk2 lib32-libgcrypt lib32-libgcrypt15 lib32-libgpg-error lib32-libgudev lib32-libice lib32-libid3tagb lib32-libidn lib32-libidn11 lib32-libidn2 lib32-libindicator-gtk2 lib32-libjpeg-turbo lib32-libjpeg6-turbo lib32-libldap lib32-libltdl lib32-libmikmod lib32-libmodplug lib32-libnm-glib lib32-libnsl lib32-libogg lib32-libpng lib32-libpng12 lib32-libpsl lib32-libpulse lib32-librtmp0 lib32-libsm lib32-libsndfile lib32-libssh2 lib32-libtasn1 lib32-libthai lib32-libtheora lib32-libtiff lib32-libtiff4 lib32-libtirpc lib32-libudev0-shim lib32-libunistring lib32-libusb lib32-libva1 lib32-libvdpau lib32-libvorbis lib32-libvpx1.3 lib32-libwebp lib32-libwrap lib32-libxcomposite lib32-libxcursor lib32-libxft lib32-libxi lib32-libxinerama lib32-libxmu lib32-libxrandr lib32-libxrender lib32-libxt lib32-libxtst lib32-lz4 lib32-mpg123 lib32-nettle lib32-nspr lib32-nss lib32-openal lib32-openssl lib32-p11-kit lib32-pango lib32-pcre lib32-pixman lib32-sdl lib32-sdl2 lib32-sdl2_image lib32-sdl2_mixer lib32-sdl2_ttf lib32-sdl_image lib32-sdl_mixer lib32-sdl_ttf lib32-smpeg lib32-sqlite lib32-systemd lib32-tdb lib32-util-linux lib32-zstd libappindicator-gtk2 libcurl-compat libdbusmenu-glib libdbusmenu-gtk2 libgcrypt15 libidn11 libindicator-gtk2 libjpeg6-turbo libmikmod libpng12 librtmp0 libtiff4 libudev0-shim libva1 libvpx1.3 libwrap opusfile sdl2_image sdl2_mixer sdl2_ttf sdl_image sdl_mixer sdl_ttf smpeg lib32-db lib32-speexdsp lib32-jack lib32-libpulse lib32-libsamplerate lib32-speex steam-native-runtime
+  libcurl-gnutls freeglut dbus-glib glew1.10 lib32-atk lib32-attr lib32-cairo lib32-curl lib32-dbus lib32-dbus-glib lib32-e2fsprogs lib32-flac lib32-fontconfig lib32-freeglut lib32-freetype2 lib32-fribidi lib32-gdk-pixbuf2 lib32-giflib lib32-glew1.10 lib32-glib2 lib32-glu lib32-gmp lib32-gnutls lib32-gtk2 lib32-harfbuzz lib32-imlib2 lib32-keyutils lib32-krb5 lib32-libappindicator-gtk2 lib32-libasyncns+3+g68cd5af lib32-libcacabeta19 lib32-libcanberra+2+gc0620e4 lib32-libcap lib32-libcups lib32-libcurl-compat lib32-libcurl-gnutls lib32-libdatrie lib32-libdbusmenu-glib lib32-libdbusmenu-gtk2 lib32-libgcrypt lib32-libgcrypt15 lib32-libgpg-error lib32-libgudev lib32-libice lib32-libid3tagb lib32-libidn lib32-libidn11 lib32-libidn2 lib32-libindicator-gtk2 lib32-libjpeg-turbo lib32-libjpeg6-turbo lib32-libldap lib32-libltdl lib32-libmikmod lib32-libmodplug lib32-libnm-glib lib32-libnsl lib32-libogg lib32-libpng lib32-libpng12 lib32-libpsl lib32-libpulse lib32-librtmp0 lib32-libsm lib32-libsndfile lib32-libssh2 lib32-libtasn1 lib32-libthai lib32-libtheora lib32-libtiff lib32-libtiff4 lib32-libtirpc lib32-libudev0-shim lib32-libunistring lib32-libusb lib32-libva1 lib32-libvdpau lib32-libvorbis lib32-libvpx1.3 lib32-libwebp lib32-libwrap lib32-libxcomposite lib32-libxcursor lib32-libxft lib32-libxi lib32-libxinerama lib32-libxmu lib32-libxrandr lib32-libxrender lib32-libxt lib32-libxtst lib32-lz4 lib32-mpg123 lib32-nettle lib32-nspr lib32-nss lib32-openal lib32-openssl lib32-p11-kit lib32-pango lib32-pcre lib32-pixman lib32-sdl lib32-sdl2 lib32-sdl2_image lib32-sdl2_mixer lib32-sdl2_ttf lib32-sdl_image lib32-sdl_mixer lib32-sdl_ttf lib32-smpeg lib32-sqlite lib32-systemd lib32-tdb lib32-util-linux lib32-zstd libappindicator-gtk2 libcurl-compat libdbusmenu-glib libdbusmenu-gtk2 libgcrypt15 libidn11 libindicator-gtk2 libjpeg6-turbo libmikmod libpng12 librtmp0 libtiff4 libudev0-shim libva1 libvpx1.3 libwrap opusfile sdl2_image sdl2_mixer sdl2_ttf sdl_image sdl_mixer sdl_ttf smpeg lib32-db lib32-speexdsp lib32-jack lib32-libpulse lib32-libsamplerate lib32-speex steam-native-runtime
 
 ## lib32-drivers-nvidia
 lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-xz lib32-zlib lib32-nvidia-utils lib32-mesa-vdpau lib32-opencl-nvidia
