@@ -152,7 +152,7 @@ xorg-xinput
 paperfs rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pulsemixer pulseaudio-alsa libical sbc libfdk-aac libldac pulseaudio-modules-bt-git pulseaudio-jack confuse libftdi libusb-compat lirc pulseaudio-lirc pulseaudio-zeroconf pulseaudio
 
 ## jack
-realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-dbus python-dbus-common jack2-dbus qjackctl
+realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-dbus python-dbus-common jack2 qjackctl
 
 ## gstreamer
 aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer iso-codes
@@ -340,6 +340,9 @@ fuse3 sshfs
 ## samba
 perl-perse-yapp samba
 
+## filebrowser
+filebrowser-bin
+
 ## ufw
 ufw
 
@@ -455,7 +458,7 @@ dep vt-cli
 tree
 
 ## pass
-browserpass browserpass-chromium browserpass-firefox tomb pass pass-tomb pass-update pwgen qtpass
+browserpass browserpass-chromium browserpass-firefox tomb tomb-kdf pass pass-tomb pass-update pwgen qtpass
 
 ## watch-with-mpv
 watch-with-mpv
@@ -567,6 +570,9 @@ hblock
 
 ## sublime-text-dev
 sublime-text-dev
+
+ ## ruby-sass
+ ruby-ffi ruby-maruku ruby-rb-inotify ruby-sass-listen ruby-yard ruby-sass
 
 ## code
 ripgrep libevent code
@@ -734,6 +740,9 @@ android-tools android-udev
  ## Heimdall
  cmake jsoncp rhash heimdall
 
+ ## spflashtool-bin
+ gendesk qt4 qtwebkit pflashtool-bin
+
 ## azuredatastudio
 azuredatastudio
 
@@ -766,6 +775,10 @@ lib32-alsa-lib lib32-alsa-plugins lib32-libxss steam
 lib32-bzip2 lib32-expat lib32-gcc-libs lib32-glibc lib32-icu lib32-libdrm lib32-libelf lib32-libffi lib32-libglvnd lib32-libpciaccess lib32-libx11 lib32-libxau lib32-libxcb lib32-libxdamage lib32-libxdmcp lib32-libxext lib32-libxfixes lib32-libxml2 lib32-libxshmfence lib32-libxxf86vm lib32-llvm-libs lib32-lm_sensors lib32-mesa lib32-ncurses lib32-readline lib32-wayland lib32-xz lib32-zlib lib32-nvidia-utils lib32-mesa-vdpau lib32-opencl-nvidia
 
 ## kodi
-kodi-bin-18.3-1  libcec-4.0.4-1  libimagequant-2.12.5-1  libmicrohttpd-0.9.66-1  lockdev-1.0.3_1.6-5
-            p8-platform-2.1.0.1-3  python2-pillow-6.1.0-1  python2-pycryptodome-3.8.2-1  python2-simplejson-3.16.1-1
-            tinyxml-2.6.2-6  kodi
+kodi-bin libcec libimagequant libmicrohttpd lockdev p8-platform python2-pillow python2-pycryptodome python2-simplejson tinyxml kodi
+
+## Trello
+electron trello
+
+## 1C Клиент
+webkitgtk2 pkgextract 1c_enterprise83
