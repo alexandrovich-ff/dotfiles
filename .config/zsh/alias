@@ -64,7 +64,7 @@ alias :moon="curl http://wttr.in/Moon"
 alias :g="googler -n 5"
 # Файлы
 alias :faq="$EDITOR $HOME/.config/i3/faq"
-alias :install="$EDITOR $HOME/.install"
+alias :inst="$EDITOR $HOME/.install"
 alias :system="$EDITOR $HOME/.system"
 alias :i3="$EDITOR $HOME/.config/i3/config"
       :i3conf() { du -a $HOME/.config/i3/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
