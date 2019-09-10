@@ -101,7 +101,6 @@ signal=12
 label=
 interval=30
 color=#E88939
-
 [::b:memory]
 label=
 interval=30
@@ -111,16 +110,13 @@ color=#21b089
 label=
 interval=30
 color=#589df6
-
 [::b:battery]
 interval=once
-
 [time]
 label=
 command=date '+%I:%M' 
 interval=60
 color=#21b089
-
 [::b:date]
 label=
 interval=once
