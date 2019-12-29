@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# vim: filetype=i3
+#  ____   ____ ____   ____ ______   __
+# / ___| / ___|  _ \ / ___|  _ \ \ / /
+# \___ \| |   | |_) | |   | |_) \ V / 
+#  ___) | |___|  _ <| |___|  __/ | |  
+# |____/ \____|_| \_\\____|_|    |_|  
+#
+# Скрипт включения \ отключения отображение экрана смартфона
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+ps_out=`ps -ef | grep 'scrcpy' | grep -v 'grep' | grep -v $0`
+result=$(echo $ps_out | grep "scrcpy")
+if [[ "$result" != "" ]];then
+    killall -q scrcpy
+else
+    scrcpy -b 10M -S
+fi
+
+# Перезагрузка модуля i3blocks
+#pkill -RTMIN+2 i3blocks

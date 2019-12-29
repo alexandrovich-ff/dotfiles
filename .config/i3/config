@@ -261,7 +261,7 @@ for_window [class="^QtPass$"] floating enable
 for_window [class="^balena-etcher-electron$"] floating enable
 for_window [class="^GLava$"] floating enable, border none
 for_window [class="^mpv$"] floating enable, resize set 250 150, move absolute position 1069 560, sticky enable
-
+for_window [class="^scrcpy$"] floating enable
 # #---Группировка консольных окон---# #
 # Терминал
 for_window [title="Терминал"] move to workspace $ws1 focus
@@ -446,7 +446,7 @@ bindsym XF86Mail $start mailsync; $start $TERMINAL -t 'Почта' -e neomutt & 
 bindsym XF86WWW $start $BROWSER & notify-send ": Браузер запущен"
 # Приложения
 # %%hotkey: Комбинации клавиш %%
-bindsym $mod+$alt+k $start dmenu_hotkeys --menu rofi --app i3
+bindsym $mod+$alt+k $start dmenuhotkeys run -m rofi -a i3
 # %%hotkey: Лаунчер приложений dmenu %%
 bindsym $mod+space $start ::launcher
 # %%hotkey: Лаунчер приложений rofi %%
@@ -503,6 +503,8 @@ bindsym $mod+$shift+F3 $start qtpass
 bindsym $mod+F4 $start ::dmenuman
 # %%hotkey: Служба торрентов %%
 bindsym $alt+F4 $start ::transmission
+# %%hotkey: Отобразить экрана смартфона %%
+bindsym $mod+F5 $start ::scrcpy
 # %%hotkey: Включить веб камеру %%
 bindsym $mod+F7 $start ::camtoggle
 # %%hotkey: Скачать музыку с YouTube %%
@@ -539,6 +541,8 @@ bindsym $mod+$shift+b $start ::hover left
 bindsym $mod+$shift+n $start ::hover right
 # %%hotkey: Сделать скриншот %%
 bindsym Print $start ::dmenuscreenshot
+# %%hotkey: Сделать скриншот на Imgur %%
+bindsym $ctrl+Print $start slip
 # %%hotkey: Сгенерировать QRCode %%
 bindsym $mod+Pause $start ::xcqr
 # %%hotkey: Переключить вкладку -> %%
@@ -549,6 +553,9 @@ bindsym $mod+$shift+$tab $start i3flip left
 bindsym $caps $start pkill -RTMIN+11 i3blocks
 # %%hotkey: Включить CapsLock %%
 bindsym $shift+$caps $start pkill -RTMIN+13 i3blocks
+# %%hotkey: Воспроизвести ссылку из буфера
+bindsym $mod+m $start mpv "$(xsel -b)" & notify-send ": Видеоплеер запущен"
+
 # Быстрый доступ
 #bindsym $mod+$alt+m [title="Видео YouTube"] scratchpad show
 
@@ -560,6 +567,6 @@ $start ::setbg
 $start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
-$start synclient TouchpadOff=1
+$start synclient TapButton1=1 TapButton2=3 TapButton3=2
 #$start unclutter
 #$start ::display

@@ -1,0 +1,5 @@
+#!/bin/sh
+tfile="${1##*/}.torrent"
+execpath=${1%/*}
+transmission-create "$1"
+mv "$(pwd)/${tfile}" "${execpath}"

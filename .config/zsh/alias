@@ -13,6 +13,9 @@
 alias :ls="ls -la"
 alias :ping="ping -c 4"
 alias :dd="sudo dd if=$1 | pv | sudo dd of=$2"
+alias :df="df -h"
+alias :du="du -h"
+alias :time="unsleep"
 # Функции
 alias :hist="echo > $HOME/.config/zsh/histfile"
 alias :vpn="sudo openvpn --config"
