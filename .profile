@@ -10,9 +10,13 @@
 # Website: http://malikov.red
 
 # Переменные окружения
+export WM="i3"
+export STATUSBAR="i3blocks"
+
+# Ст-е переменные окружения
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 export EDITOR="nvim"
-export EDITOR_G="subl3"
+export EDITOR_G="code"
 export TERMINAL="$HOME/.local/bin/tools/::terminal"
 export TERM=xterm-color
 export BROWSER="chromium"
