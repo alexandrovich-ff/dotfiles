@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# vim: filetype=dmenu
+#  ____  __  __ _____ _   _ _   _    __        ______
+# |  _ \|  \/  | ____| \ | | | | |   \ \      / / ___|
+# | | | | |\/| |  _| |  \| | | | |____\ \ /\ / / |  _
+# | |_| | |  | | |___| |\  | |_| |_____\ V  V /| |_| |
+# |____/|_|  |_|_____|_| \_|\___/       \_/\_/  \____|
+#
+# Скрипт поключения к VPN серверам
+# Написан: @alexandrovich.ff
+# Website: http://malikov.red
+
+keys=$(for conf in `find $HOME/.wg*/* -type f -name "*.conf"`; do printf $conf | cut -f5 -d/ ; done)
+
+if pgrep -x wg-quick >/dev/null ;
+then
+    [ "$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Отключится от WG сервера?")" = "Да" ] && sudo -A wg-quick down "$HOME/.wg/$wg" && notify-send "💡 Отключен от WG сервера"
+else
+    ::ifinstalled wg-quick || exit
+    wg=$(printf "$keys" | ::dmenu -x 15 -y 40 -h 28 -w 600 -l 10 -i -p "Выберите WG сервер :" )
+    [ "$(sudo -A wg-quick up "$HOME/.wg/$wg")" ] & notify-send "💡 Подключение к WG серверу"
+fi
+
+sleep 3 && pkill -RTMIN+10 i3blocks
