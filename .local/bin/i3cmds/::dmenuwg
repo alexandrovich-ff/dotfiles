@@ -12,10 +12,12 @@
 # Website: http://malikov.red
 
 keys=$(for conf in `find $HOME/.wg*/* -type f -name "*.conf"`; do printf $conf | cut -f5 -d/ ; done)
+process=$(::ifrunning wg)
 
-if pgrep -x wg-quick >/dev/null ;
+if [ $? != 0 ] ;
 then
-    [ "$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Отключится от WG сервера?")" = "Да" ] && sudo -A wg-quick down "$HOME/.wg/$wg" && notify-send "💡 Отключен от WG сервера"
+    wg=$(sudo -A wg show | grep interface | cut -d' ' -f2)
+    [ "$(printf "Нет\\nДа" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -i -p "Отключится от WG сервера?")" = "Да" ] && sudo -A wg-quick down "$HOME/.wg/$wg.conf" && notify-send "💡 Отключен от WG сервера"
 else
     ::ifinstalled wg-quick || exit
     wg=$(printf "$keys" | ::dmenu -x 15 -y 40 -h 28 -w 600 -l 10 -i -p "Выберите WG сервер :" )
