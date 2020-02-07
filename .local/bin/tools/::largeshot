@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# vim: filetype=wmctrl
+#  _        _    ____   ____ _____ ____  _   _  ___ _____ 
+# | |      / \  |  _ \ / ___| ____/ ___|| | | |/ _ \_   _|
+# | |     / _ \ | |_) | |  _|  _| \___ \| |_| | | | || |  
+# | |___ / ___ \|  _ <| |_| | |___ ___) |  _  | |_| || |  
+# |_____/_/   \_\_| \_\\____|_____|____/|_| |_|\___/ |_|  
+#
+# Скрипт создания длинных скриншотов
+# Написан: @alexandrovich.ff
+# Веб-сайт: http://malikov.red
+
+SCREENALL_WM_IMAGE_DIR="/tmp/`uuidgen`/";
+SCREENALL_WM_NUMBERS=`wmctrl -d | wc -l`;
+SCREENALL_WM_CURENT_NAME=`wmctrl -d | grep "*"`;
+SCREENALL_WM_CURENT_NUMBER=${SCREENALL_WM_CURENT_NAME:0:1};
+
+mkdir $SCREENALL_WM_IMAGE_DIR;
+
+
+for ((i=0; i < $SCREENALL_WM_NUMBERS; i++ ))
+do
+    wmctrl -s $i;
+    scrot  -q 100 -d 1  $SCREENALL_WM_IMAGE_DIR$i.png
+done
+
+wmctrl -s $SCREENALL_WM_CURENT_NUMBER;
+convert -append $SCREENALL_WM_IMAGE_DIR*.png "/home/$USER/Изображения/Скриншоты/Largeshot/`date`.png"
+convert +append $SCREENALL_WM_IMAGE_DIR*.png "/home/$USER/Изображения/Скриншоты/Largeshot/`date`.png"
+
+rm -rd $SCREENALL_WM_IMAGE_DIR;
+xdg-open ~/;
+echo "Готово!";
