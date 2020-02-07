@@ -9,7 +9,7 @@
 #
 # Скрипт состояния торрент клиента
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
     1) $TERMINAL -e transmission-remote-cli ;;

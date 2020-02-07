@@ -9,7 +9,7 @@
 #
 # Скрипт добавления торрент файлов
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 pgrep -x transmission-da || (transmission-daemon && notify-send "Запуск службы: Transmission..." && sleep 3 && pkill -RTMIN+6 i3blocks)
 transmission-remote -a "$@" && notify-send "🔽 Торрент добавлен."

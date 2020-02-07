@@ -9,7 +9,7 @@
 #
 # Скрипт изменения размера окон i3
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 [ -z "$1" ] && echo "Не указано направление" && exit 1
 distanceStr="2 px or 2 ppt"

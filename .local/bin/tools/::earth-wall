@@ -9,7 +9,7 @@
 #
 # Скрипт смены фонового рисунка Google Earth
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 START=1003
 END=1089

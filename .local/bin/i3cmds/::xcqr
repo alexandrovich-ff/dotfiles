@@ -9,7 +9,7 @@
 #
 # Скрипт создания QR кода из буффера обмена
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ::ifinstalled feh && qrencode -o - -s 1 \
 	"$(xclip -out -selection clipboard)" |

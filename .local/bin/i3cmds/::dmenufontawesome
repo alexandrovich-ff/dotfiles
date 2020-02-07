@@ -9,7 +9,7 @@
 #
 # Скрипт выбора значков FontAwesome
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 xclip -h >/dev/null || exit
 

@@ -9,7 +9,7 @@
 #
 # Скрипт включения \ отключения отображение экрана смартфона
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ps_out=`ps -ef | grep 'scrcpy' | grep -v 'grep' | grep -v $0`
 result=$(echo $ps_out | grep "scrcpy")

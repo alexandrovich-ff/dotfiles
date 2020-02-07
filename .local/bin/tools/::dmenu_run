@@ -9,6 +9,6 @@
 #
 # Лаунчер Dmenu_run
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 dmenu_run -nb white -nf black -sb red -sf white -fn 'TerminessTTF Nerd Font-14' -x 15 -y 40 -h 28 -w 545 -p "Запуск приложения:"

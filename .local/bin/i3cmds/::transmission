@@ -9,7 +9,7 @@
 #
 # Скрипт проверки активности сервиса
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 if pgrep -x transmission-da >/dev/null ;
 then

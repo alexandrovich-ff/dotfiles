@@ -9,7 +9,7 @@
 #
 # Скрипт добавления торрент файлов
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 printf "Подготовка к обновлению системы...\\n"
 

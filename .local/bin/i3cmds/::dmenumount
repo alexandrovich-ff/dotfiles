@@ -9,7 +9,7 @@
 #
 # Скрипт для удобного монтирования внешних накопителей
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 pgrep -x dmenu && exit
 

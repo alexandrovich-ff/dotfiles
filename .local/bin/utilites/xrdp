@@ -9,7 +9,7 @@
 #
 # Подключение RDP для старых версий Win
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 # Получение максимального разширения монитора
 resolution_VGA=`xrandr | awk '/VGA1 connected/ { getline; print  $1}'`

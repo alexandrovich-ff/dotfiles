@@ -9,7 +9,7 @@
 #
 # CRON: Проверка обновлений
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ping -q -c 1 1.1.1.1 > /dev/null || exit
 

@@ -9,7 +9,7 @@
 #
 # Скрипт записи экрана с разными параметрами
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 updateicon() { \
     echo "$1" > /tmp/recordingicon

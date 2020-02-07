@@ -9,7 +9,7 @@
 #
 # Скрипт отображения загруженности оперативной памяти
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
 	1) notify-send "🧠 RAM процессы" "$(ps axch -o cmd:15,%mem --sort=-%mem | head)" ;;

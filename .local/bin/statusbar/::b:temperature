@@ -9,6 +9,6 @@
 #
 # Скрипт отображения температуры процессора
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 sensors | awk '/Core 0/ {print $3}'

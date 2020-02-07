@@ -9,7 +9,7 @@
 #
 # Скрипт отображения CapsLock, NumLock, ScrollLock
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 TYPE="${BLOCK_INSTANCE:-caps}"
 

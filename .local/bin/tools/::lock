@@ -9,7 +9,7 @@
 #
 # Скрипт блокировки экрана с помощью i3block
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 # Создание скриншота
 scrot /tmp/screen_locked.png

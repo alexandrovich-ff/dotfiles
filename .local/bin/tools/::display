@@ -9,7 +9,7 @@
 #                                         
 # Проверка наличия монитора перед запуском граф. оболочки
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 export DISPLAY=:0.0
 

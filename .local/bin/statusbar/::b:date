@@ -9,7 +9,7 @@
 #
 # Скрипт состояния батареи
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
 	1) pgrep -x dunst >/dev/null && notify-send "$(cal | sed "s/..7m/<b><span color=\"red\">/;s/..27m/<\/span><\/b>/")" && notify-send "Напоминания:" "$(calcurse -D ~/.config/calcurse -d3)" ;;

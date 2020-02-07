@@ -9,6 +9,6 @@
 #
 # Скрипт включения\отключения Cron задач
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ([ -f ~/.config/cronsaved ] && crontab - < ~/.config/cronsaved  && rm ~/.config/cronsaved && notify-send "🕓 Задачи cron восстановлены.") || ( crontab -l > ~/.config/cronsaved && crontab -r && notify-send "🕓 Задачи cron сохранены и отключены.")

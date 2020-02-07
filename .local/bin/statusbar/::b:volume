@@ -9,7 +9,7 @@
 #
 # Скрипт отображения уровня громкости
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
     3) pamixer -i 5 && pkill -RTMIN+9 i3blocks ;;

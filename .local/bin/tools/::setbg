@@ -9,7 +9,7 @@
 #
 # Установка фонового рисунка
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 [ -n "$1" ] && cp "$1" ~/.config/i3/wall.png && notify-send -i "$HOME/.config/wall.png" "Фоновый рисунок изменен."
 feh --bg-scale ~/.config/i3/wall.png

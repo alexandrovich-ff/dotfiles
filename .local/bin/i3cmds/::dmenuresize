@@ -9,6 +9,6 @@
 #
 # Скрипт изменения размера окон i3
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 echo "📐" | ::dmenu -x 15 -y 40 -h 28 -w 1000 -p "Укажите ширину и высоту окна:" | xargs xdotool windowsize "$(xdotool getwindowfocus)"

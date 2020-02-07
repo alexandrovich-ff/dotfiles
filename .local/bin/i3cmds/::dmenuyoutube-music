@@ -9,7 +9,7 @@
 #
 # Скрипт скачивания аудио с youtube
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 music_dir="$HOME/Музыка"
 

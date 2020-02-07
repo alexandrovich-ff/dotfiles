@@ -9,6 +9,6 @@
 #
 # Скрипт запуска приложений - Rofi
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 rofi -modi run,drun -show drun -location 7 -xoffset 15 -yoffset -450 -line-padding 4 -columns 1 -width 40 -lines 10 -padding 4 -hide-scrollbar -show-icons

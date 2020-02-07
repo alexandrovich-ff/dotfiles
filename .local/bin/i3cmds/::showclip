@@ -9,7 +9,7 @@
 #
 # Скрипт для отображения содержимого буффера обмена
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 clip=$(xclip -o -selection clipboard)
 prim=$(xclip -o -selection primary)

@@ -9,7 +9,7 @@
 #
 # Скрипт поключения к VPN серверам
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 keys=$(for ovpn in `find $HOME/.ovpn*/* -type f -name "*.ovpn"`; do printf $ovpn | cut -f5 -d/ ; done)
 

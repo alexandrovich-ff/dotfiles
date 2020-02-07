@@ -9,7 +9,7 @@
 #
 # Скрипт отображения активной видеокарты
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 GRAPHICS=$(optimus-manager --print-mode | awk '{print $5}')
 

@@ -9,7 +9,7 @@
 #
 # Скрипт почты
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
         1) setsid "$TERMINAL" -e newsboat && pkill -RTMIN+5 i3blocks ;;

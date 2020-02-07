@@ -9,7 +9,7 @@
 #
 # Скрипт удобного поиска в Google
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 pgrep -x dmenu && exit
 

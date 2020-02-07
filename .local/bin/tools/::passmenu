@@ -9,6 +9,6 @@
 #
 # Запуск passmenu з параметрами
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 passmenu -nb white -nf black -sb red -sf white -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -p "Выберите сервис:"

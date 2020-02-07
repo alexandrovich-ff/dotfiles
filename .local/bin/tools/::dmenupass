@@ -9,6 +9,6 @@
 #
 # Скрипт ввода пароля с помощью dmenu
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 dmenu -nb white -nf black -sb red -sf white -fn 'TerminessTTF Nerd Font-14' -x 15 -y 40 -h 28 -w 540 -p "$1" <&- && echo

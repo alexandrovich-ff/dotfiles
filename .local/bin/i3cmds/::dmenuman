@@ -9,6 +9,6 @@
 #
 # Скрипт чтения man в формате pdf
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 man -Tpdf $(man -k . | awk '{print $1}' | uniq | ::dmenu -x 15 -y 40 -h 28 -w 545 -fn 'Terminus (TTF)-14' -l 20) | zathura -

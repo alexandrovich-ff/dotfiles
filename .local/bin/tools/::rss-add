@@ -9,7 +9,7 @@
 #
 # Скрипт добавления RSS канала
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ! echo "$1" | grep "https*://\S\+\.[A-Za-z]\+\S*" >/dev/null &&
     notify-send "Это не похоже на полный URL." && exit

@@ -9,7 +9,7 @@
 #
 # Скрипт - Меню выключения
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 MENU="$(rofi -sep "|" -dmenu -i -p 'Выключение' -location 5 -xoffset -14 -yoffset -595 -width 20 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 <<< " Блокировка| Выход| Перезагрузка| Выключение")"
             case "$MENU" in

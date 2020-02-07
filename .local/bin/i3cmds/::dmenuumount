@@ -9,7 +9,7 @@
 #
 # Скрипт для удобного размонтирования внешних накопителей
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 unmountusb() {
 	[ -z "$drives" ] && exit

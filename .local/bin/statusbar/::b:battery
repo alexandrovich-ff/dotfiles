@@ -9,7 +9,7 @@
 #
 # Скрипт состояния батареи
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 
 capacity=$(cat /sys/class/power_supply/BAT0/capacity) || exit

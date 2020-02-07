@@ -9,6 +9,6 @@
 #                                                   
 # Запуск терминала з параметрами
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 termite --config $HOME/.config/termite/termite-dark.color "$@"

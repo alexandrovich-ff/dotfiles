@@ -9,7 +9,7 @@
 #
 # Скрипт для определения запущеного приложения
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 ps_out=`ps -ef | grep '$1' | grep -v 'grep' | grep -v $0`
 result=$(echo $ps_out | grep "$1")

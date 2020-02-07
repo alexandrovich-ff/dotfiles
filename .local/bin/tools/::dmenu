@@ -9,6 +9,6 @@
 #                                              
 # Запуск dmenu з параметрами
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 dmenu -nb white -nf black -sb red -sf white -fn 'TerminessTTF Nerd Font-14' "$@"

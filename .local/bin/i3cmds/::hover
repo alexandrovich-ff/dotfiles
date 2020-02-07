@@ -8,7 +8,7 @@
 #
 # Скрипт перемещения выбранного окна в нижний правый\левый угол экрана.
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 [ -z "$1" ] && exit
 current=$(xdotool getwindowfocus)

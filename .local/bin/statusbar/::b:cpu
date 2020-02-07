@@ -9,7 +9,7 @@
 #
 # Скрипт нагрузки на процессор
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
 	1) notify-send "🖥CPU процессы" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)" ;;

@@ -9,7 +9,7 @@
 #
 # Скрипт отображения уровня микрофона
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
   amixer -q sset Capture 5%-

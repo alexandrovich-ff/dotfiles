@@ -9,7 +9,7 @@
 #
 # Скрипт включение \ отключение тачпада (synaptics)
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 # Включение \ выключение тачпада
 (synclient | grep "TouchpadOff.*1" && synclient TouchpadOff=0)>/dev/null && notify-send "🖱 Тачпад включен." && exit

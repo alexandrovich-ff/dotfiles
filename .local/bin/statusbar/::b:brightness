@@ -9,7 +9,7 @@
 #
 # Скрипт отображения яркости подсветки монитора
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 case $BLOCK_BUTTON in
   1) xbacklight -dec 5 && pkill -RTMIN+12 i3blocks ;;

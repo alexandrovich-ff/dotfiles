@@ -9,7 +9,7 @@
 #
 # Скрипт поключения к VPN серверам
 # Написан: @alexandrovich.ff
-# Website: http://malikov.red
+# Веб-сайт: http://malikov.red
 
 keys=$(for conf in `find $HOME/.wg*/* -type f -name "*.conf"`; do printf $conf | cut -f5 -d/ ; done)
 process=$(::ifrunning wg)

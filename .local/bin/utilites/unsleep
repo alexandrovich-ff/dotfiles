@@ -8,8 +8,8 @@
 #  \___/|_|    |_| |___|_|  |_|_____|
 #
 # Вывод информации о времени работы сервера
-# написан: @alexandrovich.ff
-# website: http://malikov.red
+# Написан: @alexandrovich.ff
+# Веб-сайт: http://malikov.red
 
 # Вывод времени работы
 echo "Время работы:"
