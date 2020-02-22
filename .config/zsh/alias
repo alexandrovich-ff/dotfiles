@@ -59,6 +59,7 @@ alias :virtdisk="sudo vboxmanage internalcommands createrawvmdk -filename ~/$1.v
 # Подключения
 alias :git="git --work-tree=$HOME --git-dir=/media/SD/dotfiles/.git"
 alias :gitback="git --work-tree=$HOME --git-dir=/media/SD/dotfiles/.git reset --soft HEAD^"
+alias :html5="git clone git@gitlab.com:alexandrovich.ff/l-html5"
 # Утилиты
 alias :trans="crow -p -a -t"
 alias :cow="fortune | cowsay | lolcat"
