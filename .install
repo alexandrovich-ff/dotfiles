@@ -5,8 +5,7 @@
 ██████╔╝██║ ██║███████║███████╗
 ╚═════╝ ╚═╝ ╚═╝╚══════╝╚══════╝
 
-## pacstrab base base-devel
-libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
+## pacstrab base base-devel libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
 
 ## pacman-contrib
 mlocate pacman-contrib
@@ -158,7 +157,7 @@ paperfs rtkit orc webrtc-audio-processing alsa-plugins alsa-utils alsa-tools pul
 realtime-privileges celt dbus-c++ libffado libxml++ python2 python2-dbus python-dbus python-dbus-common jack2 qjackctl
 
 ## gstreamer
-aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base gst-plugins-good gst-plugins-base-libs gstreamer iso-codes
+aalib cdparanoia graphene libdv libshout libvisual mpg123 sdl taglib twolame wavpack gst-libav gst-plugins-base qt5-wayland gst-plugins-good gst-plugins-base-libs gstreamer iso-codes
 
 ███████╗███╗  ██╗██╗  ██╗██╗██████╗ ██████╗ ███╗  ██╗███╗  ███╗███████╗███╗  ██╗████████╗
 ██╔════╝████╗ ██║██║  ██║██║██╔══██╗██╔═══██╗████╗ ██║████╗ ████║██╔════╝████╗ ██║╚══██╔══╝
@@ -240,8 +239,8 @@ libnsl python
 ## python-pip
 python-cachecontrol-0.12.5-6  python-colorama-0.4.1-3  python-distlib-0.3.0-1
             python-distro-1.4.0-3  python-html5lib-1.0.1-7  python-lockfile-0.12.2-6  python-msgpack-0.6.2-3
-            python-pep517-0.6.0-3  python-progress-1.5-3  python-pytoml-0.1.21-3  python-retrying-1.3.3-6
-            python-webencodings-0.5.1-4  python-pip
+            python-toml python-pep517-0.6.0-3  python-progress-1.5-3  python-pytoml-0.1.21-3  python-retrying-1.3.3-6
+            python-webencodings-0.5.1-4  python-contextlib2 python-pip
 
 ## git
 perl-error perl-timedate perl-mailtools git
@@ -396,6 +395,9 @@ smartmontools
 
 ## nodejs
 c-ares http-parser node-gyp semver nodejs npm
+
+## gulp
+gulp
 
 ## rtorrent
 libtorrent xmlrpc-c rtorrent
@@ -554,7 +556,7 @@ ttf-liberation cantarell-fonts ttf-dejavu
 atk libxcursor libxinerama libtiff jasper shared-mime-info gdk-pixbuf2 dconf libxcomposite at-spi2-core at-spi2-atk hicolor-icon-theme librsvg gtk-update-icon-cache adwaita-icon-theme json-glib wayland-protocols desktop-file-utils lcms2 libgusb js52 js60 polkit colord libproxy gsettings-desktop-schemas glib-networking libsoup rest libdaemon avahi libogg libvorbis alsa-topology-conf alsa-ucm-conf alsa-lib tdb sound-theme-freedesktop libcanberra webkitgtk aspell hunspell hspell libvoikko enchant harfbuzz-icu libwpe wpebackend-fdo webkit2gtk gtk3 vte-common termite-terminfo termite
 
 ## chromium
-nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore libplacebo dav1d ffmpeg minizip libxslt re2 snappy flac pipewire chromium
+nspr nss xorg-xset xdg-utils libxss libasyncns libsndfile libpulse aom gsm libsamplerate zita-alsa-pcmi zita-resampler lame libraw1394 libavc1394 libiec61883 libmodplug libsoxr libssh libtheora libvdpau giflib libwebp opencore-amr openjpeg2 opus libibus sdl2 speexdsp speex v4l-utils libass libbluray libva vid.stab libvpx l-smash x264 x265 xvidcore libplacebo dav1d intel-gmmlib intel-media-driver intel-media-sdk libmfx ffmpeg minizip libxslt re2 snappy flac pipewire chromium
 
 ## pepper-flash & flashplugin
 pepper-flash & gtk2 flashplugin
@@ -563,7 +565,7 @@ pepper-flash & gtk2 flashplugin
 mailcap mozilla-common firefox firefox-i18n-ru
 
 ## qutebrowser
-pdfjs python-pyqt5 python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
+pdfjs python-pyqt5-sip python-pyqt5 python-attrs python-jinja python-markupsafe python-pypeg2 python-pyqt5 python-sip-pyqt5 python-yaml qt5-location qt5-declarative qt5-webchannel qt5-webengine qutebrowser
  
  ## Support (pass)
  python-requests-file python-tldextract
@@ -575,7 +577,7 @@ surf
 hblock
 
 ## sublime-text-dev
-sublime-text-dev
+sublime-merge sublime-text-dev
 
  ## ruby-sass
  ruby-ffi ruby-maruku ruby-rb-inotify ruby-sass-listen ruby-yard ruby-sass
@@ -593,22 +595,19 @@ brackets-bin
 libcanberra-pulse libsigc++ glibmm cairomm pangomm atkmm gtkmm3 pavucontrol
  
  ## Support
- pamixer
+ boost-libs hwloc openmpi pamixer
 
 ## lxappearance
 lxappearance
 
-## gpick
-boost-libs gpick
-
 ## telegram-desktop
-double-conversion libmng openal tslib telegram-desktop
+libdbusmenu-qt5 libdbusmenu-gtk3 libindicator-gtk3 libappindicator-gtk3 double-conversion libmng openal tslib telegram-desktop
 
 ## igdm
 igdm
 
 ## mpv
-cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
+mujs cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
 
 ## pcmanfm
 libfm libfm-extra libfm-gtk2 lxmenu-data menu-cache pcmanfm
@@ -656,7 +655,7 @@ girara libsynctex zathura
 qt5-tools crow-translate
 
 ## qemu
-celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
+brltty libslirp celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
 
  ## Support
  ## libvirt
@@ -771,6 +770,12 @@ geoip-database geoip nginx
 ## php-fpm
 oniguruma php php-fpm
 
+## php-gd
+gd libxpm php-gd
+
+## php-imagick
+php-imagick
+
 ## mysql
 mariadb-clients mariadb-libs mariadb
 
@@ -806,3 +811,29 @@ scrcpy
 
 ## Tor
 tor
+
+## colorpicker
+colorpicker
+
+## drawio
+ant drawio-desktop
+
+## dosbox
+sdl_net sdl_sound dosbox
+
+## fail2ban
+python-pyinotify python-systemd whois fail2ban
+
+## wmctrl
+wmctrl
+
+## audacity
+libmad-0.15.1b-8  lilv-0.24.6-2  portsmf-234-1  serd-0.30.2-1  sord-0.16.4-1  soundtouch-2.1.2-1
+           sratom-0.6.4-1  suil-0.10.6-2  audacity
+
+## linphone-desktop
+qt5-graphicaleffects-5.14.1-1  qt5-quickcontrols2-5.14.1-1  qt5-speech-5.14.1-1
+           linphone-desktop-all-git
+
+## google-earth-pro
+google-earth-pro
