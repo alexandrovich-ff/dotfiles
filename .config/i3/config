@@ -322,6 +322,7 @@ for_window [class="^Messenger for Desktop$"] move to workspace $ws18 focus
 for_window [class="^IGdm$"] move to workspace $ws18 focus
 for_window [class="^ViberPC$"] move to workspace $ws18 focus
 for_window [class="^Trello$"] move to workspace $ws18 focus
+for_window [class="^linphone$"] move to workspace $ws18 focus
 # Администрирование
 for_window [class="^rdesktop$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
 for_window [class="^Virt-manager$"] floating disable, move to workspace $ws19 focus, layout tabbed, border normal
@@ -446,7 +447,7 @@ bindsym XF86Mail $start mailsync; $start $TERMINAL -t 'Почта' -e neomutt & 
 bindsym XF86WWW $start $BROWSER & notify-send ": Браузер запущен"
 # Приложения
 # %%hotkey: Комбинации клавиш %%
-bindsym $mod+$alt+k $start dmenuhotkeys run -m rofi -a i3
+bindsym $mod+$alt+k $start dmenu_hotkeys run -m rofi -a i3
 # %%hotkey: Лаунчер приложений dmenu %%
 bindsym $mod+space $start ::launcher
 # %%hotkey: Лаунчер приложений rofi %%
@@ -464,11 +465,11 @@ bindsym $mod+$shift+$enter $start $TERMINAL -t 'Плавающий термин�
 # %%hotkey: Запустить консольный текстовый редактор %%
 bindsym $mod+$alt+s $start $editor & notify-send ": Текстовый редактор запущен"
 # %%hotkey: Запустить графический текстовый редактор %%
-bindsym $mod+$alt+$shift+s $start subl3 & notify-send ": Текстовый редактор запущен"
+bindsym $mod+$alt+$shift+s $start $EDITOR_G & notify-send ": Текстовый редактор запущен"
 # %%hotkey: Запустить консольный файловый менеджер %%
 bindsym $mod+$alt+f $start $filemanager & notify-send ": Файловый менеджер запущен"
 # %%hotkey: Запустить графический файловый менеджер %%
-bindsym $mod+$alt+$shift+f $start pcmanfm & notify-send ": Файловый менеджер запущен"
+bindsym $mod+$alt+$shift+f $start $FILE_G & notify-send ": Файловый менеджер запущен"
 # %%hotkey: Запустить Telegram %%
 bindsym $mod+$alt+t $start $telegram & notify-send ": Телеграм запущен"
 # %%hotkey: Запустить менеджер процессов %%
@@ -480,11 +481,15 @@ bindsym $mod+$alt+backslash $start glava --desktop & notify-send ": Визу�
 # %%hotkey: Запустить визуализатор %%
 bindsym $mod+$alt+$shift+backslash $start $equalizer & notify-send ": Визуализатор запущен"
 #bindsym $mod+$shift+m $start $TERMINAL -t 'Видео YouTube' -e mpsyt & notify-send "Медиа плеер YouTube открыт в режиме быстрого доступа"
+# %%hotkey: Определить цвет %%
+bindsym $ctrl+$mod+c $start ::colorpicker & notify-send ": Выбор цвета"
 # Скрипты
 # %%hotkey: Поиск в Google %%
 bindsym $mod+F1 $start ::dmenusearch
-# %%hotkey: Подключение к VPN серверу %%
-bindsym $alt+F1 $start ::dmenuvpn
+# %%hotkey: Подключение к OVPN серверу %%
+bindsym $alt+F1 $start ::dmenuovpn
+# %%ghotkey: Подключение к WG VPN серверу%%
+bindsym $alt+F2 $start ::dmenuwg
 # %%hotkey: Поиск на YouTube %%
 bindsym $mod+$alt+F1 $start ::dmenusearch-youtube
 # %%hotkey: Запуск почтового клиента %%
