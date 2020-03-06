@@ -577,7 +577,7 @@ surf
 hblock
 
 ## sublime-text-dev
-sublime-merge sublime-text-dev
+sublime-text-dev
 
  ## ruby-sass
  ruby-ffi ruby-maruku ruby-rb-inotify ruby-sass-listen ruby-yard ruby-sass
@@ -695,9 +695,6 @@ gtkglext pangox-compat python-shiboken2 anydesk
 
 ## stellarium
 gpsd qt5-multimedia qt5-script qt5-serialport stellarium
-
-## popcorntime
-yarn popcorntime
 
 ## obs-studio
 obs-studio
@@ -837,3 +834,14 @@ qt5-graphicaleffects-5.14.1-1  qt5-quickcontrols2-5.14.1-1  qt5-speech-5.14.1-1
 
 ## google-earth-pro
 google-earth-pro
+
+## dnstop
+dnstop
+
+## mypaint
+babl-0.1.74-1  exiv2-0.27.2-1  gegl-0.4.20-1  intel-tbb-2020.1-1  lensfun-0.3.95-1  libgexiv2-0.12.0-4
+            libmypaint-1.4.0-1  metis-5.1.0.p8-1  openexr-2.4.1-1  python2-gobject-3.34.0-3  python2-numpy-1.16.4-2
+            suitesparse-5.7.1-1  mypaint
+
+## wrk siege
+siege wrk
