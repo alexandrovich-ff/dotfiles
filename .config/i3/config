@@ -558,7 +558,7 @@ bindsym $mod+$shift+$tab $start i3flip left
 bindsym $caps $start pkill -RTMIN+11 i3blocks
 # %%hotkey: Включить CapsLock %%
 bindsym $shift+$caps $start pkill -RTMIN+13 i3blocks
-# %%hotkey: Воспроизвести ссылку из буфера
+# %%hotkey: Воспроизвести ссылку из буфера %%
 bindsym $mod+m $start mpv "$(xsel -b)" & notify-send ": Видеоплеер запущен"
 
 # Быстрый доступ
@@ -569,7 +569,7 @@ bindsym $mod+m $start mpv "$(xsel -b)" & notify-send ": Видеоплеер 
 # Системные утилиты
 $start setxkbmap us,ru -option grp:caps_toggle
 $start ::setbg
-$start compton --config $HOME/.config/compton/config
+#$start compton --config $HOME/.config/compton/config
 $start lxpolkit
 $start dunst
 $start synclient TapButton1=1 TapButton2=3 TapButton3=2

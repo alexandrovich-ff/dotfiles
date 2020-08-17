@@ -75,6 +75,7 @@ alias :i3="$EDITOR $HOME/.config/i3/config"
 alias :i3blocks="$EDITOR $HOME/.config/i3blocks/config"
       :i3bconf() { du -a $HOME/.config/i3blocks/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
 alias :zsh="$EDITOR $HOME/.zshrc"
+alias :host="sudo nvim /etc/hosts"
 # Директории
 alias :h="$HOME/"
 alias :d="$HOME/Документы"

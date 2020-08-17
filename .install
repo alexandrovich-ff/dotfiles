@@ -5,7 +5,7 @@
 ██████╔╝██║ ██║███████║███████╗
 ╚═════╝ ╚═╝ ╚═╝╚══════╝╚══════╝
 
-## pacstrab base base-devel libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
+## pacstrab base base-devel libnfnetlink libnetfilter_conntrack linux-api-headers tzdata iana-etc filesystem glibc gcc-libs ncurses readline bash bzip2 attr acl gmp libcap gdbm db perl openssl coreutils libgpg-error libgcrypt lz4 xz systemd-libs device-mapper popt libutil-linux json-c argon2 cryptsetup expat dbus libmnl libnftnl libnl libusb libpcap iptables zlib cracklib e2fsprogs libsasl libldap keyutils krb5 libtirpc pambase pam kbd kmod hwids libunistring libidn2 libelf libseccomp shadow libcap-ng util-linux pcre2 audit libp11-kit systemd dhcpcd diffutils file findutils mpfr gawk pcre libffi glib2 icu libxml2 libcroco gettext grep less gzip inetutils iproute2 iputils jfsutils licenses linux-firmware mkinitcpio-busybox zstd libarchive mkinitcpio linux linux-headers logrotate libaio thin-provisioning-tools lvm2 groff libpipeline man-db man-pages mdadm nano openresolv netctl libtasn1 p11-kit ca-certificates-utils ca-certificates-mozilla ca-certificates libssh2 libpsl libnghttp2 curl npth libksba libassuan libsecret pinentry nettle gnutls sqlite gnupg gpgme pacman-mirrorlist archlinux-keyring xdelta3 pacman pciutils procps-ng psmisc reiserfsprogs s-nail sed sysfsutils systemd-sysvcompat tar texinfo usbutils vi which xfsprogs m4 autoconf automake binutils bison fakeroot flex libmpc gcc libtool libatomic_ops gc guile make patch pkgconf sudo
 
 ## pacman-contrib
 mlocate pacman-contrib
@@ -607,7 +607,7 @@ libdbusmenu-qt5 libdbusmenu-gtk3 libindicator-gtk3 libappindicator-gtk3 double-c
 igdm
 
 ## mpv
-mujs cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
+sndio mujs cifs-utils fftw gamin glslang ldb libbsd libdvdnav libdvdread libwbclient lmdb lua52 rubberband shaderc spirv-tools talloc tevent uchardet vamp-plugin-sdk jansson mpv
 
 ## pcmanfm
 libfm libfm-extra libfm-gtk2 lxmenu-data menu-cache pcmanfm
@@ -655,7 +655,7 @@ girara libsynctex zathura
 qt5-tools crow-translate
 
 ## qemu
-brltty libslirp celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
+liburing brltty libslirp celt0.5.1 libcacard libnfs numactl seabios spice usbredir vde2 virglrenderer vte3 qemu
 
  ## Support
  ## libvirt
@@ -845,3 +845,27 @@ babl-0.1.74-1  exiv2-0.27.2-1  gegl-0.4.20-1  intel-tbb-2020.1-1  lensfun-0.3.95
 
 ## wrk siege
 siege wrk
+
+## gnome-keyring
+gnome-keyring
+
+## odin
+clang compiler-rt llvm odin-bin
+
+## heroku
+heroku-cli
+
+## android-apktool
+android-apktool
+
+## dex2jar-git 
+gradle dex2jar-git 
+
+## jd-gui-bin
+jd-gui-bin
+
+## Odin
+clang compiler-rt llvm odin-bin
+
+## colordiff
+colordiff

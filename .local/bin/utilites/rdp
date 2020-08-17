@@ -19,7 +19,7 @@ if [ -n "$resolution_VGA" ]; then
 
     resolution=`xrandr | awk '/VGA-1-1 connected/ { getline; print  $1}' | awk -F "x" '{print int($1)"x"int($2*0.95)}'`
 
-    rdesktop -g $resolution -P -z -x l -r sound:off -K \
+    rdesktop -g $resolution -P -z -x l -r sound:local -K \
     $(zenity \
         --entry \
         --title="IP подключения" \
@@ -28,7 +28,7 @@ elif [ -n "$resolution_HDMI" ]; then
 
     resolution=`xrandr | awk '/HDMI-1-1 connected/ { getline; print  $1}' | awk -F "x" '{print int($1)"x"int($2*0.95)}'`
 
-    rdesktop -g $resolution -P -z -x l -r sound:off -K \
+    rdesktop -g $resolution -P -z -x l -r sound:local -K \
     $(zenity \
         --entry \
         --title="IP подключения" \
@@ -37,7 +37,7 @@ else
 
     resolution=`xrandr -q | awk '/ connected / {print $3;exit}' | awk -F "x" '{print int($1)"x"int($2*0.93)}'`
 
-    rdesktop -g $resolution -P -z -x l -r sound:off -K \
+    rdesktop -g $resolution -P -z -x l -r sound:local -K \
     $(zenity \
         --entry \
         --title="IP подключения" \

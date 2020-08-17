@@ -16,7 +16,7 @@ result=$(echo $ps_out | grep "scrcpy")
 if [[ "$result" != "" ]];then
     killall -q scrcpy
 else
-    scrcpy -b 10M -S
+    scrcpy -b 20M -S
 fi
 
 # Перезагрузка модуля i3blocks
